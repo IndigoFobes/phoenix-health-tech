@@ -5,9 +5,9 @@ import PHTLogo from "../assets/PHT_logo_title.png";
 export default function Landing() {
   return (
     <div className="flex flex-col items-center mb-20">
-      <div className="px-4 mx-auto flex justify-center mt-20">
+      <div className="px-4 mx-auto flex justify-center mt-10">
         <img
-          className=" w-9/10 lg:w-3/4 align-middle object-cover object-top"
+          className=" w-4/5 lg:w-3/4 align-middle object-cover object-top"
           src={PHTLogo}
           alt="PHT Logo, colorful phoenix"
         ></img>
@@ -17,7 +17,7 @@ export default function Landing() {
       </p>
       <Link
         to="/home"
-        className="bg-sky-400 px-2 py-1.5 md:px-3.5 md:py-2.5 lg:px-4 lg:py-5 text-lg md:text-xl lg:text-2xl mt-8 rounded-sm font-semibold text-white hover:bg-sky-600"
+        className="bg-sky-400 px-2 py-1.5 md:px-3.5 md:py-2.5 lg:px-5 lg:py-3 text-lg md:text-xl lg:text-2xl mt-8 rounded-md font-semibold text-white hover:bg-sky-600"
       >
         Learn More
       </Link>

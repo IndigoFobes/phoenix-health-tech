@@ -2,13 +2,17 @@ import React from "react";
 
 function Navbar({ currentPage, handlePageChange }) {
   return (
-    <nav className="bg-pink-200 flex p-3 justify-center">
-      <ul className="flex flex-row gap-4">
+    <nav className="flex w-4/5 mx-auto justify-center py-10">
+      <ul className="flex flex-row w-full border-none justify-center text-white font-semibold text-xl">
         <li>
           <a
             href="#home"
             onClick={() => handlePageChange("Home")}
-            className={currentPage === "Home" ? "nav-link active" : "nav-link"}
+            className={
+              currentPage === "Home"
+                ? "nav-link active py-3 px-12 text-blue-900"
+                : "nav-link bg-sky-400 py-3 px-12"
+            }
           >
             Home
           </a>
@@ -17,7 +21,11 @@ function Navbar({ currentPage, handlePageChange }) {
           <a
             href="#about"
             onClick={() => handlePageChange("About")}
-            className={currentPage === "About" ? "nav-link active" : "nav-link"}
+            className={
+              currentPage === "About"
+                ? "nav-link active py-3 px-12 text-blue-900"
+                : "nav-link bg-sky-400 py-3 px-12"
+            }
           >
             About
           </a>
@@ -26,7 +34,11 @@ function Navbar({ currentPage, handlePageChange }) {
           <a
             href="#learn"
             onClick={() => handlePageChange("Learn")}
-            className={currentPage === "Learn" ? "nav-link active" : "nav-link"}
+            className={
+              currentPage === "Learn"
+                ? "nav-link active py-3 px-12 text-blue-900"
+                : "nav-link bg-sky-400 py-3 px-12"
+            }
           >
             Learn
           </a>
@@ -36,7 +48,9 @@ function Navbar({ currentPage, handlePageChange }) {
             href="#purchase"
             onClick={() => handlePageChange("Purchase")}
             className={
-              currentPage === "Purchase" ? "nav-link active" : "nav-link"
+              currentPage === "Purchase"
+                ? "nav-link active py-3 px-12 text-blue-900"
+                : "nav-link bg-sky-400 py-3 px-12"
             }
           >
             Purchase
@@ -47,7 +61,9 @@ function Navbar({ currentPage, handlePageChange }) {
             href="#contact"
             onClick={() => handlePageChange("Contact")}
             className={
-              currentPage === "Contact" ? "nav-link active" : "nav-link"
+              currentPage === "Contact"
+                ? "nav-link active py-3 px-12 text-blue-900"
+                : "nav-link bg-sky-400 py-3 px-12"
             }
           >
             Contact
