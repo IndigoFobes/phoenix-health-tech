@@ -3,8 +3,10 @@ import React from "react";
 export default function Home() {
   return (
     <div>
-      <h1>PHT Home Page</h1>
-      Hello Home!
+      <container className="text-center p-10">
+        <h1>PHT Home Page</h1>
+        <p>Home text</p>
+      </container>
     </div>
   );
 }
