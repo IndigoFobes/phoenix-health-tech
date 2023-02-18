@@ -15,7 +15,7 @@ export default function PageContainer() {
 
   const renderPage = () => {
     if (currentPage === "Home") {
-      return <Home />;
+      return <Home className="flex" />;
     } else if (currentPage === "About") {
       return <About />;
     } else if (currentPage === "Contact") {
