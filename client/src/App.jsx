@@ -7,6 +7,8 @@ import Landing from "./pages/Landing";
 // import css, if used
 import "./App.css";
 
+// Stripe stuff??
+
 const App = () => {
   return (
     <Router>

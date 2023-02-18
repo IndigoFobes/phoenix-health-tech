@@ -11,7 +11,7 @@ function Navbar({ currentPage, handlePageChange }) {
             className={
               currentPage === "Home"
                 ? "nav-link active py-3 px-12 text-blue-900"
-                : "nav-link bg-sky-400 py-3 px-12"
+                : "nav-link bg-indigo-400 py-3 px-12"
             }
           >
             Home
