@@ -13,7 +13,7 @@ export default function Landing() {
         ></img>
       </div>
       <p className="font-sans text-center text-lg md:text-2xl lg:text-3xl font-medium text-stone-700 mx-10">
-        Tag line here about Phoenix Health Technology
+        Changing the world, one breath at a time.
       </p>
       <Link
         to="/home"

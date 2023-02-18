@@ -34,7 +34,7 @@ export default function PageContainer() {
   // return
   return (
     <div>
-      <main>
+      <main className="relative min-h-full min-h-screen">
         <Header currentPage={currentPage} handlePageChange={handlePageChange} />
         {renderPage()}
       </main>
