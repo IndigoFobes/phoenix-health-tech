@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import PHTLogo from "../assets/PHT_logo_title.png";
+import PHTLogo from "../assets/PHT_LOGO_BLUE.png";
 
 export default function Landing() {
   return (
