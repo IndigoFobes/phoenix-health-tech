@@ -39,7 +39,12 @@ export default function Contact() {
                 <label htmlFor="lastName" value="Last name">
                   Last Name
                 </label>
-                <input id="lastName" type="text" sizing="sm" />
+                <input
+                  className="rounded-md border-sky-400 border-2 shadow-sm focus:border-amber-400 focus:ring-amber-400 block"
+                  id="lastName"
+                  type="text"
+                  sizing="sm"
+                />
               </div>
             </div>
             {/* phone TODO: react-phone-input-2 via npm*/}
