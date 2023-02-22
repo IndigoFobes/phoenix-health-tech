@@ -1,4 +1,11 @@
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  solid,
+  regular,
+  brands,
+  icon,
+} from "@fortawesome/fontawesome-svg-core/import.macro";
 
 export default function Contact() {
   return (
@@ -13,9 +20,32 @@ export default function Contact() {
             Send us a message, and we will be sure to get back to you as soon as
             possible.
           </p>
-          <p className="text-xl text-white mb-3">777-777-7777</p>
-          <p className="text-xl text-white mb-3">will@phoenixhealthtech.com</p>
-          {/* TODO: social media icons: facebook, insta(?) */}
+          <div className="flex flex-row gap-2">
+            <FontAwesomeIcon
+              className="text-white mt-1.5"
+              icon={icon({
+                name: "phone",
+                style: "solid",
+              })}
+            />
+            <p className="text-xl text-white mb-3">777-777-7777</p>
+          </div>
+          <div className="flex flex-row gap-2">
+            <FontAwesomeIcon
+              className="text-white mt-1.5"
+              icon={icon({
+                name: "envelope",
+                style: "solid",
+              })}
+            />
+            <p className="text-xl text-white mb-3">
+              will@phoenixhealthtech.com
+            </p>
+          </div>
+          {/* TODO: social media icons: NOT working yet}
+          {/* <div>
+            <FontAwesomeIcon className="mt-1.5" icon={brands("twitter")} />
+          </div> */}
         </div>
         {/* input form */}
         <form className="bg-white col-start-3 col-end-6 rounded-r-md p-8 grid grid-rows-2">
