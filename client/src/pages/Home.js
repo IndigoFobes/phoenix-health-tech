@@ -1,4 +1,11 @@
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  solid,
+  regular,
+  brands,
+  icon,
+} from "@fortawesome/fontawesome-svg-core/import.macro";
 
 export default function Home() {
   return (
@@ -48,6 +55,36 @@ export default function Home() {
           </p>
         </container>
       </div>
+      {/* placeholder icons */}
+      <container className="flex justify-around mt-20 mx-60">
+        <div>
+          <FontAwesomeIcon
+            className="text-amber-400 text-5xl mt-1.5"
+            icon={icon({
+              name: "recycle",
+              style: "solid",
+            })}
+          />
+        </div>
+        <div>
+          <FontAwesomeIcon
+            className="text-lime-500 text-5xl mt-1.5"
+            icon={icon({
+              name: "recycle",
+              style: "solid",
+            })}
+          />
+        </div>
+        <div>
+          <FontAwesomeIcon
+            className="text-sky-400 text-5xl mt-1.5"
+            icon={icon({
+              name: "recycle",
+              style: "solid",
+            })}
+          />
+        </div>
+      </container>
     </div>
   );
 }
