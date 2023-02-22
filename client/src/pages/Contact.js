@@ -9,8 +9,9 @@ export default function Contact() {
           <h1 className="text-3xl font-bold text-white mt-3 mb-5">
             Contact us
           </h1>
-          <p className="text-xl text-white mb-5">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          <p className="text-xl text-white mb-9">
+            Send us a message, and we will be sure to get back to you as soon as
+            possible.
           </p>
           <p className="text-xl text-white mb-3">777-777-7777</p>
           <p className="text-xl text-white mb-3">will@phoenixhealthtech.com</p>
@@ -26,7 +27,7 @@ export default function Contact() {
                   First Name
                 </label>
                 <input
-                  className="rounded-md border-sky-400 border-2 shadow-sm focus:border-amber-400 focus:ring-amber-400 block"
+                  className="rounded-md border-sky-400 border-2 shadow-sm focus:border-amber-400 focus:ring-0 block text-gray-900"
                   id="firstName"
                   type="text"
                   sizing="sm"
@@ -40,7 +41,7 @@ export default function Contact() {
                   Last Name
                 </label>
                 <input
-                  className="rounded-md border-sky-400 border-2 shadow-sm focus:border-amber-400 focus:ring-amber-400 block"
+                  className="rounded-md border-sky-400 border-2 shadow-sm focus:border-amber-400 focus:ring-0 block text-gray-900"
                   id="lastName"
                   type="text"
                   sizing="sm"
@@ -53,7 +54,12 @@ export default function Contact() {
                 <label htmlFor="phone" value="phone">
                   Phone number
                 </label>
-                <input id="phone" type="text" sizing="sm" />
+                <input
+                  className="rounded-md border-sky-400 border-2 shadow-sm focus:border-amber-400 focus:ring-0 block text-gray-900"
+                  id="phone"
+                  type="text"
+                  sizing="sm"
+                />
               </div>
             </div>
             {/* email */}
@@ -62,7 +68,12 @@ export default function Contact() {
                 <label htmlFor="email" value="email">
                   Email
                 </label>
-                <input id="email" type="email" sizing="sm" />
+                <input
+                  className="rounded-md border-sky-400 border-2 shadow-sm focus:border-amber-400 focus:ring-0 block text-gray-900"
+                  id="email"
+                  type="email"
+                  sizing="sm"
+                />
               </div>
             </div>
           </div>
@@ -71,20 +82,20 @@ export default function Contact() {
             <div class="sm:col-span-2">
               <label
                 for="message"
-                class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400"
+                className="block mb-2 text-md font-medium text-gray-900 dark:text-gray-400"
               >
                 Your message
               </label>
               <textarea
                 id="message"
                 rows="6"
-                class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-md shadow-sm border-2 border-sky-400 focus:ring-0 focus:border-amber-400 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
                 placeholder="Leave a comment..."
               ></textarea>
             </div>
             <button
               type="submit"
-              className="mt-3 font-bold text-white text-lg bg-sky-400 px-6 py-1 rounded-sm"
+              className="mt-3 font-bold text-white text-lg bg-sky-400 px-6 py-1 rounded-sm hover:bg-sky-300 "
             >
               Send
             </button>
