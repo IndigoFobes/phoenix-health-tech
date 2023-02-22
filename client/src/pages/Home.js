@@ -1,4 +1,5 @@
 import React from "react";
+// import Modal from "../components/Modal";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   solid,
@@ -57,7 +58,7 @@ export default function Home() {
       </div>
       {/* placeholder icons */}
       <container className="flex justify-around mt-20 mx-60">
-        <div>
+        <div className="flex flex-col">
           <FontAwesomeIcon
             className="text-amber-400 text-5xl mt-1.5"
             icon={icon({
@@ -65,8 +66,9 @@ export default function Home() {
               style: "solid",
             })}
           />
+          <h3 className="font-semibold text-xl">All Natural</h3>
         </div>
-        <div>
+        <div className="flex flex-col">
           <FontAwesomeIcon
             className="text-lime-500 text-5xl mt-1.5"
             icon={icon({
@@ -74,8 +76,9 @@ export default function Home() {
               style: "solid",
             })}
           />
+          <h3 className="font-semibold text-xl">Green Solution</h3>
         </div>
-        <div>
+        <div className="flex flex-col">
           <FontAwesomeIcon
             className="text-sky-400 text-5xl mt-1.5"
             icon={icon({
@@ -83,8 +86,12 @@ export default function Home() {
               style: "solid",
             })}
           />
+          <h3 className="font-semibold text-xl">Prevention First</h3>
         </div>
       </container>
+      {/* ***TODO: This is where I'll pass through the Modal, which will be determined via useState */}
+      {/* {hover ? (
+      <> </> ): null} */}
     </div>
   );
 }
