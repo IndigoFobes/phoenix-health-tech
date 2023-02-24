@@ -8,6 +8,7 @@ import Home from "../pages/Home";
 import Landing from "../pages/Landing";
 import Learn from "../pages/Learn";
 import Purchase from "../pages/Purchase";
+import ContactForm from "./ContactForm";
 
 export default function PageContainer() {
   // useState to set which page user is on
@@ -37,6 +38,9 @@ export default function PageContainer() {
       <main className="relative min-h-screen">
         <Header currentPage={currentPage} handlePageChange={handlePageChange} />
         {renderPage()}
+        <div className="App mt-20">
+          <ContactForm />
+        </div>
       </main>
       <Footer />
     </div>
