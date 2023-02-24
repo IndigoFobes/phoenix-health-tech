@@ -135,9 +135,17 @@ export default function Home() {
           <h3 className="font-semibold text-xl">Prevention First</h3>
         </div>
       </container>
+      {/* Conditionally render extra space if hover is not happening */}
+      {!isHoveringYellow && !isHoveringGreen && !isHoveringBlue && (
+        <div className="flex justify-center mt-40 text-2xl font-medium mb-40">
+          <h3 className="bg-sky-400 px-10 py-6 rounded-md opacity-75">
+            Mouse over an icon to learn more.
+          </h3>
+        </div>
+      )}
       {/* Yellow box */}
       <div
-        className={`bg-amber-300 justify-center mt-10 mx-60 rounded-md py-10 px-20 flex-col text-center gap-5 ${
+        className={`bg-amber-300 justify-center mt-10 mx-60 rounded-md py-10 px-20 flex-col text-center gap-5 mb-20 ${
           isHoveringYellow ? "flex" : "hidden"
         }`}
       >
@@ -159,7 +167,7 @@ export default function Home() {
       </div>
       {/* Green box */}
       <div
-        className={`bg-lime-500 justify-center mt-10 mx-60 rounded-md py-10 px-20 flex-col text-center gap-5 ${
+        className={`bg-lime-500 justify-center mt-10 mx-60 rounded-md py-10 px-20 flex-col text-center gap-5 mb-20 ${
           isHoveringGreen ? "flex" : "hidden"
         }`}
       >
@@ -181,7 +189,7 @@ export default function Home() {
       </div>
       {/* Blue box */}
       <div
-        className={`bg-sky-400 justify-center mt-10 mx-60 rounded-md py-10 px-20 flex-col text-center gap-5 ${
+        className={`bg-sky-400 justify-center mt-10 mx-60 rounded-md py-10 px-20 flex-col text-center gap-5 mb-20 ${
           isHoveringBlue ? "flex" : "hidden"
         }`}
       >
