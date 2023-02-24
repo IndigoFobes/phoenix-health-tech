@@ -41,14 +41,17 @@ contactEmail.verify((error) => {
 
 // Router to send email
 router.post("/contact", (req, res) => {
-  const name = req.body.name;
+  const firstName = req.body.firstName;
+  const lastName = req.body.lastName;
+  const phone = req.body.phone;
   const email = req.body.email;
   const message = req.body.message;
   const mail = {
-    from: name,
+    from: `Phoenix Health Technologies`,
     to: process.env.GMAIL,
-    subject: "Contact Form Submission",
-    html: `<p>Name: ${name}</p>
+    subject: "Phoenix Health Tech Contact Form Submission",
+    html: `<p>Name: ${firstName} ${lastName}</p>
+           <p>Phone number: ${phone}</p>
            <p>Email: ${email}</p>
            <p>Message: ${message}</p>`,
   };

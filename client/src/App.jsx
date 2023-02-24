@@ -5,10 +5,11 @@ import Landing from "./pages/Landing";
 import ContactForm from "./components/ContactForm";
 import Header from "./components/Header";
 import About from "../src/pages/About";
-import Contact from "../src/pages/Contact";
+// import Contact from "../src/pages/Contact";
 import Home from "../src/pages/Home";
 import Learn from "../src/pages/Learn";
 import Purchase from "../src/pages/Purchase";
+import Footer from "../src/components/Footer";
 //import Home from "./pages/Home";
 
 // import css, if used
@@ -50,6 +51,7 @@ const App = () => {
             <Route path="/contact" element={<ContactForm />} />
           </Routes>
         </main>
+        <Footer />
       </div>
     </Router>
   );
