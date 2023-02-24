@@ -1,11 +1,15 @@
 const env = require("dotenv").config();
 const express = require("express");
-// const { ApolloServer } = require("apollo-server-express");
+const router = express.Router();
+const cors = require("cors");
+const nodemailer = require("nodemailer");
 const path = require("path");
+// const { ApolloServer } = require("apollo-server-express");
 // const { typeDefs, resolvers } = require("../server/schemas");
 // const db = require("./config/connection");
 // const { authMiddleware } = require("./utils/auth");
 const e = require("express");
+
 // connect Stripe
 const STRIPE_KEY = process.env.STRIPE_SECRET;
 const stripe = require("stripe")(STRIPE_KEY);
@@ -18,12 +22,31 @@ const app = express();
 //   context: authMiddleware,
 // });
 
-app.use(express.urlencoded({ extended: false }));
+// Should I use app.use(express.urlencoded({ extended: false })); instead?
+app.use(cors());
 app.use(express.json());
+app.use(router);
 
 if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.join(__dirname, "../client/build")));
 }
+
+// Nodemailer setup
+const contactEmail = nodemailer.createTransport({
+  service: "gmail",
+  auth: {
+    user: process.env.GMAIL,
+    pass: process.env.PASS,
+  },
+});
+
+contactEmail.verify((error) => {
+  if (error) {
+    console.log(error);
+  } else {
+    console.log("Ready to send!");
+  }
+});
 
 /** Stripe Integration
  *
