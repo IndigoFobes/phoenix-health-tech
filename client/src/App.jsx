@@ -1,5 +1,10 @@
 import React, { useState } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Outlet,
+} from "react-router-dom";
 import Landing from "./pages/Landing";
 import ContactForm from "./components/ContactForm";
 import Header from "./components/Header";
@@ -25,29 +30,61 @@ const App = () => {
 
   const renderPage = () => {
     if (currentPage === "Home") {
-      return <Home className="flex" />;
+      return (
+        <>
+          <Header
+            currentPage={currentPage}
+            handlePageChange={handlePageChange}
+          />
+          <Home className="flex" />
+        </>
+      );
     } else if (currentPage === "About") {
-      return <About />;
+      return (
+        <>
+          <Header
+            currentPage={currentPage}
+            handlePageChange={handlePageChange}
+          />
+          <About />
+        </>
+      );
     } else if (currentPage === "Landing") {
-      return <Landing />; // TODO *** hide header!
+      return <Landing />;
     } else if (currentPage === "Learn") {
-      return <Learn />;
+      return (
+        <>
+          <Header
+            currentPage={currentPage}
+            handlePageChange={handlePageChange}
+          />
+          <Learn />
+        </>
+      );
     }
-    return <Purchase />;
+    return (
+      <>
+        <Header currentPage={currentPage} handlePageChange={handlePageChange} />
+        <Purchase />
+      </>
+    );
   };
+
+  const ContactLayout = () => (
+    <>
+      <Header currentPage={currentPage} handlePageChange={handlePageChange} />
+      <ContactForm />
+    </>
+  );
 
   return (
     <Router>
       <div>
         <main className="relative min-h-screen">
-          <Header
-            currentPage={currentPage}
-            handlePageChange={handlePageChange}
-          />
           <Routes>
             <Route path="/" element={<Landing />} />
             <Route path="/home" element={renderPage()} />
-            <Route path="/contact" element={<ContactForm />} />
+            <Route path="/contact" element={<ContactLayout />} />
           </Routes>
         </main>
         <Footer />
