@@ -5,9 +5,9 @@ import PHTLogo from "../assets/PHT_LOGO_noWORDS.png";
 
 export default function Header({ currentPage, handlePageChange }) {
   return (
-    <header className="static">
+    <header className="">
       {/* logo */}
-      <div className="absolute top-0 left-10 w-1/6">
+      {/* <div className="absolute top-10 left-10 w-40">
         <Link to="/">
           <img
             className="object-cover "
@@ -15,7 +15,7 @@ export default function Header({ currentPage, handlePageChange }) {
             alt="PHT Logo, colorful phoenix"
           ></img>
         </Link>
-      </div>
+      </div> */}
       {/* navbar */}
       <Navbar currentPage={currentPage} handlePageChange={handlePageChange} />
     </header>
