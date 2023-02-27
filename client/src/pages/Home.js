@@ -7,6 +7,10 @@ import {
   brands,
   icon,
 } from "@fortawesome/fontawesome-svg-core/import.macro";
+import orange from "../assets/orange_triangle_pht.png";
+import green from "../assets/green_triangle_pht.png";
+import blue from "../assets/blue_triangle_pht.png";
+
 // import Modal from "../components/Modal";
 
 export default function Home() {
@@ -93,45 +97,27 @@ export default function Home() {
       {/* placeholder icons */}
       <container className="flex justify-around mt-20 mx-60">
         <div
-          className="flex flex-col"
+          className="flex flex-col justify-center items-center mt-1.5"
           onMouseEnter={handleMouseEnterYellow}
           onMouseLeave={handleMouseLeaveYellow}
         >
-          <FontAwesomeIcon
-            className="text-amber-400 text-5xl mt-1.5"
-            icon={icon({
-              name: "recycle",
-              style: "solid",
-            })}
-          />
+          <img src={orange} className="w-1/6"></img>
           <h3 className="font-semibold text-xl">All Natural</h3>
         </div>
         <div
-          className="flex flex-col"
+          className="flex flex-col justify-center items-center mt-1.5"
           onMouseEnter={handleMouseEnterGreen}
           onMouseLeave={handleMouseLeaveGreen}
         >
-          <FontAwesomeIcon
-            className="text-lime-500 text-5xl mt-1.5"
-            icon={icon({
-              name: "recycle",
-              style: "solid",
-            })}
-          />
+          <img src={green} className="w-1/6"></img>
           <h3 className="font-semibold text-xl">Green Solution</h3>
         </div>
         <div
-          className="flex flex-col"
+          className="flex flex-col justify-center items-center mt-1.5"
           onMouseEnter={handleMouseEnterBlue}
           onMouseLeave={handleMouseLeaveBlue}
         >
-          <FontAwesomeIcon
-            className="text-sky-400 text-5xl mt-1.5"
-            icon={icon({
-              name: "recycle",
-              style: "solid",
-            })}
-          />
+          <img src={blue} className="w-1/6"></img>
           <h3 className="font-semibold text-xl">Prevention First</h3>
         </div>
       </container>
