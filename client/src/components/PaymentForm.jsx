@@ -58,7 +58,7 @@ export default function PaymentForm() {
     <>
       {!success ? (
         <form onSubmit={handleSubmit}>
-          <fieldset className="FormGroup">
+          <fieldset className="FormGroup min-w-40">
             <div className="FormRow">
               <CardElement options={CARD_OPTIONS} />
             </div>
