@@ -1,6 +1,14 @@
 import React from "react";
+import GreenOne from "../assets/1_green_pht.png";
+import GreenTwo from "../assets/2_green_pht.png";
+import GreenThree from "../assets/3_green_pht.png";
+import GreyOne from "../assets/1_grey_pht.png";
+import GreyTwo from "../assets/2_grey_pht.png";
+import GreyThree from "../assets/3_grey_pht.png";
 
 export default function Learn() {
+  // Handle hover and click on icons
+
   return (
     <div className="flex flex-col justify-center items-center mt-20">
       <h1 className="text-3xl font-semibold text-blue-900 mb-10">
@@ -36,6 +44,25 @@ export default function Learn() {
       <h1 className="text-3xl font-semibold text-blue-900 mb-10 mt-40">
         What does PHT do to fix it?
       </h1>
+      {/* Numbers for hover effect */}
+      <div className="flex space-x-40 pb-20">
+        <img src={GreyOne} className="w-60"></img>
+        <img src={GreyTwo} className="w-60"></img>
+        <img src={GreyThree} className="w-60"></img>
+      </div>
+      <div className="p-4 bg-lime-500 rounded-md">
+        <iframe
+          className=""
+          // Handle hover (or click) to display proper animation
+          src="https://www.youtube.com/embed/C0DPdy98e4c"
+          width={1000}
+          height={500}
+          frameborder="0"
+          allow="autoplay; encrypted-media"
+          allowfullscreen
+          title="video"
+        />{" "}
+      </div>
     </div>
   );
 }
