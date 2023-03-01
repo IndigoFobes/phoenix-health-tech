@@ -7,10 +7,10 @@ const path = require("path");
 const e = require("express");
 
 // connect Stripe
-const STRIPE_KEY = process.env.STRIPE_SECRET;
+const STRIPE_KEY = process.env.STRIPE_SECRET_TEST; //***TODO**** change from TEST
 const stripe = require("stripe")(STRIPE_KEY);
 
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3001; // should it not be 3000?
 const app = express();
 
 // Should I use app.use(express.urlencoded({ extended: false })); instead?
@@ -64,13 +64,31 @@ router.post("/contact", (req, res) => {
   });
 });
 
-/** Stripe Integration
- *
- * app.get("/config")...
- *
- * app.post("/create-payment-intent")...
- *
- */
+// Stripe integration
+app.post("/payment", cors(), async (req, res) => {
+  let { amount, id } = req.body;
+  try {
+    const payment = await stripe.paymentIntents.create({
+      amount,
+      currency: "USD",
+      description: "HVAC Unit",
+      payment_method: id,
+      confirm: true,
+    });
+
+    console.log("Payment", payment);
+    res.json({
+      message: "Payment successful!",
+      success: true,
+    });
+  } catch (error) {
+    console.log("Error", error);
+    res.json({
+      message: "Payment failed.",
+      success: false,
+    });
+  }
+});
 
 app.listen(PORT, () => {
   console.log(`API server listening at port ${PORT}!`);
