@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
+import StripeContainer from "../components/StripeContainer";
+import greenImage from "../assets/green_placeholder.jpg";
 
 export default function Purchase() {
+  const [showItem, setShowItem] = useState(false);
   return (
     <div>
       <div className="grid grid-cols-6">
@@ -25,6 +28,32 @@ export default function Purchase() {
             varius massa vel mi ornare malesuada.
           </p>
         </container>
+      </div>
+      <div className="grid grid-cols-6 mt-20">
+        <div className="col-start-2 col-end-6 text-center flex flex-col items-center">
+          <h2 className="font-semibold text-2xl text-blue-900 mb-2">
+            HVAC Unit
+          </h2>
+          {showItem ? (
+            <StripeContainer />
+          ) : (
+            <>
+              {" "}
+              <h3 className="font-medium text-xl mb-4">$xxxx</h3>{" "}
+              <img
+                src={greenImage}
+                alt="HVAC Unit placeholder."
+                className="w-1/2"
+              />
+              <button
+                className="bg-amber-400 rounded-md px-4 py-2 mt-3"
+                onClick={() => setShowItem(true)}
+              >
+                Purchase a Unit
+              </button>
+            </>
+          )}
+        </div>
       </div>
     </div>
   );
