@@ -65,21 +65,19 @@ router.post("/contact", (req, res) => {
 });
 
 // Stripe integration
-app.post("/payment", cors(), async (req, res) => {
-  let { amount, id } = req.body;
+app.post("/payment", async (req, res) => {
   try {
-    const payment = await stripe.paymentIntents.create({
-      amount,
+    const paymentIntent = await stripe.paymentIntents.create({
+      amount: 2000,
       currency: "USD",
       description: "HVAC Unit",
-      payment_method: id,
-      confirm: true,
+      automatic_payment_methods: {
+        enabled: true,
+      },
     });
 
-    console.log("Payment", payment);
-    res.json({
-      message: "Payment successful!",
-      success: true,
+    res.send({
+      clientSecret: paymentIntent.client_secret,
     });
   } catch (error) {
     console.log("Error", error);
