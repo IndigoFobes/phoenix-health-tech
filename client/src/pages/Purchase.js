@@ -34,8 +34,17 @@ export default function Purchase() {
           <h2 className="font-semibold text-2xl text-blue-900 mb-2">
             HVAC Unit
           </h2>
+
           {showItem ? (
-            <StripeContainer />
+            <div>
+              <button
+                onClick={() => setShowItem(false)}
+                className="bg-amber-400 border-2 border-amber-400 px-4 py-1 rounded-sm hover:bg-white hover:border-2 hover:border-amber-400"
+              >
+                Back
+              </button>
+              <StripeContainer />
+            </div>
           ) : (
             <>
               {" "}
@@ -43,10 +52,10 @@ export default function Purchase() {
               <img
                 src={greenImage}
                 alt="HVAC Unit placeholder."
-                className="w-1/2"
+                className="w-1/2 mx-auto mb-5"
               />
               <button
-                className="bg-amber-400 rounded-md px-4 py-2 mt-3"
+                className="bg-amber-400 rounded-md px-4 py-2 mt-3 hover:bg-white hover:border-2 hover:border-amber-400 hover:cursor-pointer"
                 onClick={() => setShowItem(true)}
               >
                 Purchase a Unit

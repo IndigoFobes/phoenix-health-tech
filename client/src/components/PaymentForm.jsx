@@ -84,7 +84,11 @@ export default function PaymentForm() {
         onChange={(e) => setEmail(e.target.value)}
       />
       <PaymentElement id="payment-element" options={paymentElementOptions} />
-      <button disabled={isLoading || !stripe || !elements} id="submit">
+      <button
+        disabled={isLoading || !stripe || !elements}
+        id="submit"
+        className="bg-gray-300 px-4 py-2 rounded-sm border-2 border-gray-300 hover:bg-gray-500 hover:border-gray-500 hover:text-white hover:font-bold"
+      >
         <span id="button-text">
           {isLoading ? <div className="spinner" id="spinner"></div> : "Pay now"}
         </span>

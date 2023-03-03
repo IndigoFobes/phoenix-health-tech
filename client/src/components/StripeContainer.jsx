@@ -29,12 +29,14 @@ export default function StripeContainer() {
     appearance,
   };
   return (
-    <div className="App">
-      {clientSecret && (
-        <Elements options={options} stripe={stripeTestPromise}>
-          <PaymentForm />
-        </Elements>
-      )}
+    <div className="grid grid-cols-7">
+      <div className="col-start-3 col-end-6 p-6 bg-gray-100 rounded-md mt-6">
+        {clientSecret && (
+          <Elements options={options} stripe={stripeTestPromise}>
+            <PaymentForm />
+          </Elements>
+        )}
+      </div>
     </div>
   );
 }

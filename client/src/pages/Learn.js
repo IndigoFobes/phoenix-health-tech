@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import GreenOne from "../assets/1_green_pht.png";
 import GreenTwo from "../assets/2_green_pht.png";
 import GreenThree from "../assets/3_green_pht.png";
@@ -7,7 +7,47 @@ import GreyTwo from "../assets/2_grey_pht.png";
 import GreyThree from "../assets/3_grey_pht.png";
 
 export default function Learn() {
-  // Handle hover and click on icons
+  // const [isHoveringOne, setIsHoveringOne] = useState(false);
+  // const [isHoveringTwo, setIsHoveringTwo] = useState(false);
+  // const [isHoveringThree, setIsHoveringThree] = useState(false);
+  // // Handle hover and click on icons
+  // //One
+  // function handleMouseEnterOne(e) {
+  //   setIsHoveringOne(true);
+  // }
+
+  // function handleMouseLeaveOne(e) {
+  //   setIsHoveringOne(false);
+  // }
+
+  // //Two
+  // function handleMouseEnterTwo(e) {
+  //   setIsHoveringTwo(true);
+  // }
+
+  // function handleMouseLeaveTwo(e) {
+  //   setIsHoveringTwo(false);
+  // }
+
+  // //Three
+  // function handleMouseEnterThree(e) {
+  //   setIsHoveringThree(true);
+  // }
+
+  // function handleMouseLeaveThree(e) {
+  //   setIsHoveringThree(false);
+  // }
+
+  /* <div
+          onMouseEnter={handleMouseEnterThree}
+          onMouseLeave={handleMouseLeaveThree}
+        >
+          {isHoveringThree ? (
+            <img src={GreenThree} className="w-60"></img>
+          ) : (
+            <img src={GreyThree} className="w-60"></img>
+          )}
+        </div> */
 
   return (
     <div className="flex flex-col justify-center items-center mt-20">
@@ -46,11 +86,29 @@ export default function Learn() {
       </h1>
       {/* Numbers for hover effect */}
       <div className="flex space-x-40 pb-20">
-        <img src={GreyOne} className="w-60"></img>
-        <img src={GreyTwo} className="w-60"></img>
-        <img src={GreyThree} className="w-60"></img>
+        <div>
+          <img
+            src={GreyOne}
+            className="w-60 hover:cursor-pointer"
+            onClick={(e) => (e.currentTarget.src = GreenOne)}
+          ></img>
+        </div>
+        <div>
+          <img
+            src={GreyTwo}
+            className="w-60 hover:cursor-pointer"
+            onClick={(e) => (e.currentTarget.src = GreenTwo)}
+          ></img>
+        </div>
+        <div>
+          <img
+            src={GreyThree}
+            className="w-60 hover:cursor-pointer"
+            onClick={(e) => (e.currentTarget.src = GreenThree)}
+          ></img>
+        </div>
       </div>
-      <div className="p-4 bg-lime-500 rounded-md">
+      <div className="p-4 bg-lime-500 rounded-md mb-20">
         <iframe
           className=""
           // Handle hover (or click) to display proper animation
