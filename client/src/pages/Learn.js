@@ -7,47 +7,101 @@ import GreyTwo from "../assets/2_grey_pht.png";
 import GreyThree from "../assets/3_grey_pht.png";
 
 export default function Learn() {
-  // const [isHoveringOne, setIsHoveringOne] = useState(false);
-  // const [isHoveringTwo, setIsHoveringTwo] = useState(false);
-  // const [isHoveringThree, setIsHoveringThree] = useState(false);
-  // // Handle hover and click on icons
-  // //One
-  // function handleMouseEnterOne(e) {
-  //   setIsHoveringOne(true);
-  // }
+  // default video is number 1
+  const [currentNumber, setCurrentNumber] = useState(1);
 
-  // function handleMouseLeaveOne(e) {
-  //   setIsHoveringOne(false);
-  // }
+  function handleClickOne(e) {
+    e.currentTarget.src = GreenOne;
+    setCurrentNumber(1);
+  }
 
-  // //Two
-  // function handleMouseEnterTwo(e) {
-  //   setIsHoveringTwo(true);
-  // }
+  function handleClickTwo(e) {
+    e.currentTarget.src = GreenTwo;
+    setCurrentNumber(2);
+  }
 
-  // function handleMouseLeaveTwo(e) {
-  //   setIsHoveringTwo(false);
-  // }
+  function handleClickThree(e) {
+    e.currentTarget.src = GreenThree;
+    setCurrentNumber(3);
+  }
 
-  // //Three
-  // function handleMouseEnterThree(e) {
-  //   setIsHoveringThree(true);
-  // }
+  // non-active icons are grey again
+  function handleGreenOne() {
+    const two = document.getElementById("two");
+    two.src = GreyTwo;
+    const three = document.getElementById("three");
+    three.src = GreyThree;
+  }
 
-  // function handleMouseLeaveThree(e) {
-  //   setIsHoveringThree(false);
-  // }
+  function handleGreenTwo() {
+    const one = document.getElementById("one");
+    one.src = GreyOne;
+    const three = document.getElementById("three");
+    three.src = GreyThree;
+  }
 
-  /* <div
-          onMouseEnter={handleMouseEnterThree}
-          onMouseLeave={handleMouseLeaveThree}
-        >
-          {isHoveringThree ? (
-            <img src={GreenThree} className="w-60"></img>
-          ) : (
-            <img src={GreyThree} className="w-60"></img>
-          )}
-        </div> */
+  function handleGreenThree() {
+    const one = document.getElementById("one");
+    one.src = GreyOne;
+    const two = document.getElementById("two");
+    two.src = GreyTwo;
+  }
+
+  // Render video based on currentNumber
+  let video;
+
+  if (currentNumber === 1) {
+    video = (
+      <div className="p-4 bg-lime-500 rounded-md mb-20">
+        <iframe
+          className=""
+          // Handle hover (or click) to display proper animation
+          src="https://www.youtube.com/embed/C0DPdy98e4c"
+          width={1000}
+          height={500}
+          frameborder="0"
+          allow="autoplay; encrypted-media"
+          allowfullscreen
+          title="video"
+        />{" "}
+      </div>
+    );
+    handleGreenOne();
+  } else if (currentNumber === 2) {
+    video = (
+      <div className="p-4 bg-lime-500 rounded-md mb-20">
+        <iframe
+          className=""
+          // Handle hover (or click) to display proper animation
+          src="https://www.youtube.com/embed/1prweT95Mo0"
+          width={1000}
+          height={500}
+          frameborder="0"
+          allow="autoplay; encrypted-media"
+          allowfullscreen
+          title="video"
+        />{" "}
+      </div>
+    );
+    handleGreenTwo();
+  } else if (currentNumber === 3) {
+    video = (
+      <div className="p-4 bg-lime-500 rounded-md mb-20">
+        <iframe
+          className=""
+          // Handle hover (or click) to display proper animation
+          src="https://www.youtube.com/embed/BA-Wi4fdcVE"
+          width={1000}
+          height={500}
+          frameborder="0"
+          allow="autoplay; encrypted-media"
+          allowfullscreen
+          title="video"
+        />{" "}
+      </div>
+    );
+    handleGreenThree();
+  }
 
   return (
     <div className="flex flex-col justify-center items-center mt-20">
@@ -90,37 +144,31 @@ export default function Learn() {
           <img
             src={GreyOne}
             className="w-60 hover:cursor-pointer"
-            onClick={(e) => (e.currentTarget.src = GreenOne)}
+            onClick={handleClickOne}
+            id="one"
           ></img>
         </div>
         <div>
           <img
             src={GreyTwo}
             className="w-60 hover:cursor-pointer"
-            onClick={(e) => (e.currentTarget.src = GreenTwo)}
+            onClick={handleClickTwo}
+            id="two"
           ></img>
         </div>
         <div>
           <img
             src={GreyThree}
             className="w-60 hover:cursor-pointer"
-            onClick={(e) => (e.currentTarget.src = GreenThree)}
+            onClick={handleClickThree}
+            id="three"
           ></img>
         </div>
       </div>
-      <div className="p-4 bg-lime-500 rounded-md mb-20">
-        <iframe
-          className=""
-          // Handle hover (or click) to display proper animation
-          src="https://www.youtube.com/embed/C0DPdy98e4c"
-          width={1000}
-          height={500}
-          frameborder="0"
-          allow="autoplay; encrypted-media"
-          allowfullscreen
-          title="video"
-        />{" "}
-      </div>
+      {video}
+      <button onClick={(e) => console.log(currentNumber)}>
+        Current Number
+      </button>
     </div>
   );
 }
