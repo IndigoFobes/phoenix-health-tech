@@ -29,12 +29,11 @@ export default function Purchase() {
           </p>
         </container>
       </div>
-      <div className="grid grid-cols-6 mt-20">
+      <div className="grid grid-cols-6 mt-20 mb-20">
         <div className="col-start-2 col-end-6 text-center items-center">
           <h2 className="font-semibold text-2xl text-blue-900 mb-2">
             HVAC Unit
           </h2>
-
           {showItem ? (
             <div>
               <button
