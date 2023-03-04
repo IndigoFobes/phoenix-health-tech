@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import GreenOne from "../assets/1_green_pht.png";
 import GreenTwo from "../assets/2_green_pht.png";
 import GreenThree from "../assets/3_green_pht.png";
@@ -26,26 +26,35 @@ export default function Learn() {
   }
 
   // non-active icons are grey again
-  function handleGreenOne() {
-    const two = document.getElementById("two");
-    two.src = GreyTwo;
-    const three = document.getElementById("three");
-    three.src = GreyThree;
-  }
+  // function handleGreenOne() {
+  //   const two = document.getElementById("two");
+  //   two.src = GreyTwo;
+  //   console.log(two);
+  //   const three = document.getElementById("three");
+  //   three.src = GreyThree;
+  // }
 
-  function handleGreenTwo() {
-    const one = document.getElementById("one");
-    one.src = GreyOne;
-    const three = document.getElementById("three");
-    three.src = GreyThree;
-  }
+  // function HandleGreenOne() {
+  //   useEffect(() => {
+  //     const two = document.getElementById("two");
+  //     console.log(two);
+  //   }),
+  //     [];
+  // }
 
-  function handleGreenThree() {
-    const one = document.getElementById("one");
-    one.src = GreyOne;
-    const two = document.getElementById("two");
-    two.src = GreyTwo;
-  }
+  // function handleGreenTwo() {
+  //   const one = document.getElementById("one");
+  //   one.src = GreyOne;
+  //   const three = document.getElementById("three");
+  //   three.src = GreyThree;
+  // }
+
+  // function handleGreenThree() {
+  //   const one = document.getElementById("one");
+  //   one.src = GreyOne;
+  //   const two = document.getElementById("two");
+  //   two.src = GreyTwo;
+  // }
 
   // Render video based on currentNumber
   let video;
@@ -66,7 +75,7 @@ export default function Learn() {
         />{" "}
       </div>
     );
-    handleGreenOne();
+    //handleGreenOne();
   } else if (currentNumber === 2) {
     video = (
       <div className="p-4 bg-lime-500 rounded-md mb-20">
@@ -83,7 +92,7 @@ export default function Learn() {
         />{" "}
       </div>
     );
-    handleGreenTwo();
+    // handleGreenTwo();
   } else if (currentNumber === 3) {
     video = (
       <div className="p-4 bg-lime-500 rounded-md mb-20">
@@ -100,7 +109,9 @@ export default function Learn() {
         />{" "}
       </div>
     );
-    handleGreenThree();
+    // handleGreenThree();
+  } else {
+    video = <p>No video to display</p>;
   }
 
   return (
