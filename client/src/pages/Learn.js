@@ -10,51 +10,45 @@ export default function Learn() {
   // default video is number 1
   const [currentNumber, setCurrentNumber] = useState(1);
 
-  function handleClickOne(e) {
+  function HandleClickOne(e) {
     e.currentTarget.src = GreenOne;
     setCurrentNumber(1);
+    handleGreenOne();
   }
 
-  function handleClickTwo(e) {
+  function HandleClickTwo(e) {
     e.currentTarget.src = GreenTwo;
     setCurrentNumber(2);
+    handleGreenTwo();
   }
 
-  function handleClickThree(e) {
+  function HandleClickThree(e) {
     e.currentTarget.src = GreenThree;
     setCurrentNumber(3);
+    handleGreenThree();
   }
 
   // non-active icons are grey again
-  // function handleGreenOne() {
-  //   const two = document.getElementById("two");
-  //   two.src = GreyTwo;
-  //   console.log(two);
-  //   const three = document.getElementById("three");
-  //   three.src = GreyThree;
-  // }
+  function handleGreenOne() {
+    const two = document.getElementById("two");
+    two.src = GreyTwo;
+    const three = document.getElementById("three");
+    three.src = GreyThree;
+  }
 
-  // function HandleGreenOne() {
-  //   useEffect(() => {
-  //     const two = document.getElementById("two");
-  //     console.log(two);
-  //   }),
-  //     [];
-  // }
+  function handleGreenTwo() {
+    const one = document.getElementById("one");
+    one.src = GreyOne;
+    const three = document.getElementById("three");
+    three.src = GreyThree;
+  }
 
-  // function handleGreenTwo() {
-  //   const one = document.getElementById("one");
-  //   one.src = GreyOne;
-  //   const three = document.getElementById("three");
-  //   three.src = GreyThree;
-  // }
-
-  // function handleGreenThree() {
-  //   const one = document.getElementById("one");
-  //   one.src = GreyOne;
-  //   const two = document.getElementById("two");
-  //   two.src = GreyTwo;
-  // }
+  function handleGreenThree() {
+    const one = document.getElementById("one");
+    one.src = GreyOne;
+    const two = document.getElementById("two");
+    two.src = GreyTwo;
+  }
 
   // Render video based on currentNumber
   let video;
@@ -153,9 +147,9 @@ export default function Learn() {
       <div className="flex space-x-40 pb-20">
         <div>
           <img
-            src={GreyOne}
+            src={GreenOne}
             className="w-60 hover:cursor-pointer"
-            onClick={handleClickOne}
+            onClick={HandleClickOne}
             id="one"
           ></img>
         </div>
@@ -163,7 +157,7 @@ export default function Learn() {
           <img
             src={GreyTwo}
             className="w-60 hover:cursor-pointer"
-            onClick={handleClickTwo}
+            onClick={HandleClickTwo}
             id="two"
           ></img>
         </div>
@@ -171,15 +165,12 @@ export default function Learn() {
           <img
             src={GreyThree}
             className="w-60 hover:cursor-pointer"
-            onClick={handleClickThree}
+            onClick={HandleClickThree}
             id="three"
           ></img>
         </div>
       </div>
       {video}
-      <button onClick={(e) => console.log(currentNumber)}>
-        Current Number
-      </button>
     </div>
   );
 }
