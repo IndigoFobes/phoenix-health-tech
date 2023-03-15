@@ -33,7 +33,7 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="h-screen flex items-center">
+    <div className="h-screen flex items-center mt-40">
       <container className="bg-sky-400 grid grid-cols-5 mx-auto max-w-screen-lg p-4 rounded-md mb-40">
         {/* Left side: "Contact us" with Social media icons and such */}
         <div className="col-start-1 col-end-3 pl-5 pr-20">

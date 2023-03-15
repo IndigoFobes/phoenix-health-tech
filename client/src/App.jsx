@@ -65,7 +65,7 @@ const App = () => {
     return (
       <>
         <Header currentPage={currentPage} handlePageChange={handlePageChange} />
-        <Purchase />
+        <Purchase className="flex" />
       </>
     );
   };
@@ -80,7 +80,7 @@ const App = () => {
   return (
     <Router>
       <div>
-        <main className="relative min-h-screen">
+        <main className="relative contentContainer">
           <Routes>
             <Route path="/" element={<Landing />} />
             <Route path="/home" element={renderPage()} />
