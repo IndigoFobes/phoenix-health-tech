@@ -61,6 +61,7 @@ export default function PaymentForm() {
       elements,
       confirmParams: {
         return_url: "http://localhost:3000/home",
+        receipt_email: email,
       },
     });
 

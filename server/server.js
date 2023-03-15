@@ -8,6 +8,7 @@ const e = require("express");
 const { response } = require("express");
 const bodyParser = require("body-parser");
 const endpointSecret = process.env.WEBHOOK_SECRET;
+// import Success from "../client/src/pages/Success";
 
 // connect Stripe
 const STRIPE_KEY = process.env.STRIPE_SECRET_TEST; //***TODO**** change from TEST
@@ -18,12 +19,57 @@ const app = express();
 
 // Should I use app.use(express.urlencoded({ extended: false })); instead?
 app.use(cors());
-//app.use(express.json());
+// express RAW for webhook route ONLY
+app.use("/webhook", express.raw({ type: "*/*" }));
 app.use("/", router);
 
 if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.join(__dirname, "../client/build")));
 }
+
+// Webhook to handle post-payment confirmation email
+app.post("/webhook", express.raw({ type: "application/json" }), (req, res) => {
+  const payload = req.body;
+  const signature = req.headers["stripe-signature"];
+
+  let event;
+  // console.log(payload);
+  // console.log(signature);
+  // console.log("event.data****", event.data);
+
+  try {
+    event = stripe.webhooks.constructEvent(payload, signature, endpointSecret);
+  } catch (error) {
+    console.log(error.message);
+    res.status(400).json({ message: "failed" });
+    return;
+  }
+
+  // console.log(event.type);
+  // console.log(event.data.object);
+  // console.log(event.data.object.id);
+
+  // handle the event
+  switch (event.type) {
+    case "payment_intent.succeeded":
+      const paymentIntent = event.data.object;
+      const email = event.data.object["receipt_email"];
+      console.log(event.data.object);
+      console.log(
+        `PaymentIntent for ${paymentIntent.amount} for ${email} was successful`
+      );
+      // handlePaymentIntenetSucceeded(paymentIntent);
+      break;
+    // payment_method.attached??
+    default:
+      console.log(`Unhandled event type ${event.type}`);
+  }
+
+  res.json();
+});
+
+// express JSON for all other routes
+app.use(express.json());
 
 // Nodemailer setup
 const contactEmail = nodemailer.createTransport({
@@ -43,7 +89,7 @@ contactEmail.verify((error) => {
 });
 
 // Router to send email
-router.post("/contact", (req, res) => {
+app.post("/contact", (req, res) => {
   const firstName = req.body.firstName;
   const lastName = req.body.lastName;
   const phone = req.body.phone;
@@ -53,10 +99,15 @@ router.post("/contact", (req, res) => {
     from: `Phoenix Health Technologies`,
     to: process.env.GMAIL,
     subject: "Phoenix Health Tech Contact Form Submission",
-    html: `<p>Name: ${firstName} ${lastName}</p>
-           <p>Phone number: ${phone}</p>
-           <p>Email: ${email}</p>
-           <p>Message: ${message}</p>`,
+    html: `
+    <div>
+    <h2>Hi, Will. You have a new message from your website.</h2>
+    <h3>Customer details:</h3>
+    <p>Name: ${firstName} ${lastName}</p>
+    <p>Phone number: ${phone}</p>
+    <p>Email: ${email}</p>
+    <p>Message: ${message}</p>
+    </div>`,
   };
   contactEmail.sendMail(mail, (error) => {
     if (error) {
@@ -74,11 +125,11 @@ app.post("/payment", async (req, res) => {
       amount: 2000,
       currency: "USD",
       description: "HVAC Unit",
+      // receipt_email: req.body.email,
       automatic_payment_methods: {
         enabled: true,
       },
     });
-
     res.send({
       clientSecret: paymentIntent.client_secret,
     });
@@ -89,63 +140,6 @@ app.post("/payment", async (req, res) => {
       success: false,
     });
   }
-});
-
-// Webhook to handle post-payment confirmation email
-app.post("/webhook", express.raw({ type: "application/json" }), (req, res) => {
-  // let event = req.body;
-  // console.log(event.type);
-  // console.log(event.data.object);
-  // console.log(event.data.object.id);
-  // TODO *** once I have my endpoint on the dashboard; check out: https://stripe.com/docs/webhooks/signatures#verify-official-libraries
-  // if (endpointSecret) {
-  //   const signature = req.headers["stripe-signature"];
-  //   try {
-  //     event = stripe.webhooks.constructEvent(
-  //       req.body,
-  //       signature,
-  //       endpointSecret
-  //     );
-  //   } catch (err) {
-  //     console.log(`Webhook signature verification failed.`, err.message);
-  //     return response.sendStatus(400);
-  //   }
-  // }
-  const payload = req.body;
-  const signature = req.headers["stripe-signature"];
-
-  let event;
-  console.log(payload);
-  console.log(signature);
-
-  try {
-    event = stripe.webhooks.constructEvent(payload, signature, endpointSecret);
-  } catch (error) {
-    console.log(error.message);
-    res.status(400).json({ message: "failed" });
-    return;
-  }
-
-  console.log(event.type);
-  console.log(event.data.object);
-  console.log(event.data.object.id);
-
-  // handle the event
-  // switch (event.type) {
-  //   case "payment_intent.succeeded":
-  //     const paymentIntent = event.data.object;
-  //     const email = event.data.object["receipt_email"];
-  //     console.log(
-  //       `PaymentIntent for ${paymentIntent.amount} for ${email} was successful`
-  //     );
-  //     // handlePaymentIntenetSucceeded(paymentIntent);
-  //     break;
-  //   // payment_method.attached??
-  //   default:
-  //     console.log(`Unhandled event type ${event.type}`);
-  // }
-
-  res.json();
 });
 
 app.listen(PORT, () => {
