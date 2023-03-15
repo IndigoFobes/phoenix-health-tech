@@ -5,6 +5,9 @@ const cors = require("cors");
 const nodemailer = require("nodemailer");
 const path = require("path");
 const e = require("express");
+const { response } = require("express");
+const bodyParser = require("body-parser");
+const endpointSecret = process.env.WEBHOOK_SECRET;
 
 // connect Stripe
 const STRIPE_KEY = process.env.STRIPE_SECRET_TEST; //***TODO**** change from TEST
@@ -15,7 +18,7 @@ const app = express();
 
 // Should I use app.use(express.urlencoded({ extended: false })); instead?
 app.use(cors());
-app.use(express.json());
+//app.use(express.json());
 app.use("/", router);
 
 if (process.env.NODE_ENV === "production") {
@@ -86,6 +89,63 @@ app.post("/payment", async (req, res) => {
       success: false,
     });
   }
+});
+
+// Webhook to handle post-payment confirmation email
+app.post("/webhook", express.raw({ type: "application/json" }), (req, res) => {
+  // let event = req.body;
+  // console.log(event.type);
+  // console.log(event.data.object);
+  // console.log(event.data.object.id);
+  // TODO *** once I have my endpoint on the dashboard; check out: https://stripe.com/docs/webhooks/signatures#verify-official-libraries
+  // if (endpointSecret) {
+  //   const signature = req.headers["stripe-signature"];
+  //   try {
+  //     event = stripe.webhooks.constructEvent(
+  //       req.body,
+  //       signature,
+  //       endpointSecret
+  //     );
+  //   } catch (err) {
+  //     console.log(`Webhook signature verification failed.`, err.message);
+  //     return response.sendStatus(400);
+  //   }
+  // }
+  const payload = req.body;
+  const signature = req.headers["stripe-signature"];
+
+  let event;
+  console.log(payload);
+  console.log(signature);
+
+  try {
+    event = stripe.webhooks.constructEvent(payload, signature, endpointSecret);
+  } catch (error) {
+    console.log(error.message);
+    res.status(400).json({ message: "failed" });
+    return;
+  }
+
+  console.log(event.type);
+  console.log(event.data.object);
+  console.log(event.data.object.id);
+
+  // handle the event
+  // switch (event.type) {
+  //   case "payment_intent.succeeded":
+  //     const paymentIntent = event.data.object;
+  //     const email = event.data.object["receipt_email"];
+  //     console.log(
+  //       `PaymentIntent for ${paymentIntent.amount} for ${email} was successful`
+  //     );
+  //     // handlePaymentIntenetSucceeded(paymentIntent);
+  //     break;
+  //   // payment_method.attached??
+  //   default:
+  //     console.log(`Unhandled event type ${event.type}`);
+  // }
+
+  res.json();
 });
 
 app.listen(PORT, () => {

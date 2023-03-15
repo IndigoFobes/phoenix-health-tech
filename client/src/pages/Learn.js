@@ -59,7 +59,7 @@ export default function Learn() {
         <iframe
           className=""
           // Handle hover (or click) to display proper animation
-          src="https://www.youtube.com/embed/C0DPdy98e4c"
+          src={"https://www.youtube.com/embed/C0DPdy98e4c"}
           width={1000}
           height={500}
           frameborder="0"
@@ -69,6 +69,7 @@ export default function Learn() {
         />{" "}
       </div>
     );
+    console.log(video.props.children[0].props);
     //handleGreenOne();
   } else if (currentNumber === 2) {
     video = (
