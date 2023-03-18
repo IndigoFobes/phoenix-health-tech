@@ -1,3 +1,26 @@
+
+.active {
+	background-color: #154F7F;
+	color: #FFFFFF
+  }
+
+.non-active {
+	background-color: #0E4370;
+	
+}
+
+.non-active:hover {
+	background-color: #154F7F;
+}
+
+.title-text {
+	color: #0E4370
+}
+
+.dark-blue-border {
+	border-color: #0E4370
+}
+
 .App {
   text-align: center;
 }
@@ -111,6 +134,10 @@
 	transform-origin: 0px 10.2px;
 	-webkit-animation: loading 2s infinite ease;
 	animation: loading 2s infinite ease;
+  }
+
+  .warm-gray {
+	background-color: #A8A29E;
   }
 
 /* button {

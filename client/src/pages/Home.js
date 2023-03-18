@@ -4,6 +4,8 @@ import React, { useState } from "react";
 import blue from "../assets/blue_triangle_pht.png";
 import green from "../assets/green_triangle_pht.png";
 import orange from "../assets/orange_triangle_pht.png";
+// import Wings from "../assets/PHT_WINGS.png";
+import CleanHome from "../assets/clean_home_pht.jpg";
 
 // import Modal from "../components/Modal";
 
@@ -48,10 +50,26 @@ export default function Home() {
   // }
 
   return (
-    <div>
+    <div
+    // style={{
+    //   backgroundImage: `url(${Wings})`,
+    //   backgroundRepeat: "no-repeat",
+    //   backgroundSize: "90%",
+    //   backgroundPositionX: "center",
+    // }}
+    >
       <div className="grid grid-cols-6">
+        <h1 className="mt-10 text-4xl font-bold col-start-2 col-end-6 text-center mb-10 title-text">
+          How clean is your home's air?
+        </h1>
+        <div className="relative col-start-2 col-end-6 mb-10 mx-20 rounded-sm transition ease-in-out duration-1200 blur-sm hover:blur-none">
+          <img src={CleanHome}></img>
+          <p className="text-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-2xl font-bold warm-gray px-4 py-4 rounded-sm text-white">
+            Not quite as clean as you think.
+          </p>
+        </div>
         <container className="col-start-2 col-end-5 mb-5 mt-10">
-          <h1 className="font-sans font-semibold text-2xl text-blue-900 ">
+          <h1 className="font-sans font-semibold text-2xl title-text ">
             The Phoenix Health Technology Solution
           </h1>
         </container>
@@ -110,7 +128,7 @@ export default function Home() {
         >
           <img
             src={orange}
-            className={`w-1/4 ${
+            className={`w-1/4 transition ease-in-out duration-800 ${
               isHoveringYellow ? "opacity-100" : "opacity-60"
             }`}
           ></img>
@@ -123,7 +141,7 @@ export default function Home() {
         >
           <img
             src={green}
-            className={`w-1/4 ${
+            className={`w-1/4 transition ease-in-out duration-800 ${
               isHoveringGreen ? "opacity-100" : "opacity-60"
             }`}
           ></img>
@@ -136,7 +154,9 @@ export default function Home() {
         >
           <img
             src={blue}
-            className={`w-1/4 ${isHoveringBlue ? "opacity-100" : "opacity-60"}`}
+            className={`w-1/4 transition ease-in-out duration-800 ${
+              isHoveringBlue ? "opacity-100" : "opacity-60"
+            }`}
           ></img>
           <h3 className="font-semibold text-xl">Prevention First</h3>
         </div>
@@ -157,7 +177,7 @@ export default function Home() {
         {/* Conditionally render extra space if hover is not happening */}
         {!isHoveringYellow && !isHoveringGreen && !isHoveringBlue && (
           <div className="flex justify-center text-2xl font-medium">
-            <h3 className="border-4 border-sky-400 px-10 py-6 rounded-md opacity-75">
+            <h3 className="border-4 dark-blue-border px-10 py-6 rounded-md opacity-75">
               Mouse over an icon to learn more.
             </h3>
           </div>

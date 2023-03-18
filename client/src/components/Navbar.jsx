@@ -27,8 +27,8 @@ function Navbar({ currentPage, handlePageChange }) {
                 onClick={() => handlePageChange("Home")}
                 className={
                   currentPage === "Home"
-                    ? "nav-link active py-3 2xl:py-4 px-6 md:px-12 2xl:px-20 rounded-l-md text-blue-900"
-                    : "nav-link bg-sky-400 py-3 2xl:py-4 px-6 md:px-12 rounded-l-md 2xl:px-20"
+                    ? "nav-link active py-3 2xl:py-4 px-6 md:px-12 2xl:px-20 rounded-l-sm"
+                    : "nav-link non-active py-3 2xl:py-4 px-6 md:px-12 rounded-l-sm 2xl:px-20"
                 }
               >
                 Home
@@ -42,8 +42,8 @@ function Navbar({ currentPage, handlePageChange }) {
                 onClick={() => handlePageChange("About")}
                 className={
                   currentPage === "About"
-                    ? "nav-link active py-3 2xl:py-4 px-6 md:px-12 2xl:px-20 text-blue-900"
-                    : "nav-link bg-sky-400 py-3 2xl:py-4 px-6 md:px-12 2xl:px-20"
+                    ? "nav-link active py-3 2xl:py-4 px-6 md:px-12 2xl:px-20"
+                    : "nav-link non-active py-3 2xl:py-4 px-6 md:px-12 2xl:px-20"
                 }
               >
                 About
@@ -57,8 +57,8 @@ function Navbar({ currentPage, handlePageChange }) {
                 onClick={() => handlePageChange("Learn")}
                 className={
                   currentPage === "Learn"
-                    ? "nav-link active py-3 2xl:py-4 px-6 md:px-12 2xl:px-20 text-blue-900"
-                    : "nav-link bg-sky-400 py-3 2xl:py-4 px-6 md:px-12 2xl:px-20"
+                    ? "nav-link active py-3 2xl:py-4 px-6 md:px-12 2xl:px-20 "
+                    : "nav-link non-active py-3 2xl:py-4 px-6 md:px-12 2xl:px-20"
                 }
               >
                 Learn
@@ -72,8 +72,8 @@ function Navbar({ currentPage, handlePageChange }) {
                 onClick={() => handlePageChange("Purchase")}
                 className={
                   currentPage === "Purchase"
-                    ? "nav-link active py-3 2xl:py-4 px-6 md:px-12 2xl:px-20 text-blue-900"
-                    : "nav-link bg-sky-400 py-3 2xl:py-4 px-6 md:px-12 2xl:px-20"
+                    ? "nav-link active py-3 2xl:py-4 px-6 md:px-12 2xl:px-20"
+                    : "nav-link non-active py-3 2xl:py-4 px-6 md:px-12 2xl:px-20"
                 }
               >
                 Purchase
@@ -87,8 +87,8 @@ function Navbar({ currentPage, handlePageChange }) {
                 onClick={() => handlePageChange("Contact")}
                 className={
                   currentPage === "Contact"
-                    ? "nav-link active py-3 2xl:py-4 px-6 md:px-12 2xl:px-20 rounded-r-md text-blue-900"
-                    : "nav-link bg-sky-400 py-3 2xl:py-4 px-6 md:px-12 2xl:px-20 rounded-r-md"
+                    ? "nav-link active py-3 2xl:py-4 px-6 md:px-12 2xl:px-20 rounded-r-sm"
+                    : "nav-link non-active py-3 2xl:py-4 px-6 md:px-12 2xl:px-20 rounded-r-sm"
                 }
               >
                 Contact

@@ -14,6 +14,7 @@ import Home from "../src/pages/Home";
 import Learn from "../src/pages/Learn";
 import Purchase from "../src/pages/Purchase";
 import Footer from "../src/components/Footer";
+
 //import Home from "./pages/Home";
 
 // import css, if used
