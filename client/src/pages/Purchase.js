@@ -54,7 +54,7 @@ export default function Purchase() {
                 className="w-1/2 mx-auto mb-5"
               />
               <button
-                className="bg-amber-400 rounded-md px-4 py-2 mt-3 hover:bg-white hover:border-2 hover:border-amber-400 hover:cursor-pointer"
+                className="bg-amber-400 rounded-md px-4 py-2 mt-3 border-2 border-amber-400 hover:bg-white hover:border-2 hover:border-amber-400 hover:cursor-pointer"
                 onClick={() => setShowItem(true)}
               >
                 Purchase a Unit

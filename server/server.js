@@ -96,18 +96,42 @@ app.post("/contact", (req, res) => {
   const email = req.body.email;
   const message = req.body.message;
   const mail = {
-    from: `Phoenix Health Technologies`,
+    from: "Phoenix Health Technologies from @phoenixhealthtech.com <admin@phoenixhealthtech.com>",
     to: process.env.GMAIL,
     subject: "Phoenix Health Tech Contact Form Submission",
     html: `
-    <div>
-    <h2>Hi, Will. You have a new message from your website.</h2>
-    <h3>Customer details:</h3>
-    <p>Name: ${firstName} ${lastName}</p>
-    <p>Phone number: ${phone}</p>
-    <p>Email: ${email}</p>
-    <p>Message: ${message}</p>
-    </div>`,
+    <div style="align-content: center; margin-right: 50px">
+        <div style="gap: 10px; background-color: #F4F4F5; padding: 20px 30px; border-style: solid; border-width: 6px; border-color: #38BDF8; border-radius: 5px">
+          <div style="text-align: center">
+            <h2 style="margin-bottom: 10px; font-size: 20px; font-weight: semibold">
+              Hi, Will. You have a new message from ${firstName}.
+            </h2>
+            <h3 style="font-size: 17px; font-weight: medium; border-bottom: solid 2px #A1A1AA; margin-bottom: 10px; padding-bottom: 10px" class="text-lg font-medium border-b-2 border-gray-400 mb-3 pb-2">
+              Customer details:
+            </h3>
+          </div>
+          <div style="font-size: 14px; align-items: start; gap: 5px; padding-left: 15px">
+            <p style="display: flex">
+              <span style="font-weight: 600">Name: </span> &nbsp; ${firstName} ${lastName}
+            </p>
+            <p style="display: flex">
+              <span style="font-weight: 600">Phone number: </span> &nbsp; ${phone}
+            </p>
+            <p style="display: flex">
+              <span style="font-weight: 600">Email: </span> &nbsp; ${email}
+            </p>
+            <p style="display: flex">
+              <span style="font-weight: 600">Message: </span> &nbsp; ${message}
+            </p>
+          </div>
+          <div style="padding: 15px 10px 0; text-align: center; font-size: 12px">
+            <p>
+              Don't respond to this email. <br></br>Contact ${firstName} in a separate
+              email, or via phone, using the information provided.
+            </p>
+          </div>
+        </div>
+      </div>`,
   };
   contactEmail.sendMail(mail, (error) => {
     if (error) {
