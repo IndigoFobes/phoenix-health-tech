@@ -106,7 +106,7 @@ app.post("/contact", (req, res) => {
             <h2 style="margin-bottom: 10px; font-size: 20px; font-weight: semibold">
               Hi, Will. You have a new message from ${firstName}.
             </h2>
-            <h3 style="font-size: 17px; font-weight: medium; border-bottom: solid 2px #A1A1AA; margin-bottom: 10px; padding-bottom: 10px" class="text-lg font-medium border-b-2 border-gray-400 mb-3 pb-2">
+            <h3 style="font-size: 17px; font-weight: 500; border-bottom: solid 2px #A1A1AA; margin-bottom: 10px; padding-bottom: 10px" class="text-lg font-medium border-b-2 border-gray-400 mb-3 pb-2">
               Customer details:
             </h3>
           </div>

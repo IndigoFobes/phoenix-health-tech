@@ -108,7 +108,12 @@ export default function Home() {
           onMouseEnter={handleMouseEnterYellow}
           // onMouseLeave={handleMouseLeaveYellow}
         >
-          <img src={orange} className="w-1/6"></img>
+          <img
+            src={orange}
+            className={`w-1/4 ${
+              isHoveringYellow ? "opacity-100" : "opacity-60"
+            }`}
+          ></img>
           <h3 className="font-semibold text-xl">All Natural</h3>
         </div>
         <div
@@ -116,7 +121,12 @@ export default function Home() {
           onMouseEnter={handleMouseEnterGreen}
           // onMouseLeave={handleMouseLeaveGreen}
         >
-          <img src={green} className="w-1/6"></img>
+          <img
+            src={green}
+            className={`w-1/4 ${
+              isHoveringGreen ? "opacity-100" : "opacity-60"
+            }`}
+          ></img>
           <h3 className="font-semibold text-xl">Green Solution</h3>
         </div>
         <div
@@ -124,7 +134,10 @@ export default function Home() {
           onMouseEnter={handleMouseEnterBlue}
           // onMouseLeave={handleMouseLeaveBlue}
         >
-          <img src={blue} className="w-1/6"></img>
+          <img
+            src={blue}
+            className={`w-1/4 ${isHoveringBlue ? "opacity-100" : "opacity-60"}`}
+          ></img>
           <h3 className="font-semibold text-xl">Prevention First</h3>
         </div>
       </container>
@@ -144,14 +157,14 @@ export default function Home() {
         {/* Conditionally render extra space if hover is not happening */}
         {!isHoveringYellow && !isHoveringGreen && !isHoveringBlue && (
           <div className="flex justify-center text-2xl font-medium">
-            <h3 className="bg-sky-400 px-10 py-6 rounded-md opacity-75">
+            <h3 className="border-4 border-sky-400 px-10 py-6 rounded-md opacity-75">
               Mouse over an icon to learn more.
             </h3>
           </div>
         )}
         {/* Yellow box */}
         <div
-          className={`bg-amber-300 justify-center mt-10 mx-60 rounded-md py-10 px-20 flex-col text-center gap-5 mb-20 ${
+          className={`bg-gradient-to-br from-amber-500 to-amber-200 justify-center mt-10 mx-60 rounded-sm py-10 px-20 flex-col text-center gap-5 mb-20 ${
             isHoveringYellow ? "flex" : "hidden"
           }`}
         >
@@ -173,7 +186,7 @@ export default function Home() {
         </div>
         {/* Green box */}
         <div
-          className={`bg-lime-500 justify-center mt-10 mx-60 rounded-md py-10 px-20 flex-col text-center gap-5 mb-20 ${
+          className={`bg-gradient-to-br from-lime-500 to-yellow-200 justify-center mt-10 mx-60 rounded-md py-10 px-20 flex-col text-center gap-5 mb-20 ${
             isHoveringGreen ? "flex" : "hidden"
           }`}
         >
@@ -195,7 +208,7 @@ export default function Home() {
         </div>
         {/* Blue box */}
         <div
-          className={`bg-sky-400 justify-center mt-10 mx-60 rounded-md py-10 px-20 flex-col text-center gap-5 mb-20 ${
+          className={`bg-gradient-to-br from-sky-400 to-indigo-200 justify-center mt-10 mx-60 rounded-md py-10 px-20 flex-col text-center gap-5 mb-20 ${
             isHoveringBlue ? "flex" : "hidden"
           }`}
         >
