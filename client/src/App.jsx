@@ -29,47 +29,75 @@ const App = () => {
   //handle page change; whichever page is plugged in here will be rendered
   const handlePageChange = (page) => setCurrentPage(page);
 
-  const renderPage = () => {
-    if (currentPage === "Home") {
-      return (
-        <>
-          <Header
-            currentPage={currentPage}
-            handlePageChange={handlePageChange}
-          />
-          <Home className="flex" />
-        </>
-      );
-    } else if (currentPage === "About") {
-      return (
-        <>
-          <Header
-            currentPage={currentPage}
-            handlePageChange={handlePageChange}
-          />
-          <About />
-        </>
-      );
-    } else if (currentPage === "Landing") {
-      return <Landing />;
-    } else if (currentPage === "Learn") {
-      return (
-        <>
-          <Header
-            currentPage={currentPage}
-            handlePageChange={handlePageChange}
-          />
-          <Learn />
-        </>
-      );
-    }
-    return (
-      <>
-        <Header currentPage={currentPage} handlePageChange={handlePageChange} />
-        <Purchase className="flex" />
-      </>
-    );
-  };
+  // const renderPage = () => {
+  //   if (currentPage === "Home") {
+  //     return (
+  //       <>
+  //         <Header
+  //           currentPage={currentPage}
+  //           handlePageChange={handlePageChange}
+  //         />
+  //         <Home className="flex" />
+  //       </>
+  //     );
+  //   } else if (currentPage === "About") {
+  //     return (
+  //       <>
+  //         <Header
+  //           currentPage={currentPage}
+  //           handlePageChange={handlePageChange}
+  //         />
+  //         <About />
+  //       </>
+  //     );
+  //   } else if (currentPage === "Landing") {
+  //     return <Landing />;
+  //   } else if (currentPage === "Learn") {
+  //     return (
+  //       <>
+  //         <Header
+  //           currentPage={currentPage}
+  //           handlePageChange={handlePageChange}
+  //         />
+  //         <Learn />
+  //       </>
+  //     );
+  //   }
+  //   return (
+  //     <>
+  //       <Header currentPage={currentPage} handlePageChange={handlePageChange} />
+  //       <Purchase className="flex" />
+  //     </>
+  //   );
+  // };
+
+  const HomeLayout = () => (
+    <>
+      <Header currentPage={currentPage} handlePageChange={handlePageChange} />
+      <Home className="flex" />
+    </>
+  );
+
+  const AboutLayout = () => (
+    <>
+      <Header currentPage={currentPage} handlePageChange={handlePageChange} />
+      <About />
+    </>
+  );
+
+  const LearnLayout = () => (
+    <>
+      <Header currentPage={currentPage} handlePageChange={handlePageChange} />
+      <Learn />
+    </>
+  );
+
+  const PurchaseLayout = () => (
+    <>
+      <Header currentPage={currentPage} handlePageChange={handlePageChange} />
+      <Purchase className="flex" />
+    </>
+  );
 
   const ContactLayout = () => (
     <>
@@ -84,7 +112,10 @@ const App = () => {
         <main className="relative contentContainer">
           <Routes>
             <Route path="/" element={<Landing />} />
-            <Route path="/home" element={renderPage()} />
+            <Route path="/home" element={<HomeLayout />} />
+            <Route path="/about" element={<AboutLayout />} />
+            <Route path="/learn" element={<LearnLayout />} />
+            <Route path="/purchase" element={<PurchaseLayout />} />
             <Route path="/contact" element={<ContactLayout />} />
           </Routes>
         </main>

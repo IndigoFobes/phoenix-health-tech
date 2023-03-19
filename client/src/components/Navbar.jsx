@@ -35,7 +35,7 @@ function Navbar({ currentPage, handlePageChange }) {
               </a>
             </li>
           </Link>
-          <Link to="/home">
+          <Link to="/about">
             <li>
               <a
                 href="#about"
@@ -50,7 +50,7 @@ function Navbar({ currentPage, handlePageChange }) {
               </a>
             </li>
           </Link>
-          <Link to="/home">
+          <Link to="/learn">
             <li>
               <a
                 href="#learn"
@@ -65,7 +65,7 @@ function Navbar({ currentPage, handlePageChange }) {
               </a>
             </li>
           </Link>
-          <Link to="/home">
+          <Link to="/purchase">
             <li>
               <a
                 href="#purchase"
