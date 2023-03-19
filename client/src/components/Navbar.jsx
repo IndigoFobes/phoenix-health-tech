@@ -1,11 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import PHTLogo from "../assets/PHT_LOGO_BLUE.png";
+import PHTTitle from "../assets/PHT_TITLE_BLUE(2).png";
 
 function Navbar({ currentPage, handlePageChange }) {
   return (
-    <div>
-      <div className="absolute top-5 left-5 2xl:left-10">
+    <div className="flex flex-col items-center">
+      {/* <div className="absolute top-5 left-5 2xl:left-10">
         <div className="grid grid-cols-8">
           <div className="col-start-1 w-60 xl:w-80">
             <Link to="/">
@@ -17,9 +18,14 @@ function Navbar({ currentPage, handlePageChange }) {
             </Link>
           </div>
         </div>
+      </div> */}
+      <div className="w-1/3 mt-5">
+        <Link to="/" target="blank">
+          <img src={PHTTitle} alt="Phoenix Health Technology"></img>
+        </Link>
       </div>
-      <nav className="flex w-4/5 mx-auto justify-center py-16 mb-10">
-        <ul className="relative flex w-full flex-row border-none justify-center lg:ml-20 text-white font-semibold text-xl">
+      <nav className="flex w-4/5 mx-auto justify-center pb-16 my-10">
+        <ul className="relative flex w-full flex-row border-none justify-center text-white font-semibold text-xl">
           <Link to="/home">
             <li>
               <a
