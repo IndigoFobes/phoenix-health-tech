@@ -3,7 +3,7 @@ import React, { useState } from "react";
 // import Modal from "../components/Modal";
 import blue from "../assets/blue_triangle_pht.png";
 import green from "../assets/green_triangle_pht.png";
-import orange from "../assets/orange_triangle_pht.png";
+import yellow from "../assets/orange_triangle_pht.png";
 // import Wings from "../assets/PHT_WINGS.png";
 import CleanHome from "../assets/clean_home_pht.jpg";
 
@@ -59,23 +59,23 @@ export default function Home() {
     // }}
     >
       <div className="grid grid-cols-6">
-        <h1 className="mt-10 text-4xl font-bold col-start-2 col-end-6 text-center mb-10 title-text">
+        <h1 className="mt-10 text-xl col-start-1 col-end-7 sm:text-2xl md:text-3xl lg:text-4xl font-bold md:col-start-2 md:col-end-6 text-center mb-10 title-text">
           How clean is your home's air?
         </h1>
-        <div className="relative col-start-2 col-end-6 mb-10 mx-20 rounded-sm transition ease-in-out duration-1200 blur-sm hover:blur-none">
+        <div className="relative col-start-1 col-end-7 mb-5 md:mb-10 mx-5 sm:mx-10 md:col-start-2 md:col-end-6 rounded-sm transition ease-in-out duration-1200 blur-sm hover:blur-none">
           <img src={CleanHome}></img>
-          <p className="text-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-2xl font-bold warm-gray px-4 py-4 rounded-sm text-white">
+          <p className="text-center text-xs sm:text-sm md:text-base lg:text-2xl absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-bold warm-gray px-4 py-4 rounded-sm text-white">
             Not quite as clean as you think.
           </p>
         </div>
-        <container className="col-start-2 col-end-5 mb-5 mt-10">
-          <h1 className="font-sans font-semibold text-2xl title-text ">
+        <container className="col-start-2 col-end-6 mb-5 mt-5 md:mt-10">
+          <h1 className="text-center md:text-left font-sans font-semibold sm:text-xl md:text-2xl title-text ">
             The Phoenix Health Technology Solution
           </h1>
         </container>
       </div>
       <div className="grid grid-cols-6">
-        <container className="col-start-2 col-end-6">
+        <container className="col-start-1 col-end-7 mx-8 md:col-start-2 md:col-end-6 text-center md:text-left text-sm sm:text-base">
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
             laoreet a nisl sit amet facilisis. Vestibulum id tellus felis.
@@ -112,9 +112,9 @@ export default function Home() {
           </p>
         </container>
       </div>
-      {/* placeholder icons */}
+      {/* icons */}
       <container
-        className="flex justify-around mt-20 mx-60"
+        className="flex justify-between mt-5 mx-5 lg:mt-20 lg:mx-60"
         onMouseLeave={() => {
           setisHoveringBlue(false);
           setisHoveringGreen(false);
@@ -122,17 +122,19 @@ export default function Home() {
         }}
       >
         <div
-          className="flex flex-col justify-center items-center mt-1.5"
+          className="flex flex-col justify-center items-center mt-1.5 lg:mr-10"
           onMouseEnter={handleMouseEnterYellow}
           // onMouseLeave={handleMouseLeaveYellow}
         >
           <img
-            src={orange}
+            src={yellow}
             className={`w-1/4 transition ease-in-out duration-800 ${
               isHoveringYellow ? "opacity-100" : "opacity-60"
             }`}
           ></img>
-          <h3 className="font-semibold text-xl">All Natural</h3>
+          <h3 className="font-semibold text-xs sm:text-base md:text-xl">
+            All Natural
+          </h3>
         </div>
         <div
           className="flex flex-col justify-center items-center mt-1.5"
@@ -145,10 +147,12 @@ export default function Home() {
               isHoveringGreen ? "opacity-100" : "opacity-60"
             }`}
           ></img>
-          <h3 className="font-semibold text-xl">Green Solution</h3>
+          <h3 className="font-semibold text-xs sm:text-base md:text-xl">
+            Green Solution
+          </h3>
         </div>
         <div
-          className="flex flex-col justify-center items-center mt-1.5"
+          className="flex flex-col justify-center items-center mt-1.5 lg:ml-10"
           onMouseEnter={handleMouseEnterBlue}
           // onMouseLeave={handleMouseLeaveBlue}
         >
@@ -158,11 +162,13 @@ export default function Home() {
               isHoveringBlue ? "opacity-100" : "opacity-60"
             }`}
           ></img>
-          <h3 className="font-semibold text-xl">Prevention First</h3>
+          <h3 className="font-semibold text-xs sm:text-base md:text-xl">
+            Prevention First
+          </h3>
         </div>
       </container>
       <div
-        className="h-[27rem] flex flex-col justify-center items-center"
+        className="h-[40rem] flex flex-col justify-center items-center"
         onMouseEnter={() => {
           setisHoveringBlue(false);
           setisHoveringGreen(false);
@@ -176,7 +182,7 @@ export default function Home() {
       >
         {/* Conditionally render extra space if hover is not happening */}
         {!isHoveringYellow && !isHoveringGreen && !isHoveringBlue && (
-          <div className="flex justify-center text-2xl font-medium">
+          <div className="hidden md:flex justify-center text-2xl font-medium">
             <h3 className="border-4 dark-blue-border px-10 py-6 rounded-md opacity-75">
               Mouse over an icon to learn more.
             </h3>
@@ -184,12 +190,14 @@ export default function Home() {
         )}
         {/* Yellow box */}
         <div
-          className={`bg-gradient-to-br from-amber-500 to-amber-200 justify-center mt-10 mx-60 rounded-sm py-10 px-20 flex-col text-center gap-5 mb-20 ${
+          className={`bg-gradient-to-br from-amber-500 to-amber-200 justify-center mt-5 md:mx-20 md:rounded-sm lg:mt-10 lg:mx-40 py-5 px-8 md:py-10 md:px-20 flex-col text-center gap-5 mb-20 ${
             isHoveringYellow ? "flex" : "hidden"
           }`}
         >
-          <h2 className="font-semibold text-2xl">An All Natural Solution</h2>
-          <p className="font-medium">
+          <h2 className="font-semibold text-xl sm:text-2xl">
+            An All Natural Solution
+          </h2>
+          <p className="font-medium text-sm sm:text-base">
             Mauris in sagittis metus. Sed sodales odio id sem sodales, sed
             bibendum risus ultrices. Maecenas magna velit, imperdiet vel dui id,
             eleifend fermentum odio. Integer at ultricies mi, nec eleifend
@@ -206,11 +214,13 @@ export default function Home() {
         </div>
         {/* Green box */}
         <div
-          className={`bg-gradient-to-br from-lime-500 to-yellow-200 justify-center mt-10 mx-60 rounded-md py-10 px-20 flex-col text-center gap-5 mb-20 ${
+          className={`bg-gradient-to-br from-lime-500 to-yellow-200 justify-center mt-5 md:mx-20 md:rounded-sm lg:mt-10 lg:mx-40 py-5 px-8 md:py-10 md:px-20 flex-col text-center gap-5 mb-20 ${
             isHoveringGreen ? "flex" : "hidden"
           }`}
         >
-          <h2 className="font-semibold text-2xl">A Green Solution</h2>
+          <h2 className="font-semibold text-xl sm:text-2xl">
+            A Green Solution
+          </h2>
           <p className="font-medium">
             Mauris in sagittis metus. Sed sodales odio id sem sodales, sed
             bibendum risus ultrices. Maecenas magna velit, imperdiet vel dui id,
@@ -228,11 +238,13 @@ export default function Home() {
         </div>
         {/* Blue box */}
         <div
-          className={`bg-gradient-to-br from-sky-400 to-indigo-200 justify-center mt-10 mx-60 rounded-md py-10 px-20 flex-col text-center gap-5 mb-20 ${
+          className={`bg-gradient-to-br from-sky-400 to-indigo-200 justify-center mt-5 md:mx-20 md:rounded-sm lg:mt-10 lg:mx-40 py-5 px-8 md:py-10 md:px-20 flex-col text-center gap-5 mb-20 ${
             isHoveringBlue ? "flex" : "hidden"
           }`}
         >
-          <h2 className="font-semibold text-2xl">Prevention First</h2>
+          <h2 className="font-semibold text-xl sm:text-2xl">
+            Prevention First
+          </h2>
           <p className="font-medium">
             Mauris in sagittis metus. Sed sodales odio id sem sodales, sed
             bibendum risus ultrices. Maecenas magna velit, imperdiet vel dui id,
