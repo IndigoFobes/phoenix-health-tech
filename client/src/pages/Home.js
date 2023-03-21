@@ -62,14 +62,14 @@ export default function Home() {
         <h1 className="mt-10 text-xl col-start-1 col-end-7 sm:text-2xl md:text-3xl lg:text-4xl font-bold md:col-start-2 md:col-end-6 text-center mb-10 title-text">
           How clean is your home's air?
         </h1>
-        <div className="relative col-start-1 col-end-7 mb-5 md:mb-10 mx-5 sm:mx-10 md:col-start-2 md:col-end-6 rounded-sm transition ease-in-out duration-1200 blur-sm hover:blur-none">
-          <img src={CleanHome}></img>
+        <div className="cursor-pointer relative col-start-1 col-end-7 mb-5 md:mb-10 mx-5 sm:mx-10 md:col-start-2 md:col-end-6 transition ease-in-out duration-1200 blur-sm hover:blur-none">
+          <img className="rounded-sm" src={CleanHome}></img>
           <p className="text-center text-xs sm:text-sm md:text-base lg:text-2xl absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-bold warm-gray px-4 py-4 rounded-sm text-white">
             Not quite as clean as you think.
           </p>
         </div>
         <container className="col-start-2 col-end-6 mb-5 mt-5 md:mt-10">
-          <h1 className="text-center md:text-left font-sans font-semibold sm:text-xl md:text-2xl title-text ">
+          <h1 className="text-center font-sans font-semibold sm:text-xl md:text-2xl lg:text-3xl title-text ">
             The Phoenix Health Technology Solution
           </h1>
         </container>

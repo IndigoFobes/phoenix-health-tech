@@ -8,46 +8,11 @@ import PHTTitle from "../assets/PHT_TITLE_BLUE(2).png";
 function Navbar({ currentPage, handlePageChange }) {
   return (
     <nav className="flex flex-col items-center">
-      {/* <div className="absolute top-5 left-5 2xl:left-10">
-        <div className="grid grid-cols-8">
-          <div className="col-start-1 w-60 xl:w-80">
-            <Link to="/">
-              <img
-                className="object-cover "
-                src={PHTLogo}
-                alt="PHT Logo, colorful phoenix"
-              ></img>
-            </Link>
-          </div>
-        </div>
-      </div> */}
       <div className="w-1/3 mt-5">
         <Link to="/" target="blank">
           <img src={PHTTitle} alt="Phoenix Health Technology"></img>
         </Link>
       </div>
-      {/* <button
-        data-collapse-toggle="navbar-default"
-        type="button"
-        className="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-        aria-controls="navbar-default"
-        aria-expanded="false"
-      >
-        <span class="sr-only">Open main menu</span>
-        <svg
-          class="w-6 h-6"
-          aria-hidden="true"
-          fill="currentColor"
-          viewBox="0 0 20 20"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            fill-rule="evenodd"
-            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-            clipRule="evenodd"
-          ></path>
-        </svg>
-      </button> */}
       {/* Mobile / iPad toggle menu */}
       <div className="md:hidden relative w-3/4 justify-center mb-10">
         <input
@@ -60,7 +25,7 @@ function Navbar({ currentPage, handlePageChange }) {
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
-            stroke="currentColor"
+            stroke="#0E4370"
           >
             <path
               stroke-linecap="round"
@@ -72,7 +37,7 @@ function Navbar({ currentPage, handlePageChange }) {
         </div>
         {/* Mobile menu content */}
         <div className="overflow-hidden transition-all duration-500 max-h-0 peer-checked:max-h-full">
-          <div className="m-5 mt-10 flex flex-col">
+          <div className="m-5 pt-5 flex flex-col">
             <ul className="bg-gray-100 rounded-sm flex flex-col font-medium text-lg focus:title-text">
               <Link to="/home">
                 <li
@@ -81,12 +46,9 @@ function Navbar({ currentPage, handlePageChange }) {
                       ? "title-text font-bold bg-gray-300 text-center rounded-t-sm py-1"
                       : "text-black text-center py-1"
                   }
+                  onClick={() => handlePageChange("Home")}
                 >
-                  <a
-                    aria-current="page"
-                    href="#home"
-                    onClick={() => handlePageChange("Home")}
-                  >
+                  <a aria-current="page" href="#home">
                     Home
                   </a>
                 </li>
@@ -98,10 +60,9 @@ function Navbar({ currentPage, handlePageChange }) {
                       ? "title-text font-bold bg-gray-300 text-center py-1"
                       : "text-black text-center py-1"
                   }
+                  onClick={() => handlePageChange("About")}
                 >
-                  <a href="#about" onClick={() => handlePageChange("About")}>
-                    About
-                  </a>
+                  <a href="#about">About</a>
                 </li>
               </Link>
               <Link to="/learn">
@@ -111,10 +72,9 @@ function Navbar({ currentPage, handlePageChange }) {
                       ? "title-text font-bold bg-gray-300 text-center py-1"
                       : "text-black text-center py-1"
                   }
+                  onClick={() => handlePageChange("Learn")}
                 >
-                  <a href="#learn" onClick={() => handlePageChange("Learn")}>
-                    Learn
-                  </a>
+                  <a href="#learn">Learn</a>
                 </li>
               </Link>
               <Link to="/purchase">
@@ -124,13 +84,9 @@ function Navbar({ currentPage, handlePageChange }) {
                       ? "title-text font-bold bg-gray-300 text-center py-1"
                       : "text-black text-center py-1"
                   }
+                  onClick={() => handlePageChange("Purchase")}
                 >
-                  <a
-                    href="#purchase"
-                    onClick={() => handlePageChange("Purchase")}
-                  >
-                    Purchase
-                  </a>
+                  <a href="#purchase">Purchase</a>
                 </li>
               </Link>
               <Link to="/contact">
@@ -140,13 +96,9 @@ function Navbar({ currentPage, handlePageChange }) {
                       ? "title-text font-bold bg-gray-300 text-center rounded-b-sm py-1"
                       : "text-black text-center py-1"
                   }
+                  onClick={() => handlePageChange("Contact")}
                 >
-                  <a
-                    href="#contact"
-                    onClick={() => handlePageChange("Contact")}
-                  >
-                    Contact
-                  </a>
+                  <a href="#contact">Contact</a>
                 </li>
               </Link>
             </ul>
@@ -167,12 +119,9 @@ function Navbar({ currentPage, handlePageChange }) {
                   ? "nav-link active md:rounded-l-sm md:grid md:place-items-center py-1 md:py-2 lg:py-3 2xl:py-4"
                   : "nav-link non-active rounded-l-sm grid place-items-center py-1 md:py-2 lg:py-3 2xl:py-4"
               }
+              onClick={() => handlePageChange("Home")}
             >
-              <a
-                aria-current="page"
-                href="#home"
-                onClick={() => handlePageChange("Home")}
-              >
+              <a aria-current="page" href="#home">
                 Home
               </a>
             </li>
@@ -184,10 +133,9 @@ function Navbar({ currentPage, handlePageChange }) {
                   ? "nav-link active grid place-items-center py-1 md:py-2 lg:py-3 2xl:py-4"
                   : "nav-link non-active grid place-items-center py-1 md:py-2 lg:py-3 2xl:py-4"
               }
+              onClick={() => handlePageChange("About")}
             >
-              <a href="#about" onClick={() => handlePageChange("About")}>
-                About
-              </a>
+              <a href="#about">About</a>
             </li>
           </Link>
           <Link to="/learn">
@@ -197,10 +145,9 @@ function Navbar({ currentPage, handlePageChange }) {
                   ? "nav-link active grid place-items-center py-1 md:py-2 lg:py-3 2xl:py-4"
                   : "nav-link non-active grid place-items-center py-1 md:py-2 lg:py-3 2xl:py-4"
               }
+              onClick={() => handlePageChange("Learn")}
             >
-              <a href="#learn" onClick={() => handlePageChange("Learn")}>
-                Learn
-              </a>
+              <a href="#learn">Learn</a>
             </li>
           </Link>
           <Link to="/purchase">
@@ -210,10 +157,9 @@ function Navbar({ currentPage, handlePageChange }) {
                   ? "nav-link active grid place-items-center py-1 md:py-2 lg:py-3 2xl:py-4"
                   : "nav-link non-active grid place-items-center py-1 md:py-2 lg:py-3 2xl:py-4"
               }
+              onClick={() => handlePageChange("Purchase")}
             >
-              <a href="#purchase" onClick={() => handlePageChange("Purchase")}>
-                Purchase
-              </a>
+              <a href="#purchase">Purchase</a>
             </li>
           </Link>
           <Link to="/contact">
@@ -223,10 +169,9 @@ function Navbar({ currentPage, handlePageChange }) {
                   ? "nav-link active rounded-r-sm grid place-items-center py-1 md:py-2 lg:py-3 2xl:py-4"
                   : "nav-link non-active rounded-r-sm grid place-items-center py-1 md:py-2 lg:py-3 2xl:py-4"
               }
+              onClick={() => handlePageChange("Contact")}
             >
-              <a href="#contact" onClick={() => handlePageChange("Contact")}>
-                Contact
-              </a>
+              <a href="#contact">Contact</a>
             </li>
           </Link>
         </ul>

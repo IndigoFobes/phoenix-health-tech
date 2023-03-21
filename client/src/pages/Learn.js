@@ -55,13 +55,11 @@ export default function Learn() {
 
   if (currentNumber === 1) {
     video = (
-      <div className="p-4 bg-lime-500 rounded-md mb-20">
+      <div className="p-1 border-4 border-lime-500 rounded-md">
         <iframe
-          className=""
+          className="rounded-sm sm:w-[calc(1000px*1/2)] sm:h-[calc(500px*1/2)] md:w-[calc(1000px*2/3)] md:h-[calc(500px*2/3)] lg:w-[1000px] lg:h-[500px]"
           // Handle hover (or click) to display proper animation
           src={"https://www.youtube.com/embed/C0DPdy98e4c"}
-          width={1000}
-          height={500}
           frameborder="0"
           allow="autoplay; encrypted-media"
           allowfullscreen
@@ -73,13 +71,11 @@ export default function Learn() {
     //handleGreenOne();
   } else if (currentNumber === 2) {
     video = (
-      <div className="p-4 bg-lime-500 rounded-md mb-20">
+      <div className="p-1 border-4 border-lime-500 rounded-md">
         <iframe
-          className=""
+          className="rounded-sm sm:w-[calc(1000px*1/2)] sm:h-[calc(500px*1/2)] md:w-[calc(1000px*2/3)] md:h-[calc(500px*2/3)] lg:w-[1000px] lg:h-[500px]"
           // Handle hover (or click) to display proper animation
           src="https://www.youtube.com/embed/1prweT95Mo0"
-          width={1000}
-          height={500}
           frameborder="0"
           allow="autoplay; encrypted-media"
           allowfullscreen
@@ -90,13 +86,11 @@ export default function Learn() {
     // handleGreenTwo();
   } else if (currentNumber === 3) {
     video = (
-      <div className="p-4 bg-lime-500 rounded-md mb-20">
+      <div className="p-1 border-4 border-lime-500 rounded-md">
         <iframe
-          className=""
+          className="rounded-sm sm:w-[calc(1000px*1/2)] sm:h-[calc(500px*1/2)] md:w-[calc(1000px*2/3)] md:h-[calc(500px*2/3)] lg:w-[1000px] lg:h-[500px]"
           // Handle hover (or click) to display proper animation
           src="https://www.youtube.com/embed/BA-Wi4fdcVE"
-          width={1000}
-          height={500}
           frameborder="0"
           allow="autoplay; encrypted-media"
           allowfullscreen
@@ -110,24 +104,24 @@ export default function Learn() {
   }
 
   return (
-    <div className="flex flex-col justify-center items-center mt-20">
-      <h1 className="text-3xl font-semibold text-blue-900 mb-10">
+    <div className="flex flex-col justify-center items-center my-20">
+      <h1 className="text-xl md:text-2xl lg:text-3xl font-semibold title-text mb-10">
         What is wrong with your HVAC unit?
       </h1>
-      <div className="p-4 bg-red-500 rounded-md">
+      <div className="p-1 border-4 border-red-500 rounded-md">
         <iframe
-          className=""
+          className="rounded-sm sm:w-[calc(1000px*1/2)] sm:h-[calc(500px*1/2)] md:w-[calc(1000px*2/3)] md:h-[calc(500px*2/3)] lg:w-[1000px] lg:h-[500px]"
           src="https://www.youtube.com/embed/C0DPdy98e4c"
-          width={1000}
-          height={500}
+          // width={1000}
+          // height={500}
           frameborder="0"
           allow="autoplay; encrypted-media"
           allowfullscreen
           title="video"
         />{" "}
       </div>
-      <div className="grid grid-cols-8">
-        <p className="col-start-3 col-end-7 p-6 pt-10 text-lg">
+      <div className="grid grid-cols-8 mt-10 text-justify text-sm sm:text-base md:text-lg">
+        <p className="col-start-1 col-end-9 md:col-start-2 md:col-end-8 px-6 md:p-0">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
           laoreet a nisl sit amet facilisis. Vestibulum id tellus felis.
           Vestibulum efficitur dignissim pulvinar. Sed vulputate posuere
@@ -141,11 +135,11 @@ export default function Learn() {
         </p>
       </div>
       {/* arrow down to next section */}
-      <h1 className="text-3xl font-semibold text-blue-900 mb-10 mt-40">
+      <h1 className="text-xl md:text-2xl lg:text-3xl font-semibold title-text mb-10 mt-10 sm:mt-20 md:mt-40">
         What does PHT do to fix it?
       </h1>
       {/* Numbers for hover effect */}
-      <div className="flex space-x-40 pb-20">
+      <div className="flex space-x-10 sm:space-x-20 md:space-x-40 pb-5 md:pb-20 mx-10">
         <div>
           <img
             src={GreenOne}
