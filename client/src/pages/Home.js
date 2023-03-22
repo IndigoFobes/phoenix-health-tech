@@ -23,10 +23,6 @@ export default function Home() {
     setisHoveringGreen(false);
   }
 
-  // function handleMouseLeaveYellow(e) {
-  // 	setisHoveringYellow(false);
-  // }
-
   // handle mouse enter green box
   function handleMouseEnterGreen(e) {
     setisHoveringGreen(true);
@@ -34,20 +30,12 @@ export default function Home() {
     setisHoveringYellow(false);
   }
 
-  // function handleMouseLeaveGreen(e) {
-  // 	setisHoveringGreen(false);
-  // }
-
   // handle mouse enter blue box
   function handleMouseEnterBlue(e) {
     setisHoveringBlue(true);
     setisHoveringYellow(false);
     setisHoveringGreen(false);
   }
-
-  // function handleMouseLeaveBlue(e) {
-  // 	setisHoveringBlue(false);
-  // }
 
   // Mobile for CLICKS
   const [currentColor, setCurrentColor] = useState("yellow");
@@ -64,13 +52,26 @@ export default function Home() {
     setCurrentColor("blue");
   }
 
+  // Handle click for top Image on mobile devices
+
+  const [isClicked, setIsClicked] = useState(false);
+
+  function handleImageClick(e) {
+    setIsClicked(true);
+  }
+
   return (
     <div>
       <div className="grid grid-cols-6">
         <h1 className="font-dMSansBold mt-10 text-xl col-start-1 col-end-7 sm:text-2xl md:text-3xl lg:text-4xl md:col-start-2 md:col-end-6 text-center mb-10 title-text">
           How clean is your home's air?
         </h1>
-        <div className="cursor-pointer relative col-start-1 col-end-7 mb-5 md:mb-10 mx-5 sm:mx-10 md:col-start-2 md:col-end-6 transition ease-in-out duration-1200 blur-sm hover:blur-none">
+        <div
+          onClick={handleImageClick}
+          className={`cursor-pointer relative col-start-1 col-end-7 mb-5 md:mb-10 mx-5 sm:mx-10 md:col-start-2 md:col-end-6 transition ease-in-out duration-1200 lg:hover:blur-none ${
+            isClicked ? "blur-none" : "blur-sm"
+          }`}
+        >
           <img className="rounded-sm" src={CleanHome}></img>
           <p className="text-center text-xs sm:text-sm md:text-base lg:text-2xl absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-bold warm-gray px-4 py-4 rounded-sm text-white">
             Not quite as clean as you think.
