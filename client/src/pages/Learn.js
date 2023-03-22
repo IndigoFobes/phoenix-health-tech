@@ -105,7 +105,7 @@ export default function Learn() {
 
   return (
     <div className="flex flex-col justify-center items-center my-20">
-      <h1 className="text-xl md:text-2xl lg:text-3xl font-semibold title-text mb-10">
+      <h1 className=" font-DMSansBold text-xl md:text-2xl lg:text-3xl title-text mb-10">
         What is wrong with your HVAC unit?
       </h1>
       <div className="p-1 border-4 border-red-500 rounded-md">

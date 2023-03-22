@@ -16,7 +16,14 @@ module.exports = {
       },
     },
     extend: {
-      fontFamily: {},
+      fontFamily: {
+        DMSansBold: "DMSans-Bold",
+        DMSansBoldItalic: "DMSans-BoldItalic",
+        DMSansItalic: "DMSans-Italic",
+        DMSansMedium: "DMSans-Medium",
+        DMSansMediumItalic: "DMSans-MediumItalic",
+        DMSans: "DMSans-Regular",
+      },
     },
   },
   plugins: [require("flowbite/plugin")],

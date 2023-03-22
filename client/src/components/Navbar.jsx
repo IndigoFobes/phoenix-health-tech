@@ -20,7 +20,7 @@ function Navbar({ currentPage, handlePageChange }) {
           type="checkbox"
         />
         {/* Arrow icon */}
-        <div className="md:hidden absolute top-0 left-1/2 -translate-x-1/2 transition-transform duration-600 rotate-0 peer-checked:rotate-180 w-6 h-6">
+        <div className="md:hidden absolute top-0 left-1/2 -translate-x-1/2 transition-transform duration-400 rotate-0 peer-checked:rotate-180 w-6 h-6">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -36,9 +36,9 @@ function Navbar({ currentPage, handlePageChange }) {
           </svg>
         </div>
         {/* Mobile menu content */}
-        <div className="overflow-hidden transition-all duration-500 max-h-0 peer-checked:max-h-full">
-          <div className="m-5 pt-5 flex flex-col">
-            <ul className="bg-gray-100 rounded-sm flex flex-col font-medium text-lg focus:title-text">
+        <div className="overflow-hidden transition peer-checked:translate-y-3 duration-700 ease-in-out max-h-0 peer-checked:max-h-full">
+          <div className="m-5 pt-3 flex flex-col">
+            <ul className="bg-gray-100 rounded-sm flex flex-col font-medium text-lg focus:title-text shadow-md shadow-gray-300/50">
               <Link to="/home">
                 <li
                   className={
