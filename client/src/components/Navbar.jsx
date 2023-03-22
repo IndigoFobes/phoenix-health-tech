@@ -14,6 +14,7 @@ function Navbar({ currentPage, handlePageChange }) {
         </Link>
       </div>
       {/* Mobile / iPad toggle menu */}
+      <h4 className="md:hidden font-bold title-text">MENU</h4>
       <div className="md:hidden relative w-3/4 justify-center mb-10">
         <input
           className="peer md:hidden absolute top-0 left-1/2 -translate-x-1/2 w-6 h-6 z-10 opacity-0 cursor-pointer"

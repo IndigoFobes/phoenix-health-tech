@@ -49,6 +49,21 @@ export default function Home() {
   // 	setisHoveringBlue(false);
   // }
 
+  // Mobile for CLICKS
+  const [currentColor, setCurrentColor] = useState("yellow");
+
+  function handleClickYellow(e) {
+    setCurrentColor("yellow");
+  }
+
+  function handleClickGreen(e) {
+    setCurrentColor("green");
+  }
+
+  function handleClickBlue(e) {
+    setCurrentColor("blue");
+  }
+
   return (
     <div
     // style={{
@@ -75,7 +90,7 @@ export default function Home() {
         </container>
       </div>
       <div className="grid grid-cols-6">
-        <container className="col-start-1 col-end-7 mx-8 md:col-start-2 md:col-end-6 text-center md:text-left text-sm sm:text-base">
+        <container className="mb-10 lg:mb-0 col-start-1 col-end-7 mx-8 md:col-start-2 md:col-end-6 text-center md:text-left text-sm sm:text-base">
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
             laoreet a nisl sit amet facilisis. Vestibulum id tellus felis.
@@ -114,7 +129,7 @@ export default function Home() {
       </div>
       {/* icons */}
       <container
-        className="flex justify-between mt-5 mx-5 lg:mt-20 lg:mx-60"
+        className="hidden lg:flex justify-between mt-5 mx-5 lg:mt-20 lg:mx-60"
         onMouseLeave={() => {
           setisHoveringBlue(false);
           setisHoveringGreen(false);
@@ -129,7 +144,9 @@ export default function Home() {
           <img
             src={yellow}
             className={`w-1/4 transition ease-in-out duration-800 ${
-              isHoveringYellow ? "opacity-100" : "opacity-60"
+              isHoveringYellow
+                ? "opacity-100 scale-110 transition ease-in-out duration-800"
+                : "opacity-60"
             }`}
           ></img>
           <h3 className="font-semibold text-xs sm:text-base md:text-xl">
@@ -144,7 +161,9 @@ export default function Home() {
           <img
             src={green}
             className={`w-1/4 transition ease-in-out duration-800 ${
-              isHoveringGreen ? "opacity-100" : "opacity-60"
+              isHoveringGreen
+                ? "opacity-100 scale-110 transition ease-in-out duration-800"
+                : "opacity-60"
             }`}
           ></img>
           <h3 className="font-semibold text-xs sm:text-base md:text-xl">
@@ -159,7 +178,9 @@ export default function Home() {
           <img
             src={blue}
             className={`w-1/4 transition ease-in-out duration-800 ${
-              isHoveringBlue ? "opacity-100" : "opacity-60"
+              isHoveringBlue
+                ? "opacity-100 scale-110 transition ease-in-out duration-800"
+                : "opacity-60"
             }`}
           ></img>
           <h3 className="font-semibold text-xs sm:text-base md:text-xl">
@@ -168,7 +189,7 @@ export default function Home() {
         </div>
       </container>
       <div
-        className="h-[40rem] flex flex-col justify-center items-center"
+        className="hidden lg:h-[30rem] lg:flex flex-col justify-start items-center"
         onMouseEnter={() => {
           setisHoveringBlue(false);
           setisHoveringGreen(false);
@@ -182,7 +203,7 @@ export default function Home() {
       >
         {/* Conditionally render extra space if hover is not happening */}
         {!isHoveringYellow && !isHoveringGreen && !isHoveringBlue && (
-          <div className="hidden md:flex justify-center text-2xl font-medium">
+          <div className="hidden lg:flex justify-center text-2xl font-medium mt-20">
             <h3 className="border-4 dark-blue-border px-10 py-6 rounded-md opacity-75">
               Mouse over an icon to learn more.
             </h3>
@@ -240,6 +261,131 @@ export default function Home() {
         <div
           className={`bg-gradient-to-br from-sky-400 to-indigo-200 justify-center mt-5 md:mx-20 md:rounded-sm lg:mt-10 lg:mx-40 py-5 px-8 md:py-10 md:px-20 flex-col text-center gap-5 mb-20 ${
             isHoveringBlue ? "flex" : "hidden"
+          }`}
+        >
+          <h2 className="font-semibold text-xl sm:text-2xl">
+            Prevention First
+          </h2>
+          <p className="font-medium">
+            Mauris in sagittis metus. Sed sodales odio id sem sodales, sed
+            bibendum risus ultrices. Maecenas magna velit, imperdiet vel dui id,
+            eleifend fermentum odio. Integer at ultricies mi, nec eleifend
+            dolor. Aliquam fermentum nunc at libero tempus, sed maximus erat
+            placerat. Praesent in arcu vitae neque cursus pulvinar.Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit. Vestibulum laoreet a
+            nisl sit amet facilisis. Vestibulum id tellus felis. Vestibulum
+            efficitur dignissim pulvinar. Sed vulputate posuere ultrices.
+            Integer blandit dui ut laoreet bibendum. Maecenas tristique, diam a
+            mollis euismod, nunc erat ultricies orci, vel auctor ex nulla in
+            erat. Ut imperdiet, purus a porttitor dignissim, nisi neque ultrices
+            eros, a commodo lectus lectus egestas leo. Ut quis neque elit.
+          </p>
+        </div>
+      </div>
+      {/* Mobile: Click instead of hover */}
+      <container className="lg:hidden flex justify-between mt-5 mx-5 lg:mt-20 lg:mx-60">
+        <div
+          className="cursor-pointer flex flex-col justify-center items-center mt-1.5 lg:mr-10"
+          onClick={handleClickYellow}
+        >
+          <img
+            src={yellow}
+            className={`w-1/4 transition ease-in-out duration-800 ${
+              currentColor === "yellow"
+                ? "opacity-100 scale-110 transition ease-in-out duration-800"
+                : "opacity-50"
+            }`}
+          ></img>
+          <h3 className="font-semibold text-xs sm:text-base md:text-xl">
+            All Natural
+          </h3>
+        </div>
+        <div
+          className="cursor-pointer flex flex-col justify-center items-center mt-1.5"
+          onClick={handleClickGreen}
+        >
+          <img
+            src={green}
+            className={`w-1/4 transition ease-in-out duration-800 ${
+              currentColor === "green"
+                ? "opacity-100 scale-110 transition ease-in-out duration-800"
+                : "opacity-50"
+            }`}
+          ></img>
+          <h3 className="font-semibold text-xs sm:text-base md:text-xl">
+            Green Solution
+          </h3>
+        </div>
+        <div
+          className="cursor-pointer flex flex-col justify-center items-center mt-1.5 lg:ml-10"
+          onClick={handleClickBlue}
+        >
+          <img
+            src={blue}
+            className={`w-1/4 transition ease-in-out duration-800 ${
+              currentColor === "blue"
+                ? "opacity-100 scale-110 transition ease-in-out duration-800"
+                : "opacity-50"
+            }`}
+          ></img>
+          <h3 className="font-semibold text-xs sm:text-base md:text-xl">
+            Prevention First
+          </h3>
+        </div>
+      </container>
+      <div className="lg:hidden flex">
+        {/* Yellow box */}
+        <div
+          className={`bg-gradient-to-br from-amber-500 to-amber-200 justify-center mt-5 md:mx-20 md:rounded-sm lg:mt-10 lg:mx-40 py-5 px-8 md:py-10 md:px-20 flex-col text-center gap-5 mb-20 ${
+            currentColor === "yellow" ? "flex" : "hidden"
+          }`}
+        >
+          <h2 className="font-semibold text-xl sm:text-2xl">
+            An All Natural Solution
+          </h2>
+          <p className="font-medium text-sm sm:text-base">
+            Mauris in sagittis metus. Sed sodales odio id sem sodales, sed
+            bibendum risus ultrices. Maecenas magna velit, imperdiet vel dui id,
+            eleifend fermentum odio. Integer at ultricies mi, nec eleifend
+            dolor. Aliquam fermentum nunc at libero tempus, sed maximus erat
+            placerat. Praesent in arcu vitae neque cursus pulvinar.Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit. Vestibulum laoreet a
+            nisl sit amet facilisis. Vestibulum id tellus felis. Vestibulum
+            efficitur dignissim pulvinar. Sed vulputate posuere ultrices.
+            Integer blandit dui ut laoreet bibendum. Maecenas tristique, diam a
+            mollis euismod, nunc erat ultricies orci, vel auctor ex nulla in
+            erat. Ut imperdiet, purus a porttitor dignissim, nisi neque ultrices
+            eros, a commodo lectus lectus egestas leo. Ut quis neque elit.
+          </p>
+        </div>
+        {/* Green box */}
+        <div
+          className={`bg-gradient-to-br from-lime-500 to-yellow-200 justify-center mt-5 md:mx-20 md:rounded-sm lg:mt-10 lg:mx-40 py-5 px-8 md:py-10 md:px-20 flex-col text-center gap-5 mb-20 ${
+            currentColor === "green" ? "flex" : "hidden"
+          }`}
+        >
+          <h2 className="font-semibold text-xl sm:text-2xl">
+            A Green Solution
+          </h2>
+          <p className="font-medium">
+            Mauris in sagittis metus. Sed sodales odio id sem sodales, sed
+            bibendum risus ultrices. Maecenas magna velit, imperdiet vel dui id,
+            eleifend fermentum odio. Integer at ultricies mi, nec eleifend
+            dolor. Aliquam fermentum nunc at libero tempus, sed maximus erat
+            placerat. Praesent in arcu vitae neque cursus pulvinar.Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit. Vestibulum laoreet a
+            nisl sit amet facilisis. Vestibulum id tellus felis. Vestibulum
+            efficitur dignissim pulvinar. Sed vulputate posuere ultrices.
+            Integer blandit dui ut laoreet bibendum. Maecenas tristique, diam a
+            mollis euismod, nunc erat ultricies orci, vel auctor ex nulla in
+            erat. Ut imperdiet, purus a porttitor dignissim, nisi neque ultrices
+            eros, a commodo lectus lectus egestas leo. Ut quis neque elit.
+          </p>
+        </div>
+        {/* Blue box */}
+        <div
+          className={`bg-gradient-to-br from-sky-400 to-indigo-200 justify-center mt-5 md:mx-20 md:rounded-sm lg:mt-10 lg:mx-40 py-5 px-8 md:py-10 md:px-20 flex-col text-center gap-5 mb-20 ${
+            currentColor === "blue" ? "flex" : "hidden"
           }`}
         >
           <h2 className="font-semibold text-xl sm:text-2xl">
