@@ -8,11 +8,11 @@ import PHTTitle from "../assets/PHT_TITLE_BLUE(2).png";
 function Navbar({ currentPage, handlePageChange }) {
   return (
     <nav className="flex flex-col items-center">
-      <div className="w-1/3 mt-5">
+      {/* <div className="w-1/3 mt-5">
         <Link to="/" target="blank">
           <img src={PHTTitle} alt="Phoenix Health Technology"></img>
         </Link>
-      </div>
+      </div> */}
       {/* Mobile / iPad toggle menu */}
       <h4 className="md:hidden font-bold title-text">MENU</h4>
       <div className="md:hidden relative w-3/4 justify-center mb-10">
@@ -109,7 +109,7 @@ function Navbar({ currentPage, handlePageChange }) {
 
       {/* Larger screen menu */}
       <div
-        className="hidden my-8 md:grid grid-cols-6 w-full nav-bg"
+        className="hidden mb-8 md:grid grid-cols-6 w-full nav-bg"
         id="navbar-default"
       >
         <ul className="col-start-2 col-end-6 grid grid-cols-5 border-none text-white font-semibold text-sm sm:text-base md:text-lg lg:text-xl">

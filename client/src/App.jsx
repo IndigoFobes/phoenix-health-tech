@@ -14,6 +14,8 @@ import Home from "../src/pages/Home";
 import Learn from "../src/pages/Learn";
 import Purchase from "../src/pages/Purchase";
 import Footer from "../src/components/Footer";
+import { Link } from "react-router-dom";
+import PHTTitle from "./assets/PHT_TITLE_BLUE(2).png";
 
 //import Home from "./pages/Home";
 
@@ -29,50 +31,15 @@ const App = () => {
   //handle page change; whichever page is plugged in here will be rendered
   const handlePageChange = (page) => setCurrentPage(page);
 
-  // const renderPage = () => {
-  //   if (currentPage === "Home") {
-  //     return (
-  //       <>
-  //         <Header
-  //           currentPage={currentPage}
-  //           handlePageChange={handlePageChange}
-  //         />
-  //         <Home className="flex" />
-  //       </>
-  //     );
-  //   } else if (currentPage === "About") {
-  //     return (
-  //       <>
-  //         <Header
-  //           currentPage={currentPage}
-  //           handlePageChange={handlePageChange}
-  //         />
-  //         <About />
-  //       </>
-  //     );
-  //   } else if (currentPage === "Landing") {
-  //     return <Landing />;
-  //   } else if (currentPage === "Learn") {
-  //     return (
-  //       <>
-  //         <Header
-  //           currentPage={currentPage}
-  //           handlePageChange={handlePageChange}
-  //         />
-  //         <Learn />
-  //       </>
-  //     );
-  //   }
-  //   return (
-  //     <>
-  //       <Header currentPage={currentPage} handlePageChange={handlePageChange} />
-  //       <Purchase className="flex" />
-  //     </>
-  //   );
-  // };
-
   const HomeLayout = () => (
     <>
+      <div className="w-full flex flex-col items-center mb-8">
+        <div className="w-1/3 mt-5 flex">
+          <Link to="/" target="blank">
+            <img src={PHTTitle} alt="Phoenix Health Technology"></img>
+          </Link>
+        </div>
+      </div>
       <Header currentPage={currentPage} handlePageChange={handlePageChange} />
       <Home className="flex" />
     </>

@@ -65,7 +65,7 @@ export default function Home() {
   }
 
   return (
-    <div className="mt-[300px]">
+    <div>
       <div className="grid grid-cols-6">
         <h1 className="font-dMSansBold mt-10 text-xl col-start-1 col-end-7 sm:text-2xl md:text-3xl lg:text-4xl md:col-start-2 md:col-end-6 text-center mb-10 title-text">
           How clean is your home's air?
