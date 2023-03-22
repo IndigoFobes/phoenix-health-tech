@@ -16,6 +16,7 @@ import Purchase from "../src/pages/Purchase";
 import Footer from "../src/components/Footer";
 import { Link } from "react-router-dom";
 import PHTTitle from "./assets/PHT_TITLE_BLUE(2).png";
+import Logo from "./components/Logo";
 
 //import Home from "./pages/Home";
 
@@ -33,13 +34,7 @@ const App = () => {
 
   const HomeLayout = () => (
     <>
-      <div className="w-full flex flex-col items-center mb-8">
-        <div className="w-1/3 mt-5 flex">
-          <Link to="/" target="blank">
-            <img src={PHTTitle} alt="Phoenix Health Technology"></img>
-          </Link>
-        </div>
-      </div>
+      <Logo />
       <Header currentPage={currentPage} handlePageChange={handlePageChange} />
       <Home className="flex" />
     </>
@@ -47,6 +42,7 @@ const App = () => {
 
   const AboutLayout = () => (
     <>
+      <Logo />
       <Header currentPage={currentPage} handlePageChange={handlePageChange} />
       <About />
     </>
@@ -54,6 +50,7 @@ const App = () => {
 
   const LearnLayout = () => (
     <>
+      <Logo />
       <Header currentPage={currentPage} handlePageChange={handlePageChange} />
       <Learn />
     </>
@@ -61,6 +58,7 @@ const App = () => {
 
   const PurchaseLayout = () => (
     <>
+      <Logo />
       <Header currentPage={currentPage} handlePageChange={handlePageChange} />
       <Purchase className="flex" />
     </>
@@ -68,6 +66,7 @@ const App = () => {
 
   const ContactLayout = () => (
     <>
+      <Logo />
       <Header currentPage={currentPage} handlePageChange={handlePageChange} />
       <ContactForm />
     </>
