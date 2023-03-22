@@ -6,7 +6,10 @@
 
 .non-active {
 	background-color: #0E4370;
-	
+}
+
+.nav-bg {
+	background-color: #0E4370;
 }
 
 .non-active:hover {

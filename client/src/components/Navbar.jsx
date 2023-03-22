@@ -109,7 +109,7 @@ function Navbar({ currentPage, handlePageChange }) {
 
       {/* Larger screen menu */}
       <div
-        className="hidden my-8 md:grid grid-cols-6 w-5/6"
+        className="hidden my-8 md:grid grid-cols-6 w-full nav-bg"
         id="navbar-default"
       >
         <ul className="col-start-2 col-end-6 grid grid-cols-5 border-none text-white font-semibold text-sm sm:text-base md:text-lg lg:text-xl">
@@ -117,8 +117,8 @@ function Navbar({ currentPage, handlePageChange }) {
             <li
               className={
                 currentPage === "Home"
-                  ? "nav-link active md:rounded-l-sm md:grid md:place-items-center py-1 md:py-2 lg:py-3 2xl:py-4"
-                  : "nav-link non-active rounded-l-sm grid place-items-center py-1 md:py-2 lg:py-3 2xl:py-4"
+                  ? "nav-link active md:grid md:place-items-center py-1 md:py-2 lg:py-3 2xl:py-4"
+                  : "nav-link non-active grid place-items-center py-1 md:py-2 lg:py-3 2xl:py-4"
               }
               onClick={() => handlePageChange("Home")}
             >
@@ -167,8 +167,8 @@ function Navbar({ currentPage, handlePageChange }) {
             <li
               className={
                 currentPage === "Contact"
-                  ? "nav-link active rounded-r-sm grid place-items-center py-1 md:py-2 lg:py-3 2xl:py-4"
-                  : "nav-link non-active rounded-r-sm grid place-items-center py-1 md:py-2 lg:py-3 2xl:py-4"
+                  ? "nav-link active grid place-items-center py-1 md:py-2 lg:py-3 2xl:py-4"
+                  : "nav-link non-active grid place-items-center py-1 md:py-2 lg:py-3 2xl:py-4"
               }
               onClick={() => handlePageChange("Contact")}
             >
