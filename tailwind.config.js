@@ -17,12 +17,12 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        DMSansBold: "DMSans-Bold",
-        DMSansBoldItalic: "DMSans-BoldItalic",
-        DMSansItalic: "DMSans-Italic",
-        DMSansMedium: "DMSans-Medium",
-        DMSansMediumItalic: "DMSans-MediumItalic",
-        DMSans: "DMSans-Regular",
+        dMSansBold: "DMSans-Bold",
+        dMSansBoldItalic: "DMSans-BoldItalic",
+        dMSansItalic: "DMSans-Italic",
+        dMSansMedium: "DMSans-Medium",
+        dMSansMediumItalic: "DMSans-MediumItalic",
+        dMSans: "DMSans-Regular",
       },
     },
   },

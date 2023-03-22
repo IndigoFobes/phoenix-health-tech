@@ -59,7 +59,7 @@ export default function Home() {
     // }}
     >
       <div className="grid grid-cols-6">
-        <h1 className="mt-10 text-xl col-start-1 col-end-7 sm:text-2xl md:text-3xl lg:text-4xl font-bold md:col-start-2 md:col-end-6 text-center mb-10 title-text">
+        <h1 className="font-dMSansBold mt-10 text-xl col-start-1 col-end-7 sm:text-2xl md:text-3xl lg:text-4xl md:col-start-2 md:col-end-6 text-center mb-10 title-text">
           How clean is your home's air?
         </h1>
         <div className="cursor-pointer relative col-start-1 col-end-7 mb-5 md:mb-10 mx-5 sm:mx-10 md:col-start-2 md:col-end-6 transition ease-in-out duration-1200 blur-sm hover:blur-none">

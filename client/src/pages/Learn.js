@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
-import GreenOne from "../assets/1_green_pht.png";
-import GreenTwo from "../assets/2_green_pht.png";
-import GreenThree from "../assets/3_green_pht.png";
-import GreyOne from "../assets/1_grey_pht.png";
-import GreyTwo from "../assets/2_grey_pht.png";
-import GreyThree from "../assets/3_grey_pht.png";
+import GreenOne from "../assets/green_1_pht(update).png";
+import GreenTwo from "../assets/green_2_pht(update).png";
+import GreenThree from "../assets/green_3_pht(update).png";
+import GreyOne from "../assets/grey_1_pht(update).png";
+import GreyTwo from "../assets/grey_2_pht(update).png";
+import GreyThree from "../assets/grey_3_pht(update).png";
 
 export default function Learn() {
   // default video is number 1
@@ -52,6 +52,7 @@ export default function Learn() {
 
   // Render video based on currentNumber
   let video;
+  let text;
 
   if (currentNumber === 1) {
     video = (
@@ -66,6 +67,14 @@ export default function Learn() {
           title="video"
         />{" "}
       </div>
+    );
+    text = (
+      <p className="col-start-1 col-end-9 md:col-start-2 md:col-end-8 px-6 md:p-0">
+        This is a fun fun testing video. 3 2 1. Very simple. This is a fun fun
+        testing video. 3 2 1. Very simple. This is a fun fun testing video. 3 2
+        1. Very simple. This is a fun fun testing video. 3 2 1. Very simple.
+        This is a fun fun testing video. 3 2 1. Very simple.
+      </p>
     );
     console.log(video.props.children[0].props);
     //handleGreenOne();
@@ -83,6 +92,17 @@ export default function Learn() {
         />{" "}
       </div>
     );
+    text = (
+      <p className="col-start-1 col-end-9 md:col-start-2 md:col-end-8 px-6 md:p-0">
+        Yo Yo Ma is my FAVORITE. Especially playing Bach, the greatest musician
+        of all time. Yo Yo Ma is my FAVORITE. Especially playing Bach, the
+        greatest musician of all time. Yo Yo Ma is my FAVORITE. Especially
+        playing Bach, the greatest musician of all time. Yo Yo Ma is my
+        FAVORITE. Especially playing Bach, the greatest musician of all time. Yo
+        Yo Ma is my FAVORITE. Especially playing Bach, the greatest musician of
+        all time.
+      </p>
+    );
     // handleGreenTwo();
   } else if (currentNumber === 3) {
     video = (
@@ -98,6 +118,15 @@ export default function Learn() {
         />{" "}
       </div>
     );
+    text = (
+      <p className="col-start-1 col-end-9 md:col-start-2 md:col-end-8 px-6 md:p-0">
+        Austin Stone is also wonderful. Worship the LORD!! Austin Stone is also
+        wonderful. Worship the LORD!! Austin Stone is also wonderful. Worship
+        the LORD!! Austin Stone is also wonderful. Worship the LORD!! Austin
+        Stone is also wonderful. Worship the LORD!! Austin Stone is also
+        wonderful. Worship the LORD!!
+      </p>
+    );
     // handleGreenThree();
   } else {
     video = <p>No video to display</p>;
@@ -105,7 +134,7 @@ export default function Learn() {
 
   return (
     <div className="flex flex-col justify-center items-center my-20">
-      <h1 className=" font-DMSansBold text-xl md:text-2xl lg:text-3xl title-text mb-10">
+      <h1 className=" font-dMSans text-xl md:text-2xl lg:text-3xl title-text mb-10">
         What is wrong with your HVAC unit?
       </h1>
       <div className="p-1 border-4 border-red-500 rounded-md">
@@ -166,6 +195,9 @@ export default function Learn() {
         </div>
       </div>
       {video}
+      <div className="grid grid-cols-8 mt-10 text-justify text-sm sm:text-base md:text-lg bg-lime-100 w-full p-5">
+        {text}
+      </div>
     </div>
   );
 }
