@@ -82,7 +82,7 @@ export default function Home() {
           }`}
         >
           <img className="" src={CleanHome}></img>
-          <p className="text-center text-xs sm:text-sm md:text-base lg:text-2xl absolute top-1/2 left-1/5 -translate-x-1/2 -translate-y-1/2 ml-10 md:ml-0 font-bold warm-gray px-4 py-4 rounded-sm text-white">
+          <p className="text-center text-xs sm:text-sm md:text-base lg:text-2xl absolute top-1/2 left-1/5 -translate-x-1/2 -translate-y-1/2 ml-10 md:ml-0 sm:font-bold warm-gray px-4 py-4 rounded-sm text-white">
             Not quite as clean as you think.
           </p>
         </div>
@@ -146,9 +146,9 @@ export default function Home() {
         </container>
       </div>
       {/* Strip for contact + purchase */}
-      <div className="bg-gradient-to-r from-[#0E4370] to-sky-500 w-full h-60 lg:h-80 grid grid-cols-7">
+      <div className="bg-gradient-to-r from-[#0E4370] to-sky-500 w-full sm:h-60 lg:h-80 grid grid-cols-7">
         {/* Purchase */}
-        <div className="flex flex-col col-start-1 ml-5 md:ml-0 md:col-start-2 col-end-4 lg:col-end-5 justify-center place-self-center lg:justify-self-start">
+        <div className="flex flex-col col-start-2 col-end-7 sm:col-start-1 ml-5 md:ml-0 md:col-start-2 sm:col-end-4 lg:col-end-5 justify-center place-self-center lg:justify-self-start mt-8 sm:mt-0">
           <h2 className="text-base md:text-xl xl:text-3xl font-bold text-white mb-3">
             Interested in Purchasing a New Unit?
           </h2>
@@ -168,7 +168,7 @@ export default function Home() {
         {/* Contact */}
         <Link
           to="/contact"
-          className="col-start-5 col-end-7 justify-center place-self-center"
+          className="col-start-2 col-end-7 sm:col-start-5 my-8 sm:my-0 justify-center place-self-center"
         >
           <div className="flex flex-col items-start bg-gradient-to-br from-yellow-600 to-yellow-400 p-4 md:p-8 shadow-md shadow-black hover:scale-110 hover:from-yellow-400 hover:to-yellow-500 transition ease-in-out duration-500 cursor-pointer">
             <h2 className="text-base sm:text-xl md:text-2xl lg:text-3xl font-bold text-white mb-3">
