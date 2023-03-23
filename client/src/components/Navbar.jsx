@@ -111,7 +111,7 @@ function Navbar({ currentPage, handlePageChange }) {
 
       {/* Larger screen menu */}
       <div
-        className="hidden mb-8 md:grid grid-cols-6 w-full nav-bg"
+        className="hidden md:grid grid-cols-6 w-full nav-bg"
         id="navbar-default"
       >
         <ul className="col-start-2 col-end-6 grid grid-cols-5 border-none text-white font-semibold text-sm sm:text-base md:text-lg lg:text-xl">

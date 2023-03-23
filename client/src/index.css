@@ -18,31 +18,31 @@ code {
 
 @font-face {
   font-family: "DMSans-Bold";
-  src: url("../public/fonts/DMSans-Bold.ttf");
+  src: url("../src/assets/fonts/DMSans-Bold.ttf");
 }
 
 @font-face {
   font-family: "DMSans-BoldItalic";
-  src: url("../public/fonts/DMSans-BoldItalic.ttf");
+  src: url("../src/assets/fonts/DMSans-BoldItalic.ttf");
 }
 
 @font-face {
   font-family: "DMSans-Italic";
-  src: url("../public/fonts/DMSans-Italic.ttf");
+  src: url("../src/assets/fonts/DMSans-Italic.ttf");
 }
 
 @font-face {
   font-family: "DMSans-Regular";
-  src: url("../public/fonts/DMSans-Regular.ttf");
+  src: url("../src/assets/fonts/DMSans-Regular.ttf");
 }
 
 @font-face {
   font-family: "DMSans-Medium";
-  src: url("../public/fonts/DMSans-Medium.ttf");
+  src: url("../src/assets/fonts/DMSans-Medium.ttf");
 }
 
 @font-face {
   font-family: "DMSans-MediumItalic";
-  src: url("../public/fonts/DMSans-MediumItalic.ttf");
+  src: url("../src/assets/fonts/DMSans-MediumItalic.ttf");
 }
 
