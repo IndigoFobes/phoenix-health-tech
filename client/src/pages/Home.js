@@ -75,9 +75,6 @@ export default function Home() {
   return (
     <div>
       <div className="flex flex-col relative">
-        <h1 className="font-dMSansBold text-base sm:text-2xl md:text-3xl lg:text-4xl absolute z-10 top-1/4 ml-10 left-1/5 -translate-x-1/2 -translate-y-1/2 title-text">
-          How clean is your home's air?
-        </h1>
         <div
           onClick={handleImageClick}
           className={`cursor-pointer relative w-full transition ease-in-out duration-1200 hover:blur-none ${
@@ -89,6 +86,9 @@ export default function Home() {
             Not quite as clean as you think.
           </p>
         </div>
+        <h1 className="font-dMSansBold text-base sm:text-2xl md:text-3xl lg:text-4xl absolute top-1/4 ml-10 left-1/5 -translate-x-1/2 -translate-y-1/2 title-text">
+          How clean is your home's air?
+        </h1>
       </div>
       <div className="grid grid-cols-6">
         <container className="col-start-2 col-end-6 mb-5 mt-5 md:mt-10">
@@ -377,7 +377,7 @@ export default function Home() {
         >
           <img
             src={yellow}
-            className={`w-1/4 transition ease-in-out duration-800 ${
+            className={`w-1/4 transition ease-in-out duration-800 hover:opacity-100 ${
               currentColor === "yellow"
                 ? "opacity-100 transition ease-in-out duration-800"
                 : "opacity-50"
@@ -402,7 +402,7 @@ export default function Home() {
         >
           <img
             src={green}
-            className={`w-1/4 transition ease-in-out duration-800 ${
+            className={`w-1/4 transition ease-in-out duration-800 hover:opacity-100 ${
               currentColor === "green"
                 ? "opacity-100 transition ease-in-out duration-800"
                 : "opacity-50"
@@ -423,7 +423,7 @@ export default function Home() {
         >
           <img
             src={blue}
-            className={`w-1/4 transition ease-in-out duration-800 ${
+            className={`w-1/4 transition ease-in-out duration-800 hover:opacity-100 ${
               currentColor === "blue"
                 ? "opacity-100 transition ease-in-out duration-800"
                 : "opacity-50"
