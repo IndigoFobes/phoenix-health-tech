@@ -1,4 +1,6 @@
 
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
+
 .active {
 	background-color: #154F7F;
 	color: #FFFFFF
@@ -17,7 +19,24 @@
 }
 
 .title-text {
-	color: #0E4370
+	color: #0E4370;
+	font-family: 'DM Sans';
+	font-weight: 700;
+}
+
+.dm-sans-bold {
+font-family: 'DM Sans';
+font-weight: 700; 
+}
+
+.dm-sans {
+font-family: 'DM Sans';
+font-weight: 400;
+}
+
+.dm-sans-med {
+	font-family: 'DM Sans';
+	font-weight: 500;
 }
 
 .dark-blue-border {

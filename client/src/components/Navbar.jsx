@@ -15,7 +15,7 @@ function Navbar({ currentPage, handlePageChange }) {
       </div> */}
       {/* Mobile / iPad toggle menu */}
       <div className="md:hidden flex flex-col items-center w-full bg-white">
-        <h4 className="font-bold title-text mt-2">MENU</h4>
+        <h4 className="font-bold title-text mt-2">Menu</h4>
         <div className="relative w-3/4 justify-center mb-6">
           <input
             className="peer md:hidden absolute top-0 left-1/2 -translate-x-1/2 w-6 h-6 z-10 opacity-0 cursor-pointer"
@@ -114,14 +114,12 @@ function Navbar({ currentPage, handlePageChange }) {
         className="hidden md:grid grid-cols-6 w-full nav-bg"
         id="navbar-default"
       >
-        <ul className="col-start-2 col-end-6 grid grid-cols-5 border-none text-white font-semibold text-sm sm:text-base md:text-lg lg:text-xl">
+        <ul className="col-start-2 col-end-6 grid grid-cols-5 border-none text-white dm-sans-med text-sm sm:text-base md:text-lg lg:text-xl">
           <Link to="/home">
             <li
-              className={
-                currentPage === "Home"
-                  ? "nav-link active md:grid md:place-items-center py-1 md:py-2 lg:py-3 2xl:py-4"
-                  : "nav-link non-active grid place-items-center py-1 md:py-2 lg:py-3 2xl:py-4"
-              }
+              className={`nav-link grid place-items-center py-1 md:py-2 lg:py-3 2xl:py-4 ${
+                currentPage === "Home" ? "active" : "non-active"
+              }`}
               onClick={() => handlePageChange("Home")}
             >
               <a aria-current="page" href="#home">

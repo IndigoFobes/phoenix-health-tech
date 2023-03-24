@@ -82,17 +82,17 @@ export default function Home() {
           }`}
         >
           <img className="" src={CleanHome}></img>
-          <p className="text-center text-xs sm:text-sm md:text-base lg:text-2xl absolute top-1/2 left-1/5 -translate-x-1/2 -translate-y-1/2 ml-10 md:ml-0 sm:font-bold warm-gray px-4 py-4 rounded-sm text-white">
+          <p className="text-center dm-sans-bold text-xs sm:text-sm md:text-base lg:text-2xl absolute top-1/2 left-1/5 -translate-x-1/2 -translate-y-1/2 ml-10 md:ml-0 sm:font-bold warm-gray px-4 py-4 rounded-sm text-white">
             Not quite as clean as you think.
           </p>
         </div>
-        <h1 className="font-dMSansBold text-base sm:text-2xl md:text-3xl lg:text-4xl absolute top-1/4 ml-10 left-1/5 -translate-x-1/2 -translate-y-1/2 title-text">
+        <h1 className="font-bold text-base sm:text-2xl md:text-3xl lg:text-4xl absolute top-1/4 ml-10 left-1/5 -translate-x-1/2 -translate-y-1/2 title-text">
           How clean is your home's air?
         </h1>
       </div>
       <div className="grid grid-cols-6">
         <container className="col-start-2 col-end-6 mb-5 mt-5 md:mt-10">
-          <h1 className="text-center font-sans font-semibold sm:text-xl md:text-2xl lg:text-3xl title-text ">
+          <h1 className="text-center font-semibold sm:text-xl md:text-2xl lg:text-3xl title-text ">
             The Phoenix Health Technology Solution
           </h1>
           <hr class="h-px my-4 bg-gray-200 border-0 dark:bg-gray-700" />
@@ -113,7 +113,7 @@ export default function Home() {
             magnis dis parturient montes, nascetur ridiculus mus. Maecenas
             interdum, dui vitae dapibus gravida, magna justo blandit sapien, nec
             convallis justo ex posuere erat. Curabitur quis dui mauris.
-            Vestibulum sollicitudin viverra suscipit.
+            Vestibulum sollicitudin viverra suscipit?
             <br></br>
             <br></br>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
@@ -134,7 +134,7 @@ export default function Home() {
           </p>
           <Link
             to="/learn"
-            className="lg:text-lg col-start-3 col-end-5 text-center py-2 rounded-sm title-text font-bold hover:translate-x-2 transition duration-300 cursor-pointer mt-5"
+            className="lg:text-lg dm-sans-med col-start-3 col-end-5 text-center py-2 rounded-sm title-text font-bold hover:translate-x-2 transition duration-300 cursor-pointer mt-5"
           >
             <p>
               Learn More{" "}
@@ -149,15 +149,15 @@ export default function Home() {
       <div className="bg-gradient-to-r from-[#0E4370] to-sky-500 w-full sm:h-60 lg:h-80 grid grid-cols-7">
         {/* Purchase */}
         <div className="flex flex-col col-start-2 col-end-7 sm:col-start-1 ml-5 md:ml-0 md:col-start-2 sm:col-end-4 lg:col-end-5 justify-center place-self-center lg:justify-self-start mt-8 sm:mt-0">
-          <h2 className="text-base md:text-xl xl:text-3xl font-bold text-white mb-3">
+          <h2 className="dm-sans-med text-base md:text-xl xl:text-3xl font-bold text-white mb-3">
             Interested in Purchasing a New Unit?
           </h2>
-          <p className="text-base xl:text-lg font-medium text-white mb-1 lg:mb-2">
+          <p className="dm-sans text-base xl:text-lg font-medium text-white mb-1 lg:mb-2">
             Give us a call, send us an email, <br></br>or head over to our
             purchase page.
           </p>
           <Link to="/purchase">
-            <p className="text-yellow-500 text-base md:text-lg lg:text-xl xl:text-2xl font-bold flex drop-shadow-md hover:translate-x-3 transition duration-300 cursor-pointer">
+            <p className="text-yellow-500 dm-sans-med text-base md:text-lg lg:text-xl xl:text-2xl font-bold flex drop-shadow-md hover:translate-x-3 transition duration-300 cursor-pointer">
               Visit Purchase Page{" "}
               <span>
                 <FontAwesomeIcon icon={faArrowRight} className="ml-2" />
@@ -171,7 +171,7 @@ export default function Home() {
           className="col-start-2 col-end-7 sm:col-start-5 my-8 sm:my-0 justify-center place-self-center"
         >
           <div className="flex flex-col items-start bg-gradient-to-br from-yellow-600 to-yellow-400 p-4 md:p-8 shadow-md shadow-black hover:scale-110 hover:from-yellow-400 hover:to-yellow-500 transition ease-in-out duration-500 cursor-pointer">
-            <h2 className="text-base sm:text-xl md:text-2xl lg:text-3xl font-bold text-white mb-3">
+            <h2 className="dm-sans-bold text-base sm:text-xl md:text-2xl lg:text-3xl font-bold text-white mb-3">
               Contact us
             </h2>
             <div className="flex flex-row gap-2">
@@ -182,7 +182,7 @@ export default function Home() {
                   style: "solid",
                 })}
               />
-              <p className="text-lg md:text-xl text-white mb-2 md:mb-3">
+              <p className="dm-sans text-lg md:text-xl text-white mb-2 md:mb-3">
                 777-777-7777
               </p>
             </div>
@@ -194,7 +194,7 @@ export default function Home() {
                   style: "solid",
                 })}
               />
-              <p className="text-lg md:text-xl text-white mb-2 md:mb-3">
+              <p className="dm-sans text-lg md:text-xl text-white mb-2 md:mb-3">
                 will@phoenixhealthtech.com
               </p>
             </div>
@@ -359,7 +359,7 @@ export default function Home() {
       {/* Mobile: Click instead of hover */}
       <container className="grid grid-cols-6">
         <container className="col-start-2 col-end-6 mb-5 mt-5 md:mt-10">
-          <h1 className="text-center font-sans font-semibold md:text-xl lg:text-2xl title-text ">
+          <h1 className="text-center text-xl md:text-2xl lg:text-3xl title-text ">
             What We Are All About
           </h1>
           <hr class="h-px my-4 mx-20 col-start-3 col-end-5 bg-gray-200 border-0 dark:bg-gray-700" />
@@ -384,9 +384,7 @@ export default function Home() {
             }`}
           ></img>
           <h3
-            className={`font-semibold text-xs sm:text-base md:text-xl ${
-              currentColor === "yellow" ? "font-semibold" : ""
-            }`}
+            className={`dm-sans-bold font-semibold text-xs sm:text-base md:text-xl`}
           >
             All Natural
           </h3>
@@ -408,7 +406,7 @@ export default function Home() {
                 : "opacity-50"
             }`}
           ></img>
-          <h3 className="font-semibold text-xs sm:text-base md:text-xl">
+          <h3 className="dm-sans-bold font-semibold text-xs sm:text-base md:text-xl">
             Green Solution
           </h3>
         </div>
@@ -429,7 +427,7 @@ export default function Home() {
                 : "opacity-50"
             }`}
           ></img>
-          <h3 className="font-semibold text-xs sm:text-base md:text-xl">
+          <h3 className="dm-sans-bold font-semibold text-xs sm:text-base md:text-xl">
             Prevention First
           </h3>
         </div>
@@ -441,7 +439,7 @@ export default function Home() {
             currentColor === "yellow" ? "flex" : "hidden"
           }`}
         >
-          <h2 className="font-semibold text-xl sm:text-2xl md:text-3xl lg:place-self-start lg:ml-10">
+          <h2 className="title-text text-xl sm:text-2xl md:text-3xl lg:place-self-start lg:ml-10">
             An All Natural Solution
           </h2>
           <div className="grid grid-cols-6">
@@ -473,7 +471,7 @@ export default function Home() {
             currentColor === "green" ? "flex" : "hidden"
           }`}
         >
-          <h2 className="font-semibold text-xl sm:text-2xl md:text-3xl lg:place-self-start lg:ml-10">
+          <h2 className="title-text text-xl sm:text-2xl md:text-3xl lg:place-self-start lg:ml-10">
             A Green Solution
           </h2>
           <div className="grid grid-cols-6">
@@ -505,7 +503,7 @@ export default function Home() {
             currentColor === "blue" ? "flex" : "hidden"
           }`}
         >
-          <h2 className="font-semibold text-xl sm:text-2xl md:text-3xl lg:place-self-start lg:ml-10">
+          <h2 className="title-text text-xl sm:text-2xl md:text-3xl lg:place-self-start lg:ml-10">
             Prevention First
           </h2>
           <div className="grid grid-cols-6">
