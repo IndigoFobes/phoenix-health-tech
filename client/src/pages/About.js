@@ -22,7 +22,7 @@ import {
   ZoomOut,
 } from "react-scroll-motion";
 
-export default function About() {
+export default function About({ currentPage, handlePageChange }) {
   const scrollAnimation = batch(Sticky(50, 20), MoveOut(0, -100));
   const FadeUp = batch(Fade(), Move(), Sticky());
   return (

@@ -21,7 +21,7 @@ import { Link } from "react-router-dom";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 // import Modal from "../components/Modal";
 
-export default function Home() {
+export default function Home({ currentPage, handlePageChange }) {
   const [isHoveringYellow, setisHoveringYellow] = useState(false);
 
   const [isHoveringGreen, setisHoveringGreen] = useState(false);
@@ -135,6 +135,7 @@ export default function Home() {
           <Link
             to="/learn"
             className="lg:text-lg dm-sans-med col-start-3 col-end-5 text-center py-2 rounded-sm title-text font-bold hover:translate-x-2 transition duration-300 cursor-pointer mt-5"
+            onClick={() => handlePageChange("Learn")}
           >
             <p>
               Learn More{" "}
@@ -157,7 +158,10 @@ export default function Home() {
             purchase page.
           </p>
           <Link to="/purchase">
-            <p className="text-yellow-500 dm-sans-med text-base md:text-lg lg:text-xl xl:text-2xl font-bold flex drop-shadow-md hover:translate-x-3 transition duration-300 cursor-pointer">
+            <p
+              className="text-yellow-500 dm-sans-med text-base md:text-lg lg:text-xl xl:text-2xl font-bold flex drop-shadow-md hover:translate-x-3 transition duration-300 cursor-pointer"
+              onClick={() => handlePageChange("Purchase")}
+            >
               Visit Purchase Page{" "}
               <span>
                 <FontAwesomeIcon icon={faArrowRight} className="ml-2" />
@@ -169,6 +173,7 @@ export default function Home() {
         <Link
           to="/contact"
           className="col-start-2 col-end-7 sm:col-start-5 my-8 sm:my-0 justify-center place-self-center"
+          onClick={() => handlePageChange("Contact")}
         >
           <div className="flex flex-col items-start bg-gradient-to-br from-yellow-600 to-yellow-400 p-4 md:p-8 shadow-md shadow-black hover:scale-110 hover:from-yellow-400 hover:to-yellow-500 transition ease-in-out duration-500 cursor-pointer">
             <h2 className="dm-sans-bold text-base sm:text-xl md:text-2xl lg:text-3xl font-bold text-white mb-3">

@@ -30,13 +30,20 @@ const App = () => {
   const [currentPage, setCurrentPage] = useState("Home");
 
   //handle page change; whichever page is plugged in here will be rendered
-  const handlePageChange = (page) => setCurrentPage(page);
+  const handlePageChange = (page) => {
+    setCurrentPage(page);
+    console.log(currentPage);
+  };
 
   const HomeLayout = () => (
     <>
       <Logo />
       <Header currentPage={currentPage} handlePageChange={handlePageChange} />
-      <Home className="flex" />
+      <Home
+        className="flex"
+        currentPage={currentPage}
+        handlePageChange={handlePageChange}
+      />
     </>
   );
 
@@ -44,7 +51,7 @@ const App = () => {
     <>
       <Logo />
       <Header currentPage={currentPage} handlePageChange={handlePageChange} />
-      <About />
+      <About currentPage={currentPage} handlePageChange={handlePageChange} />
     </>
   );
 
@@ -52,7 +59,7 @@ const App = () => {
     <>
       <Logo />
       <Header currentPage={currentPage} handlePageChange={handlePageChange} />
-      <Learn />
+      <Learn currentPage={currentPage} handlePageChange={handlePageChange} />
     </>
   );
 
@@ -60,7 +67,11 @@ const App = () => {
     <>
       <Logo />
       <Header currentPage={currentPage} handlePageChange={handlePageChange} />
-      <Purchase className="flex" />
+      <Purchase
+        className="flex"
+        currentPage={currentPage}
+        handlePageChange={handlePageChange}
+      />
     </>
   );
 
@@ -68,7 +79,10 @@ const App = () => {
     <>
       <Logo />
       <Header currentPage={currentPage} handlePageChange={handlePageChange} />
-      <ContactForm />
+      <ContactForm
+        currentPage={currentPage}
+        handlePageChange={handlePageChange}
+      />
     </>
   );
 

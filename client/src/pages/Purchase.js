@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import StripeContainer from "../components/StripeContainer";
 import greenImage from "../assets/green_placeholder.jpg";
 
-export default function Purchase() {
+export default function Purchase({ currentPage, handlePageChange }) {
   const [showItem, setShowItem] = useState(false);
   return (
     <div>

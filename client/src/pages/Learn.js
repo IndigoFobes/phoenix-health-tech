@@ -6,7 +6,7 @@ import GreyOne from "../assets/grey_1_pht(update).png";
 import GreyTwo from "../assets/grey_2_pht(update).png";
 import GreyThree from "../assets/grey_3_pht(update).png";
 
-export default function Learn() {
+export default function Learn({ currentPage, handlePageChange }) {
   // default video is number 1
   const [currentNumber, setCurrentNumber] = useState(1);
 
