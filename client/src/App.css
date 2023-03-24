@@ -49,6 +49,17 @@ font-weight: 400;
 	}
 }
 
+.meet-team {
+	font-size: 4rem;
+	/* text-shadow: 1px 1px 10px #404346; */
+}
+
+@media screen and (max-width: 953px){
+	.meet-team {
+		font-size: 3rem
+	}
+}
+
 .our-mission-mobile {
 	font-size: 3rem
 }

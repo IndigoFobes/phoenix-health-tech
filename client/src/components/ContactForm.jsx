@@ -37,10 +37,10 @@ const ContactForm = () => {
       <container className="bg-gradient-to-br from-sky-600  to-sky-300 grid grid-cols-5 mx-auto max-w-screen-lg p-4 rounded-md mb-40">
         {/* Left side: "Contact us" with Social media icons and such */}
         <div className="col-start-1 col-end-3 pl-5 pr-20">
-          <h1 className="text-3xl font-bold text-white mt-3 mb-5">
+          <h1 className="text-3xl font-bold dm-sans-bold text-white mt-3 mb-5">
             Contact us
           </h1>
-          <p className="text-xl text-white mb-9">
+          <p className="dm-sans text-xl text-white mb-9">
             Send us a message, and we will be sure to get back to you as soon as
             possible.
           </p>
@@ -52,7 +52,7 @@ const ContactForm = () => {
                 style: "solid",
               })}
             />
-            <p className="text-xl text-white mb-3">777-777-7777</p>
+            <p className="text-xl dm-sans text-white mb-3">777-777-7777</p>
           </div>
           <div className="flex flex-row gap-2">
             <FontAwesomeIcon
@@ -62,7 +62,7 @@ const ContactForm = () => {
                 style: "solid",
               })}
             />
-            <p className="text-xl text-white mb-3">
+            <p className="text-xl dm-sans text-white mb-3">
               will@phoenixhealthtech.com
             </p>
           </div>
@@ -150,7 +150,7 @@ const ContactForm = () => {
             </div>
             <button
               type="submit"
-              className="mt-3 font-bold text-white text-lg bg-sky-400 px-6 py-1 rounded-sm hover:bg-sky-300 "
+              className="mt-3 dm-sans-med text-white text-lg bg-sky-400 px-6 py-1 rounded-sm hover:bg-sky-300 "
             >
               {status}
             </button>

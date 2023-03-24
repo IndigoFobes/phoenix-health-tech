@@ -17,7 +17,7 @@ import Footer from "../src/components/Footer";
 import { Link } from "react-router-dom";
 import PHTTitle from "./assets/PHT_TITLE_BLUE(2).png";
 import Logo from "./components/Logo";
-
+import ScrollToTop from "./components/ScrollToTop";
 //import Home from "./pages/Home";
 
 // import css, if used
@@ -74,6 +74,7 @@ const App = () => {
 
   return (
     <Router>
+      {/* <ScrollToTop> */}
       <div>
         <main className="relative contentContainer">
           <Routes>
@@ -87,6 +88,7 @@ const App = () => {
         </main>
         <Footer />
       </div>
+      {/* </ScrollToTop> */}
     </Router>
   );
 };

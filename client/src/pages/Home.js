@@ -202,161 +202,7 @@ export default function Home() {
         </Link>
       </div>
       {/* icons */}
-      {/* <container
-        className="hidden justify-between pt-5 px-5 lg:pt-10 lg:px-60 pb-10 bg-[#ECF0F2] drop-shadow-lg"
-        onMouseLeave={() => {
-          setisHoveringBlue(false);
-          setisHoveringGreen(false);
-          setisHoveringYellow(false);
-        }}
-      >
-        <div
-          className="flex flex-col justify-center items-center mt-1.5 lg:mr-10"
-          onMouseEnter={handleMouseEnterYellow}
-          // onMouseLeave={handleMouseLeaveYellow}
-        >
-          <img
-            src={yellow}
-            className={`w-1/4 transition ease-in-out duration-800 ${
-              isHoveringYellow
-                ? "opacity-100 scale-110 transition ease-in-out duration-800"
-                : "opacity-60"
-            }`}
-          ></img>
-          <h3 className="font-semibold text-xs sm:text-base md:text-xl">
-            All Natural
-          </h3>
-        </div>
-        <div
-          className="flex flex-col justify-center items-center mt-1.5"
-          onMouseEnter={handleMouseEnterGreen}
-          // onMouseLeave={handleMouseLeaveGreen}
-        >
-          <img
-            src={green}
-            className={`w-1/4 transition ease-in-out duration-800 ${
-              isHoveringGreen
-                ? "opacity-100 scale-110 transition ease-in-out duration-800"
-                : "opacity-60"
-            }`}
-          ></img>
-          <h3 className="font-semibold text-xs sm:text-base md:text-xl">
-            Green Solution
-          </h3>
-        </div>
-        <div
-          className="flex flex-col justify-center items-center mt-1.5 lg:ml-10"
-          onMouseEnter={handleMouseEnterBlue}
-          // onMouseLeave={handleMouseLeaveBlue}
-        >
-          <img
-            src={blue}
-            className={`w-1/4 transition ease-in-out duration-800 ${
-              isHoveringBlue
-                ? "opacity-100 scale-110 transition ease-in-out duration-800"
-                : "opacity-60"
-            }`}
-          ></img>
-          <h3 className="font-semibold text-xs sm:text-base md:text-xl">
-            Prevention First
-          </h3>
-        </div>
-      </container> */}
-      {/* <div
-        className="hidden lg:h-[30rem] lg:flex flex-col justify-start items-center"
-        onMouseEnter={() => {
-          setisHoveringBlue(false);
-          setisHoveringGreen(false);
-          setisHoveringYellow(false);
-        }}
-        onMouseLeave={() => {
-          setisHoveringBlue(false);
-          setisHoveringGreen(false);
-          setisHoveringYellow(false);
-        }}
-      > */}
-      {/* Conditionally render extra space if hover is not happening */}
-      {/* {!isHoveringYellow && !isHoveringGreen && !isHoveringBlue && (
-          <div className="hidden lg:flex justify-center text-2xl font-medium mt-20">
-            <h3 className="border-4 dark-blue-border px-10 py-6 rounded-md opacity-75">
-              Mouse over an icon to learn more.
-            </h3>
-          </div>
-        )} */}
-      {/* Yellow box */}
-      {/* <div
-          className={`bg-gradient-to-br from-amber-500 to-amber-200 justify-center pt-5 md:rounded-sm lg:pt-10 lg:px-40 py-5 px-8 md:py-10 md:px-20 flex-col text-center gap-5 mb-10 ${
-            isHoveringYellow ? "flex" : "hidden"
-          }`}
-        > */}
-      {/* <h2 className="font-semibold text-xl sm:text-2xl">
-            An All Natural Solution
-          </h2>
-          <p className="font-medium text-sm sm:text-base">
-            Mauris in sagittis metus. Sed sodales odio id sem sodales, sed
-            bibendum risus ultrices. Maecenas magna velit, imperdiet vel dui id,
-            eleifend fermentum odio. Integer at ultricies mi, nec eleifend
-            dolor. Aliquam fermentum nunc at libero tempus, sed maximus erat
-            placerat. Praesent in arcu vitae neque cursus pulvinar.Lorem ipsum
-            dolor sit amet, consectetur adipiscing elit. Vestibulum laoreet a
-            nisl sit amet facilisis. Vestibulum id tellus felis. Vestibulum
-            efficitur dignissim pulvinar. Sed vulputate posuere ultrices.
-            Integer blandit dui ut laoreet bibendum. Maecenas tristique, diam a
-            mollis euismod, nunc erat ultricies orci, vel auctor ex nulla in
-            erat. Ut imperdiet, purus a porttitor dignissim, nisi neque ultrices
-            eros, a commodo lectus lectus egestas leo. Ut quis neque elit.
-          </p>
-        </div> */}
-      {/* Green box */}
-      {/* <div
-          className={`bg-gradient-to-br from-lime-500 to-yellow-200 justify-center mt-5 md:mx-20 md:rounded-sm lg:mt-10 lg:mx-40 py-5 px-8 md:py-10 md:px-20 flex-col text-center gap-5 mb-20 ${
-            isHoveringGreen ? "flex" : "hidden"
-          }`}
-        >
-          <h2 className="font-semibold text-xl sm:text-2xl">
-            A Green Solution
-          </h2>
-          <p className="font-medium">
-            Mauris in sagittis metus. Sed sodales odio id sem sodales, sed
-            bibendum risus ultrices. Maecenas magna velit, imperdiet vel dui id,
-            eleifend fermentum odio. Integer at ultricies mi, nec eleifend
-            dolor. Aliquam fermentum nunc at libero tempus, sed maximus erat
-            placerat. Praesent in arcu vitae neque cursus pulvinar.Lorem ipsum
-            dolor sit amet, consectetur adipiscing elit. Vestibulum laoreet a
-            nisl sit amet facilisis. Vestibulum id tellus felis. Vestibulum
-            efficitur dignissim pulvinar. Sed vulputate posuere ultrices.
-            Integer blandit dui ut laoreet bibendum. Maecenas tristique, diam a
-            mollis euismod, nunc erat ultricies orci, vel auctor ex nulla in
-            erat. Ut imperdiet, purus a porttitor dignissim, nisi neque ultrices
-            eros, a commodo lectus lectus egestas leo. Ut quis neque elit.
-          </p>
-        </div> */}
-      {/* Blue box */}
-      {/* <div
-          className={`bg-gradient-to-br from-sky-400 to-indigo-200 justify-center mt-5 md:mx-20 md:rounded-sm lg:mt-10 lg:mx-40 py-5 px-8 md:py-10 md:px-20 flex-col text-center gap-5 mb-20 ${
-            isHoveringBlue ? "flex" : "hidden"
-          }`}
-        >
-          <h2 className="font-semibold text-xl sm:text-2xl">
-            Prevention First
-          </h2>
-          <p className="font-medium">
-            Mauris in sagittis metus. Sed sodales odio id sem sodales, sed
-            bibendum risus ultrices. Maecenas magna velit, imperdiet vel dui id,
-            eleifend fermentum odio. Integer at ultricies mi, nec eleifend
-            dolor. Aliquam fermentum nunc at libero tempus, sed maximus erat
-            placerat. Praesent in arcu vitae neque cursus pulvinar.Lorem ipsum
-            dolor sit amet, consectetur adipiscing elit. Vestibulum laoreet a
-            nisl sit amet facilisis. Vestibulum id tellus felis. Vestibulum
-            efficitur dignissim pulvinar. Sed vulputate posuere ultrices.
-            Integer blandit dui ut laoreet bibendum. Maecenas tristique, diam a
-            mollis euismod, nunc erat ultricies orci, vel auctor ex nulla in
-            erat. Ut imperdiet, purus a porttitor dignissim, nisi neque ultrices
-            eros, a commodo lectus lectus egestas leo. Ut quis neque elit.
-          </p>
-        </div>
-      </div> */}
-      {/* Mobile: Click instead of hover */}
+      {/* Click instead of hover */}
       <container className="grid grid-cols-6">
         <container className="col-start-2 col-end-6 mb-5 mt-5 md:mt-10">
           <h1 className="text-center text-xl md:text-2xl lg:text-3xl title-text ">
@@ -368,7 +214,7 @@ export default function Home() {
       <container className="grid grid-cols-5 py-5">
         {/* yellow */}
         <div
-          className={`col-start-2 cursor-pointer flex flex-col justify-center items-center pt-6 pb-3 transition ease-in-out duration-800 ${
+          className={`col-start-2 cursor-pointer flex flex-col justify-center items-center pt-6 pb-3 transition ease-in-out duration-600 ${
             currentColor === "yellow"
               ? "scale-110 transition ease-in-out duration-800"
               : ""
@@ -377,7 +223,7 @@ export default function Home() {
         >
           <img
             src={yellow}
-            className={`w-1/4 transition ease-in-out duration-800 hover:opacity-100 ${
+            className={`w-1/4 transition ease-in-out duration-500 hover:opacity-100 ${
               currentColor === "yellow"
                 ? "opacity-100 transition ease-in-out duration-800"
                 : "opacity-50"
@@ -391,7 +237,7 @@ export default function Home() {
         </div>
         {/* green */}
         <div
-          className={`col-start-3 cursor-pointer flex flex-col justify-center items-center pt-6 pb-3 transition ease-in-out duration-800 ${
+          className={`col-start-3 cursor-pointer flex flex-col justify-center items-center pt-6 pb-3 transition ease-in-out duration-600 ${
             currentColor === "green"
               ? "scale-110 transition ease-in-out duration-800"
               : ""
@@ -400,7 +246,7 @@ export default function Home() {
         >
           <img
             src={green}
-            className={`w-1/4 transition ease-in-out duration-800 hover:opacity-100 ${
+            className={`w-1/4 transition ease-in-out duration-500 hover:opacity-100 ${
               currentColor === "green"
                 ? "opacity-100 transition ease-in-out duration-800"
                 : "opacity-50"
@@ -412,7 +258,7 @@ export default function Home() {
         </div>
         {/* blue */}
         <div
-          className={`col-start-4 cursor-pointer flex flex-col justify-center items-center pt-6 pb-3 transition ease-in-out duration-800 ${
+          className={`col-start-4 cursor-pointer flex flex-col justify-center items-center pt-6 pb-3 transition ease-in-out duration-600 ${
             currentColor === "blue"
               ? "scale-110 transition ease-in-out duration-800"
               : ""
@@ -421,7 +267,7 @@ export default function Home() {
         >
           <img
             src={blue}
-            className={`w-1/4 transition ease-in-out duration-800 hover:opacity-100 ${
+            className={`w-1/4 transition ease-in-out duration-500 hover:opacity-100 ${
               currentColor === "blue"
                 ? "opacity-100 transition ease-in-out duration-800"
                 : "opacity-50"

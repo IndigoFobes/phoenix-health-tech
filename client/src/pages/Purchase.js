@@ -8,9 +8,7 @@ export default function Purchase() {
     <div>
       <div className="grid grid-cols-6">
         <container className="col-start-2 col-end-5 mb-5 mt-10">
-          <h1 className="font-sans font-semibold text-2xl text-blue-900 ">
-            Purchase a Unit
-          </h1>
+          <h1 className="text-2xl title-text">Purchase a Unit</h1>
         </container>
       </div>
       <div className="grid grid-cols-6">
@@ -31,9 +29,7 @@ export default function Purchase() {
       </div>
       <div className="grid grid-cols-6 mt-20 mb-20">
         <div className="col-start-2 col-end-6 text-center items-center">
-          <h2 className="font-semibold text-2xl text-blue-900 mb-2">
-            HVAC Unit
-          </h2>
+          <h2 className="title-text text-2xl mb-2">HVAC Unit</h2>
           {showItem ? (
             <div>
               <button
