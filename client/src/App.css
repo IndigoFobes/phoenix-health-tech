@@ -60,12 +60,31 @@ font-weight: 400;
 	}
 }
 
+.hvac {
+	font-size: 3rem;
+	/* text-shadow: 1px 1px 10px #404346; */
+}
+
+@media screen and (max-width: 953px){
+	.hvac {
+		font-size: 2.5rem
+	}
+}
+
 .our-mission-mobile {
 	font-size: 3rem
 }
 
 .about-bg {
 	background: url("./assets/pexels-office.jpg");
+	height: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+  	background-size: cover;
+}
+
+.purchase-bg {
+	background: url("./assets/PHT_LOGO_noWORDS.png");
 	height: 100%;
 	background-position: center;
 	background-repeat: no-repeat;

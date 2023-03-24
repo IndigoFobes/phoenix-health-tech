@@ -81,7 +81,11 @@ export default function Home({ currentPage, handlePageChange }) {
             isClicked ? "blur-none" : "blur-sm"
           }`}
         >
-          <img className="" src={CleanHome}></img>
+          <img
+            className=""
+            src={CleanHome}
+            alt="White, modern couch with white pillows. Small circular tables with vase of pretty leaf decoration."
+          ></img>
           <p className="text-center dm-sans-bold text-xs sm:text-sm md:text-base lg:text-2xl absolute top-1/2 left-1/5 -translate-x-1/2 -translate-y-1/2 ml-10 md:ml-0 sm:font-bold warm-gray px-4 py-4 rounded-sm text-white">
             Not quite as clean as you think.
           </p>
@@ -233,6 +237,7 @@ export default function Home({ currentPage, handlePageChange }) {
                 ? "opacity-100 transition ease-in-out duration-800"
                 : "opacity-50"
             }`}
+            alt="Yellowish-orange recycle symbol."
           ></img>
           <h3
             className={`dm-sans-bold font-semibold text-xs sm:text-base md:text-xl`}
@@ -256,6 +261,7 @@ export default function Home({ currentPage, handlePageChange }) {
                 ? "opacity-100 transition ease-in-out duration-800"
                 : "opacity-50"
             }`}
+            alt="Green recycle symbol."
           ></img>
           <h3 className="dm-sans-bold font-semibold text-xs sm:text-base md:text-xl">
             Green Solution
@@ -277,6 +283,7 @@ export default function Home({ currentPage, handlePageChange }) {
                 ? "opacity-100 transition ease-in-out duration-800"
                 : "opacity-50"
             }`}
+            alt="Blue recycle symbol."
           ></img>
           <h3 className="dm-sans-bold font-semibold text-xs sm:text-base md:text-xl">
             Prevention First
@@ -313,6 +320,7 @@ export default function Home({ currentPage, handlePageChange }) {
             <img
               src={natural}
               className="col-start-2 col-end-6 lg:col-start-4 lg:col-end-7 lg:w-3/4 place-self-center"
+              alt="Kitchen wall with light purple hand towel, bowl of oranges, glasses of water, and a bit of the kitchen counter. Close up."
             ></img>
           </div>
         </div>
@@ -345,6 +353,7 @@ export default function Home({ currentPage, handlePageChange }) {
             <img
               src={greenPhoto}
               className="col-start-2 col-end-6 lg:col-start-4 lg:col-end-7 lg:w-3/4 place-self-center"
+              alt="Close up of small, green plant sprouting from the ground. Blurry background of soil."
             ></img>
           </div>
         </div>
@@ -377,6 +386,7 @@ export default function Home({ currentPage, handlePageChange }) {
             <img
               src={blueGirl}
               className="col-start-2 col-end-6 lg:col-start-4 lg:col-end-7 lg:w-3/4 place-self-center"
+              alt="Young girl outside, wearing a tan fedora, jean jacket, and a blue and white button-up top. She  has red hair, is holding a paper airplane, and is smiling off into the distance."
             ></img>
           </div>
         </div>
