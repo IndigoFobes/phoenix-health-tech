@@ -13,7 +13,7 @@ import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 export default function Purchase({ currentPage, handlePageChange }) {
   const [showItem, setShowItem] = useState(false);
   return (
-    <div className="bg-fixed purchase-bg relative">
+    <div className="bg-fixed bg-gradient-to-br from-[#0E4370] to-sky-400 relative">
       <div className="shadow-inner pb-8 bg-gray-100 opacity-80 w-full h-[300px] sm:h-[340px] md:h-[370px] lg:h-[290px]"></div>
       <div className="absolute top-0 left-0">
         <div className="grid grid-cols-6">
@@ -36,9 +36,15 @@ export default function Purchase({ currentPage, handlePageChange }) {
       </div>
       {/* space */}
       <div className="w-full h-[300px]"></div>
-      <div className="grid grid-cols-6 bg-white h-[400px] "></div>
+      <div className=" bg-white h-[400px] flex items-center">
+        <ul className="grid grid-cols-6 justify-items-center w-full">
+          <li className="col-start-1 col-end-3">Purchase your own Unit</li>
+          <li className="col-start-3 col-end-5">Receive a Call or Email</li>
+          <li className="col-start-5 col-end-7">Installation Day</li>
+        </ul>
+      </div>
       {/* Purchase box */}
-      <div className="grid grid-cols-6 bg-gradient-to-r from-[#0E4370] to-sky-500 py-8">
+      <div className="grid grid-cols-6 py-20">
         <div className="col-start-1 col-end-4 flex flex-col justify-center place-items-center">
           <h2 className="dm-sans-bold text-white hvac mb-2">HVAC Unit</h2>
           <hr class="h-px my-4 w-2/3 bg-gray-100 border-0 dark:bg-gray-700" />
