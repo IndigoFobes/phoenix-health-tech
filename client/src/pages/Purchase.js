@@ -9,11 +9,14 @@ import {
   icon,
 } from "@fortawesome/fontawesome-svg-core/import.macro";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import purchase from "../assets/pht_purchase_graphic_1.png";
+import phoneCall from "../assets/pht_purchase_graphic_2.png";
+import install from "../assets/pht_purchase_graphic_3.png";
 
 export default function Purchase({ currentPage, handlePageChange }) {
   const [showItem, setShowItem] = useState(false);
   return (
-    <div className="bg-fixed bg-gradient-to-br from-[#0E4370] to-sky-400 relative">
+    <div className="bg-fixed bg-gradient-to-b from-[#0E4370] to-sky-300 relative">
       <div className="shadow-inner pb-8 bg-gray-100 opacity-80 w-full h-[300px] sm:h-[340px] md:h-[370px] lg:h-[290px]"></div>
       <div className="absolute top-0 left-0">
         <div className="grid grid-cols-6">
@@ -36,11 +39,50 @@ export default function Purchase({ currentPage, handlePageChange }) {
       </div>
       {/* space */}
       <div className="w-full h-[300px]"></div>
-      <div className=" bg-white h-[400px] flex items-center">
-        <ul className="grid grid-cols-6 justify-items-center w-full">
-          <li className="col-start-1 col-end-3">Purchase your own Unit</li>
-          <li className="col-start-3 col-end-5">Receive a Call or Email</li>
-          <li className="col-start-5 col-end-7">Installation Day</li>
+      <div className=" flex items-center flex-col">
+        <ul className="bg-white grid grid-cols-6 justify-items-center w-full mx-20 mt-5 py-8">
+          <li className="col-start-1 col-end-3 flex flex-col text-center gap-4 ">
+            <p className="dm-sans-med text-[#0E4370] text-2xl">Purchase</p>
+            <img
+              className="w-1/3 self-center hover:scale-110 transition duration-500 ease-in-out"
+              src={purchase}
+            ></img>
+          </li>
+          <li className="col-start-3 col-end-5 flex flex-col text-center gap-4">
+            <p className="dm-sans-med text-[#0E4370] text-2xl">Call</p>
+            <img
+              className="w-1/3 self-center hover:scale-110 transition duration-500 ease-in-out"
+              src={phoneCall}
+            ></img>
+          </li>
+          <li className="col-start-5 col-end-7 flex flex-col text-center gap-4">
+            <p className="dm-sans-med text-[#0E4370] text-2xl">Install</p>
+            <img
+              className="w-1/3 self-center hover:scale-110 transition duration-500 ease-in-out"
+              src={install}
+            ></img>
+          </li>
+        </ul>
+        <ul className="grid grid-cols-6 justify-items-center w-full mx-20 bg-[#0E4370] text-white py-4">
+          <li className="col-start-1 col-end-3 flex flex-col text-center gap-4">
+            <p className="mx-20 dm-sans">
+              Purchase a unit online. You will fill out a form with your contact
+              information so we can get in touch.
+            </p>
+          </li>
+          <li className="col-start-3 col-end-5 flex flex-col text-center gap-4">
+            <p className="mx-20 dm-sans">
+              One of our dealers near you will receive your order and give you a
+              call or email so you can plan a day that works best for you to get
+              your new unit installed.
+            </p>
+          </li>
+          <li className="col-start-5 col-end-7 flex flex-col text-center gap-4">
+            <p className="mx-20 dm-sans">
+              Installation day will come and go, and you can breathe deeply
+              knowing your HVAC unit is doing its thing, keeping your air clean!
+            </p>
+          </li>
         </ul>
       </div>
       {/* Purchase box */}
