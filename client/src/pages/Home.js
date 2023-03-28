@@ -72,6 +72,10 @@ export default function Home({ currentPage, handlePageChange }) {
     setIsClicked(true);
   }
 
+  function componentDidMount() {
+    window.scrollTo(0, 0);
+  }
+
   return (
     <div>
       <div className="flex flex-col relative">
@@ -139,7 +143,10 @@ export default function Home({ currentPage, handlePageChange }) {
           <Link
             to="/learn"
             className="lg:text-lg dm-sans-med col-start-3 col-end-5 text-center py-2 rounded-sm title-text font-bold hover:translate-x-2 transition duration-300 cursor-pointer mt-5"
-            onClick={() => handlePageChange("Learn")}
+            onClick={[
+              () => handlePageChange("Learn"),
+              () => componentDidMount(),
+            ]}
           >
             <p>
               Learn More{" "}
@@ -161,7 +168,7 @@ export default function Home({ currentPage, handlePageChange }) {
             Give us a call, send us an email, <br></br>or head over to our
             purchase page.
           </p>
-          <Link to="/purchase">
+          <Link to="/purchase" onClick={() => componentDidMount()}>
             <p
               className="text-yellow-500 dm-sans-med text-base md:text-lg lg:text-xl xl:text-2xl font-bold flex drop-shadow-md hover:translate-x-3 transition duration-300 cursor-pointer"
               onClick={() => handlePageChange("Purchase")}
@@ -177,7 +184,10 @@ export default function Home({ currentPage, handlePageChange }) {
         <Link
           to="/contact"
           className="col-start-2 col-end-7 sm:col-start-5 my-8 sm:my-0 justify-center place-self-center"
-          onClick={() => handlePageChange("Contact")}
+          onClick={[
+            () => handlePageChange("Contact"),
+            () => componentDidMount(),
+          ]}
         >
           <div className="flex flex-col items-start bg-gradient-to-br from-yellow-600 to-yellow-400 p-4 md:p-8 shadow-md shadow-black hover:scale-110 hover:from-yellow-400 hover:to-yellow-500 transition ease-in-out duration-500 cursor-pointer">
             <h2 className="dm-sans-bold text-base sm:text-xl md:text-2xl lg:text-3xl font-bold text-white mb-3">

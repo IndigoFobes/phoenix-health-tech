@@ -29,10 +29,16 @@ const App = () => {
   // useState to set which page user is on
   const [currentPage, setCurrentPage] = useState("Home");
 
+  // Scroll to top of page on page load
+  function componentDidMount() {
+    window.scrollTo(0, 0);
+  }
+
   //handle page change; whichever page is plugged in here will be rendered
   const handlePageChange = (page) => {
     setCurrentPage(page);
     console.log(currentPage);
+    componentDidMount();
   };
 
   const HomeLayout = () => (
