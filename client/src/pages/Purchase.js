@@ -1,6 +1,7 @@
 import React, { useState, useRef } from "react";
 import StripeContainer from "../components/StripeContainer";
 import greenImage from "../assets/green_placeholder.jpg";
+import familyPlaying from "../assets/family-playing.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   solid,
@@ -106,11 +107,10 @@ const expectVariant = {
 export default function Purchase({ currentPage, handlePageChange }) {
   const [showItem, setShowItem] = useState(false);
   return (
-    <div className="bg-fixed bg-gradient-to-b from-[#0E4370] to-sky-300 relative">
-      <div className="shadow-inner pb-8 bg-gray-100 opacity-80 w-full h-[300px] sm:h-[340px] md:h-[370px] lg:h-[290px] xl:h-[310px]"></div>
-      <div className="absolute top-0 left-0">
+    <div className="bg-fixed purchase-bg relative">
+      <div className="bg-gray-200/80 py-10">
         <div className="grid grid-cols-6">
-          <container className="col-start-1 col-end-7 md:col-end-5 mb-5 mt-10 mx-10">
+          <container className="col-start-1 col-end-7 md:col-end-5 mb-5 mx-10">
             <h1 className="text-center md:text-left our-mission title-text">
               Purchase a Unit
             </h1>
@@ -150,7 +150,7 @@ export default function Purchase({ currentPage, handlePageChange }) {
       {/* regular to large screens */}
       <div className="hidden md:flex items-center flex-col">
         <motion.div
-          className="bg-white grid grid-cols-6 justify-items-center w-full mx-20 mt-5 pt-8 pb-10"
+          className="bg-gray-200/80 grid grid-cols-6 justify-items-center w-full mx-20 mt-5 pt-8 pb-10"
           initial="offscreen"
           whileInView="onscreen"
           viewport={{ once: true, amount: 0.8 }}
@@ -306,12 +306,14 @@ export default function Purchase({ currentPage, handlePageChange }) {
         </motion.div>
       </div>
       {/* Purchase box */}
-      <div className="grid grid-cols-6 py-20">
+      <div className="grid grid-cols-6 py-20 bg-white">
         <div className="col-start-1 col-end-7 md:col-end-4 flex flex-col justify-center place-items-center">
-          <h2 className="dm-sans-bold text-white hvac mb-2">HVAC Unit</h2>
-          <hr class="h-px my-4 w-2/3 bg-gray-100 border-0 dark:bg-gray-700" />
-          <h3 className="dm-sans-med text-white text-xl mb-4">$2,355.00</h3>
-          <h4 className="text-white">Text about the product. Information.</h4>
+          <h2 className="dm-sans-bold text-[#0E4370] hvac mb-2">HVAC Unit</h2>
+          <hr class="h-px my-4 w-2/3 bg-[#0E4370] border-0 dark:bg-gray-700" />
+          <h3 className="dm-sans-med text-[#0E4370] text-xl mb-4">$2,355.00</h3>
+          <h4 className="text-[#0E4370]">
+            Text about the product. Information.
+          </h4>
         </div>{" "}
         <img
           src={greenImage}

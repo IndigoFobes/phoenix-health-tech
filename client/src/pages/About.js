@@ -3,6 +3,7 @@ import indigo from "../assets/indigo_recent.JPG";
 import missionShape from "../assets/pht_mission_shape.png";
 import missionShapeLight from "../assets/pht_mission_shape_light.png";
 import office from "../assets/pexels-office.jpg";
+
 import {
   Animator,
   ScrollContainer,
@@ -70,10 +71,10 @@ const textVariant = {
 export default function About({ currentPage, handlePageChange }) {
   return (
     <div className="bg-fixed about-bg relative">
-      <div className="shadow-inner pb-8 bg-gray-200 opacity-80 w-full h-[300px] sm:h-[330px] md:h-[360px] lg:h-[320px]"></div>
-      <div className="absolute top-0 left-0">
+      {/* <div className="shadow-inner pb-8 bg-gray-200 opacity-80 w-full h-[300px] sm:h-[330px] md:h-[360px] lg:h-[320px]"></div> */}
+      <div className="bg-gray-200/80 py-10">
         <div className="grid grid-cols-6">
-          <container className="col-start-1 col-end-7 md:col-end-5 mb-5 mt-10 mx-10">
+          <container className="col-start-1 col-end-7 md:col-end-5 mb-5 mx-10">
             <h1 className="text-center md:text-left our-mission title-text">
               Our Mission
             </h1>
