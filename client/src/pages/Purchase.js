@@ -227,7 +227,7 @@ export default function Purchase({ currentPage, handlePageChange }) {
       </div>
 
       {/* Mobile */}
-      <div className="flex md:hidden items-center flex-col">
+      <div className="flex md:hidden items-center flex-col bg-[#0E4370]/60 py-10">
         <motion.div
           className=" justify-items-center mb-10"
           initial="offscreen"

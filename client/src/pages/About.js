@@ -98,7 +98,7 @@ export default function About({ currentPage, handlePageChange }) {
         <div className="my-40">
           <motion.h1
             variants={textVariant}
-            className="rounded-sm meet-team text-center font-semibold dm-sans-bold text-white"
+            className="rounded-sm meet-team text-center font-semibold dm-sans-bold text-[#0E4370]"
           >
             Meet Our Team
           </motion.h1>

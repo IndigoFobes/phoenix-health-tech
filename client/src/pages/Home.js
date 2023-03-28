@@ -25,7 +25,7 @@ import { motion } from "framer-motion";
 // for animations
 const imgVariant1 = {
   offscreen: {
-    y: 500,
+    y: 300,
     opacity: 0,
   },
   onscreen: {
@@ -42,7 +42,7 @@ const imgVariant1 = {
 
 const imgVariant2 = {
   offscreen: {
-    y: 500,
+    y: 300,
     opacity: 0,
   },
   onscreen: {
@@ -60,7 +60,7 @@ const imgVariant2 = {
 
 const imgVariant3 = {
   offscreen: {
-    y: 500,
+    y: 300,
     opacity: 0,
   },
   onscreen: {
@@ -198,10 +198,7 @@ export default function Home({ currentPage, handlePageChange }) {
           <Link
             to="/learn"
             className="lg:text-lg dm-sans-med col-start-3 col-end-5 text-center py-2 rounded-sm title-text font-bold hover:translate-x-2 transition duration-300 cursor-pointer mt-5"
-            onClick={[
-              () => handlePageChange("Learn"),
-              () => componentDidMount(),
-            ]}
+            onClick={() => handlePageChange("Learn")}
           >
             <p>
               Learn More{" "}
@@ -223,7 +220,7 @@ export default function Home({ currentPage, handlePageChange }) {
             Give us a call, send us an email, <br></br>or head over to our
             purchase page.
           </p>
-          <Link to="/purchase" onClick={() => componentDidMount()}>
+          <Link to="/purchase">
             <p
               className="text-yellow-500 dm-sans-med text-base md:text-lg lg:text-xl xl:text-2xl font-bold flex drop-shadow-md hover:translate-x-3 transition duration-300 cursor-pointer"
               onClick={() => handlePageChange("Purchase")}
@@ -239,12 +236,11 @@ export default function Home({ currentPage, handlePageChange }) {
         <Link
           to="/contact"
           className="col-start-2 col-end-7 sm:col-start-5 my-8 sm:my-0 justify-center place-self-center"
-          onClick={[
-            () => handlePageChange("Contact"),
-            () => componentDidMount(),
-          ]}
         >
-          <div className="flex flex-col items-start bg-gradient-to-br from-yellow-600 to-yellow-400 p-4 md:p-8 shadow-md shadow-black hover:scale-110 hover:from-yellow-400 hover:to-yellow-500 transition ease-in-out duration-500 cursor-pointer">
+          <div
+            onClick={() => handlePageChange("Contact")}
+            className="flex flex-col items-start bg-gradient-to-br from-yellow-600 to-yellow-400 p-4 md:p-8 shadow-md shadow-black hover:scale-110 hover:from-yellow-400 hover:to-yellow-500 transition ease-in-out duration-500 cursor-pointer"
+          >
             <h2 className="dm-sans-bold text-base sm:text-xl md:text-2xl lg:text-3xl font-bold text-white mb-3">
               Contact us
             </h2>
@@ -292,76 +288,90 @@ export default function Home({ currentPage, handlePageChange }) {
         viewport={{ once: true, amount: 0.8 }}
       >
         {/* yellow */}
-        <motion.div
+
+        <div
           className={`col-start-2 cursor-pointer flex flex-col justify-center items-center pt-6 pb-3 transition ease-in-out duration-600 ${
             currentColor === "yellow"
               ? "scale-110 transition ease-in-out duration-800"
               : ""
           }`}
-          variants={imgVariant1}
           onClick={handleClickYellow}
         >
-          <img
-            src={yellow}
-            className={`w-1/4 transition ease-in-out duration-500 hover:opacity-100 ${
-              currentColor === "yellow"
-                ? "opacity-100 transition ease-in-out duration-800"
-                : "opacity-50"
-            }`}
-            alt="Yellowish-orange recycle symbol."
-          ></img>
-          <h3
-            className={`dm-sans-bold font-semibold text-xs sm:text-base md:text-xl`}
+          <motion.div
+            variants={imgVariant1}
+            className="flex flex-col items-center"
           >
-            All Natural
-          </h3>
-        </motion.div>
+            <img
+              src={yellow}
+              className={`w-1/4 transition ease-in-out duration-500 hover:opacity-100 ${
+                currentColor === "yellow"
+                  ? "opacity-100 transition ease-in-out duration-800"
+                  : "opacity-50"
+              }`}
+              alt="Yellowish-orange recycle symbol."
+            ></img>
+            <h3
+              className={`dm-sans-bold font-semibold text-xs sm:text-base md:text-xl`}
+            >
+              All Natural
+            </h3>
+          </motion.div>
+        </div>
         {/* green */}
-        <motion.div
+        <div
           className={`col-start-3 cursor-pointer flex flex-col justify-center items-center pt-6 pb-3 transition ease-in-out duration-600 ${
             currentColor === "green"
               ? "scale-110 transition ease-in-out duration-800"
               : ""
           }`}
-          variants={imgVariant2}
           onClick={handleClickGreen}
         >
-          <img
-            src={green}
-            className={`w-1/4 transition ease-in-out duration-500 hover:opacity-100 ${
-              currentColor === "green"
-                ? "opacity-100 transition ease-in-out duration-800"
-                : "opacity-50"
-            }`}
-            alt="Green recycle symbol."
-          ></img>
-          <h3 className="dm-sans-bold font-semibold text-xs sm:text-base md:text-xl">
-            Green Solution
-          </h3>
-        </motion.div>
+          <motion.div
+            variants={imgVariant2}
+            className="flex flex-col items-center"
+          >
+            <img
+              src={green}
+              className={`w-1/4 transition ease-in-out duration-500 hover:opacity-100 ${
+                currentColor === "green"
+                  ? "opacity-100 transition ease-in-out duration-800"
+                  : "opacity-50"
+              }`}
+              alt="Green recycle symbol."
+            ></img>
+            <h3 className="dm-sans-bold font-semibold text-xs sm:text-base md:text-xl">
+              Green Solution
+            </h3>
+          </motion.div>
+        </div>
         {/* blue */}
-        <motion.div
+
+        <div
           className={`col-start-4 cursor-pointer flex flex-col justify-center items-center pt-6 pb-3 transition ease-in-out duration-600 ${
             currentColor === "blue"
               ? "scale-110 transition ease-in-out duration-800"
               : ""
           }`}
-          variants={imgVariant3}
           onClick={handleClickBlue}
         >
-          <img
-            src={blue}
-            className={`w-1/4 transition ease-in-out duration-500 hover:opacity-100 ${
-              currentColor === "blue"
-                ? "opacity-100 transition ease-in-out duration-800"
-                : "opacity-50"
-            }`}
-            alt="Blue recycle symbol."
-          ></img>
-          <h3 className="dm-sans-bold font-semibold text-xs sm:text-base md:text-xl">
-            Prevention First
-          </h3>
-        </motion.div>
+          <motion.div
+            variants={imgVariant3}
+            className="flex flex-col items-center"
+          >
+            <img
+              src={blue}
+              className={`w-1/4 transition ease-in-out duration-500 hover:opacity-100 ${
+                currentColor === "blue"
+                  ? "opacity-100 transition ease-in-out duration-800"
+                  : "opacity-50"
+              }`}
+              alt="Blue recycle symbol."
+            ></img>
+            <h3 className="dm-sans-bold font-semibold text-xs sm:text-base md:text-xl">
+              Prevention First
+            </h3>
+          </motion.div>
+        </div>
       </motion.container>
       <div className="flex mb-20">
         {/* Yellow box */}
