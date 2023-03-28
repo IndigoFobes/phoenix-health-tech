@@ -19,7 +19,62 @@ import {
 } from "@fortawesome/fontawesome-svg-core/import.macro";
 import { Link } from "react-router-dom";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { motion } from "framer-motion";
 // import Modal from "../components/Modal";
+
+// for animations
+const imgVariant1 = {
+  offscreen: {
+    y: 500,
+    opacity: 0,
+  },
+  onscreen: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      ease: "linear",
+      type: "spring",
+      bounce: 0.2,
+      duration: 0.8,
+    },
+  },
+};
+
+const imgVariant2 = {
+  offscreen: {
+    y: 500,
+    opacity: 0,
+  },
+  onscreen: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      ease: "linear",
+      type: "spring",
+      bounce: 0.2,
+      duration: 0.8,
+      delay: 0.3,
+    },
+  },
+};
+
+const imgVariant3 = {
+  offscreen: {
+    y: 500,
+    opacity: 0,
+  },
+  onscreen: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      ease: "linear",
+      type: "spring",
+      bounce: 0.2,
+      duration: 0.8,
+      delay: 0.6,
+    },
+  },
+};
 
 export default function Home({ currentPage, handlePageChange }) {
   const [isHoveringYellow, setisHoveringYellow] = useState(false);
@@ -230,14 +285,20 @@ export default function Home({ currentPage, handlePageChange }) {
           <hr class="h-px my-4 mx-20 col-start-3 col-end-5 bg-gray-200 border-0 dark:bg-gray-700" />
         </container>
       </container>
-      <container className="grid grid-cols-5 py-5">
+      <motion.container
+        className="grid grid-cols-5 py-5"
+        initial="offscreen"
+        whileInView="onscreen"
+        viewport={{ once: true, amount: 0.8 }}
+      >
         {/* yellow */}
-        <div
+        <motion.div
           className={`col-start-2 cursor-pointer flex flex-col justify-center items-center pt-6 pb-3 transition ease-in-out duration-600 ${
             currentColor === "yellow"
               ? "scale-110 transition ease-in-out duration-800"
               : ""
           }`}
+          variants={imgVariant1}
           onClick={handleClickYellow}
         >
           <img
@@ -254,14 +315,15 @@ export default function Home({ currentPage, handlePageChange }) {
           >
             All Natural
           </h3>
-        </div>
+        </motion.div>
         {/* green */}
-        <div
+        <motion.div
           className={`col-start-3 cursor-pointer flex flex-col justify-center items-center pt-6 pb-3 transition ease-in-out duration-600 ${
             currentColor === "green"
               ? "scale-110 transition ease-in-out duration-800"
               : ""
           }`}
+          variants={imgVariant2}
           onClick={handleClickGreen}
         >
           <img
@@ -276,14 +338,15 @@ export default function Home({ currentPage, handlePageChange }) {
           <h3 className="dm-sans-bold font-semibold text-xs sm:text-base md:text-xl">
             Green Solution
           </h3>
-        </div>
+        </motion.div>
         {/* blue */}
-        <div
+        <motion.div
           className={`col-start-4 cursor-pointer flex flex-col justify-center items-center pt-6 pb-3 transition ease-in-out duration-600 ${
             currentColor === "blue"
               ? "scale-110 transition ease-in-out duration-800"
               : ""
           }`}
+          variants={imgVariant3}
           onClick={handleClickBlue}
         >
           <img
@@ -298,8 +361,8 @@ export default function Home({ currentPage, handlePageChange }) {
           <h3 className="dm-sans-bold font-semibold text-xs sm:text-base md:text-xl">
             Prevention First
           </h3>
-        </div>
-      </container>
+        </motion.div>
+      </motion.container>
       <div className="flex mb-20">
         {/* Yellow box */}
         <div
