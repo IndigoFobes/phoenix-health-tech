@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import StripeContainer from "../components/StripeContainer";
 import greenImage from "../assets/green_placeholder.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -12,6 +12,81 @@ import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import purchase from "../assets/pht_purchase_graphic_1.png";
 import phoneCall from "../assets/pht_purchase_graphic_2.png";
 import install from "../assets/pht_purchase_graphic_3.png";
+import {
+  motion,
+  useScroll,
+  useSpring,
+  useTransform,
+  MotionValue,
+  useMotionValue,
+} from "framer-motion";
+
+const imgVariant1 = {
+  offscreen: {
+    y: 300,
+    opacity: 0,
+  },
+  onscreen: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      ease: "linear",
+      type: "spring",
+      bounce: 0.2,
+      duration: 0.8,
+    },
+  },
+};
+
+const imgVariant2 = {
+  offscreen: {
+    y: 300,
+    opacity: 0,
+  },
+  onscreen: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      ease: "linear",
+      type: "spring",
+      bounce: 0.2,
+      duration: 0.8,
+      delay: 0.3,
+    },
+  },
+};
+
+const imgVariant3 = {
+  offscreen: {
+    y: 300,
+    opacity: 0,
+  },
+  onscreen: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      ease: "linear",
+      type: "spring",
+      bounce: 0.2,
+      duration: 0.8,
+      delay: 0.6,
+    },
+  },
+};
+
+const textVariant = {
+  offscreen: {
+    opacity: 0,
+  },
+  onscreen: {
+    opacity: 1,
+    transition: {
+      duration: 1.2,
+      ease: "linear",
+      delay: 1,
+    },
+  },
+};
 
 export default function Purchase({ currentPage, handlePageChange }) {
   const [showItem, setShowItem] = useState(false);
@@ -21,7 +96,7 @@ export default function Purchase({ currentPage, handlePageChange }) {
       <div className="absolute top-0 left-0">
         <div className="grid grid-cols-6">
           <container className="col-start-1 col-end-7 md:col-end-5 mb-5 mt-10 mx-10">
-            <h1 className="text-center text-shadow md:text-left our-mission title-text">
+            <h1 className="text-center md:text-left our-mission title-text">
               Purchase a Unit
             </h1>
           </container>
@@ -39,51 +114,80 @@ export default function Purchase({ currentPage, handlePageChange }) {
       </div>
       {/* space */}
       <div className="w-full h-[300px]"></div>
-      <div className=" flex items-center flex-col">
-        <ul className="bg-white grid grid-cols-6 justify-items-center w-full mx-20 mt-5 py-8">
-          <li className="col-start-1 col-end-3 flex flex-col text-center gap-4 ">
+      <div className="flex items-center flex-col">
+        <motion.div
+          className="bg-white grid grid-cols-6 justify-items-center w-full mx-20 mt-5 pt-8 pb-10"
+          initial="offscreen"
+          whileInView="onscreen"
+          viewport={{ once: true, amount: 0.8 }}
+        >
+          <motion.div
+            variants={imgVariant1}
+            className="col-start-1 col-end-3 flex flex-col text-center gap-4"
+          >
             <p className="dm-sans-med text-[#0E4370] text-2xl">Purchase</p>
             <img
               className="w-1/3 self-center hover:scale-110 transition duration-500 ease-in-out"
               src={purchase}
             ></img>
-          </li>
-          <li className="col-start-3 col-end-5 flex flex-col text-center gap-4">
+          </motion.div>
+          <motion.div
+            variants={imgVariant2}
+            className="col-start-3 col-end-5 flex flex-col text-center gap-4"
+          >
             <p className="dm-sans-med text-[#0E4370] text-2xl">Call</p>
             <img
               className="w-1/3 self-center hover:scale-110 transition duration-500 ease-in-out"
               src={phoneCall}
             ></img>
-          </li>
-          <li className="col-start-5 col-end-7 flex flex-col text-center gap-4">
+          </motion.div>
+          <motion.div
+            variants={imgVariant3}
+            className="col-start-5 col-end-7 flex flex-col text-center gap-4"
+          >
             <p className="dm-sans-med text-[#0E4370] text-2xl">Install</p>
             <img
               className="w-1/3 self-center hover:scale-110 transition duration-500 ease-in-out"
               src={install}
             ></img>
-          </li>
-        </ul>
-        <ul className="grid grid-cols-6 justify-items-center w-full mx-20 bg-[#0E4370] text-white py-4">
-          <li className="col-start-1 col-end-3 flex flex-col text-center gap-4">
+          </motion.div>
+        </motion.div>
+
+        <motion.ul
+          className="grid grid-cols-6 justify-items-center w-full mx-20 bg-[#0E4370] text-white py-6"
+          initial="offscreen"
+          whileInView="onscreen"
+          viewport={{ once: true, amount: 0.8 }}
+        >
+          <motion.li
+            variants={textVariant}
+            className="col-start-1 col-end-3 flex flex-col text-center gap-4"
+          >
             <p className="mx-20 dm-sans">
               Purchase a unit online. You will fill out a form with your contact
               information so we can get in touch.
             </p>
-          </li>
-          <li className="col-start-3 col-end-5 flex flex-col text-center gap-4">
+          </motion.li>
+          <motion.li
+            variants={textVariant}
+            className="col-start-3 col-end-5 flex flex-col text-center gap-4"
+          >
             <p className="mx-20 dm-sans">
               One of our dealers near you will receive your order and give you a
               call or email so you can plan a day that works best for you to get
               your new unit installed.
             </p>
-          </li>
-          <li className="col-start-5 col-end-7 flex flex-col text-center gap-4">
+          </motion.li>
+          <motion.li
+            variants={textVariant}
+            className="col-start-5 col-end-7 flex flex-col text-center gap-4"
+          >
             <p className="mx-20 dm-sans">
               Installation day will come and go, and you can breathe deeply
               knowing your HVAC unit is doing its thing, keeping your air clean!
             </p>
-          </li>
-        </ul>
+          </motion.li>
+        </motion.ul>
       </div>
       {/* Purchase box */}
       <div className="grid grid-cols-6 py-20">
