@@ -163,6 +163,7 @@ export default function Purchase({ currentPage, handlePageChange }) {
             <img
               className="w-1/3 lg:w-2/5 self-center hover:scale-110 transition duration-500 ease-in-out"
               src={purchase}
+              alt="Laptop"
             ></img>
           </motion.div>
           <motion.div
@@ -173,6 +174,7 @@ export default function Purchase({ currentPage, handlePageChange }) {
             <img
               className="w-1/3 lg:w-2/5 self-center hover:scale-110 transition duration-500 ease-in-out"
               src={phoneCall}
+              alt="Woman on phone call smiling."
             ></img>
           </motion.div>
           <motion.div
@@ -183,6 +185,7 @@ export default function Purchase({ currentPage, handlePageChange }) {
             <img
               className="w-1/3 lg:w-2/5 self-center hover:scale-110 transition duration-500 ease-in-out"
               src={install}
+              alt="Man in overalls giving thumbs-up."
             ></img>
           </motion.div>
         </motion.div>
@@ -239,6 +242,7 @@ export default function Purchase({ currentPage, handlePageChange }) {
             <img
               className="w-1/3 self-center hover:scale-110 transition duration-500 ease-in-out"
               src={purchase}
+              alt="Laptop"
             ></img>
           </motion.div>
           <motion.div
@@ -265,6 +269,7 @@ export default function Purchase({ currentPage, handlePageChange }) {
             <img
               className="w-1/3 self-center hover:scale-110 transition duration-500 ease-in-out"
               src={phoneCall}
+              alt="Woman on phone call smiling."
             ></img>
           </motion.div>
           <motion.div
@@ -292,6 +297,7 @@ export default function Purchase({ currentPage, handlePageChange }) {
             <img
               className="w-1/3 self-center hover:scale-110 transition duration-500 ease-in-out"
               src={install}
+              alt="Man in overalls giving thumbs-up."
             ></img>
           </motion.div>
           <motion.div

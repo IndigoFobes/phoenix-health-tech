@@ -175,6 +175,7 @@ export default function Learn({ currentPage, handlePageChange }) {
             className="w-60 hover:cursor-pointer"
             onClick={HandleClickOne}
             id="one"
+            alt="Number one"
           ></img>
         </div>
         <div>
@@ -183,6 +184,7 @@ export default function Learn({ currentPage, handlePageChange }) {
             className="w-60 hover:cursor-pointer"
             onClick={HandleClickTwo}
             id="two"
+            alt="Number two"
           ></img>
         </div>
         <div>
@@ -191,6 +193,7 @@ export default function Learn({ currentPage, handlePageChange }) {
             className="w-60 hover:cursor-pointer"
             onClick={HandleClickThree}
             id="three"
+            alt="Number three"
           ></img>
         </div>
       </div>
