@@ -137,6 +137,13 @@ export default function Purchase({ currentPage, handlePageChange }) {
         <motion.div
           variants={expectVariant}
           className="text-center hover:translate-y-4 transition duration-700 ease-in-out"
+          animate={{ transform: "translateY(-28px)" }}
+          transition={{
+            duration: 1,
+            ease: "easeInOut",
+            repeat: Infinity,
+            repeatType: "reverse",
+          }}
         >
           <p className="text-white dm-sans-bold expect-text border-b-4 border-white">
             What to Expect
@@ -320,36 +327,44 @@ export default function Purchase({ currentPage, handlePageChange }) {
           <h4 className="text-[#0E4370]">
             Text about the product. Information.
           </h4>
-        </div>{" "}
-        <img
-          src={greenImage}
-          alt="HVAC Unit placeholder."
-          className="col-start-1 md:col-start-4 col-end-7 w-2/3 mx-auto mt-10 md:mt-0 mb-5"
-        />
+        </div>
+        <div className="col-start-1 md:col-start-4 col-end-7 w-2/3 mx-auto flex flex-col items-center">
+          <img
+            src={greenImage}
+            alt="HVAC Unit placeholder."
+            className="mt-10 md:mt-0 mb-5"
+          />
+          {showItem ? (
+            <div className="col-start-1 col-end-7 lg:col-start-2 lg:col-end-6 flex flex-col">
+              <button
+                onClick={() => setShowItem(false)}
+                className="self-center bg-amber-400 border-2 border-amber-400 px-4 py-1 mt-5 rounded-sm hover:bg-transparent hover:border-2 hover:border-amber-400"
+              >
+                Back
+              </button>
+            </div>
+          ) : (
+            <>
+              <button
+                className="sm:text-xl md:text-2xl dm-sans-bold col-start-1 col-end-7 md:col-start-4 md:col-end-7 text-center py-2 rounded-sm text-yellow-400 hover:translate-x-2 transition duration-300 cursor-pointer mt-5"
+                onClick={() => setShowItem(true)}
+              >
+                <p>
+                  Purchase a Unit{" "}
+                  <span>
+                    <FontAwesomeIcon icon={faArrowRight} className="ml-2" />
+                  </span>
+                </p>
+              </button>
+            </>
+          )}
+        </div>
         {showItem ? (
           <div className="col-start-1 col-end-7 lg:col-start-2 lg:col-end-6 flex flex-col">
-            <button
-              onClick={() => setShowItem(false)}
-              className="self-center bg-amber-400 border-2 border-amber-400 px-4 py-1 mt-5 rounded-sm hover:bg-transparent hover:border-2 hover:border-amber-400"
-            >
-              Back
-            </button>
             <StripeContainer />
           </div>
         ) : (
-          <>
-            <button
-              className="sm:text-lg md:text-xl dm-sans-bold col-start-1 col-end-7 md:col-start-4 md:col-end-7 text-center py-2 rounded-sm text-yellow-400 hover:translate-x-2 transition duration-300 cursor-pointer mt-5"
-              onClick={() => setShowItem(true)}
-            >
-              <p>
-                Purchase a Unit{" "}
-                <span>
-                  <FontAwesomeIcon icon={faArrowRight} className="ml-2" />
-                </span>
-              </p>
-            </button>
-          </>
+          ""
         )}
       </div>
     </div>

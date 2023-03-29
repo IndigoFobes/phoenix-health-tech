@@ -212,7 +212,7 @@ export default function Home({ currentPage, handlePageChange }) {
       {/* Strip for contact + purchase */}
       <div className="bg-gradient-to-r from-[#0E4370] to-sky-500 w-full sm:h-60 lg:h-80 grid grid-cols-7">
         {/* Purchase */}
-        <div className="flex flex-col col-start-2 col-end-7 sm:col-start-1 ml-5 md:ml-0 md:col-start-2 sm:col-end-4 lg:col-end-5 justify-center place-self-center lg:justify-self-start mt-8 sm:mt-0">
+        <div className="flex flex-col col-start-2 col-end-7 sm:col-start-1 ml-5 md:ml-0 md:col-start-2 sm:col-end-4 lg:col-end-5 justify-center place-self-center lg:justify-self-start items-start mt-8 sm:mt-0">
           <h2 className="dm-sans-med text-base md:text-xl xl:text-3xl font-bold text-white mb-3">
             Interested in Purchasing a New Unit?
           </h2>
@@ -220,7 +220,7 @@ export default function Home({ currentPage, handlePageChange }) {
             Give us a call, send us an email, <br></br>or head over to our
             purchase page.
           </p>
-          <Link to="/purchase">
+          <Link to="/purchase" className="">
             <p
               className="text-yellow-500 dm-sans-med text-base md:text-lg lg:text-xl xl:text-2xl font-bold flex drop-shadow-md hover:translate-x-3 transition duration-300 cursor-pointer"
               onClick={() => handlePageChange("Purchase")}
@@ -290,7 +290,7 @@ export default function Home({ currentPage, handlePageChange }) {
         {/* yellow */}
 
         <div
-          className={`col-start-2 cursor-pointer flex flex-col justify-center items-center pt-6 pb-3 transition ease-in-out duration-600 ${
+          className={`col-start-2 cursor-pointer flex flex-col justify-center items-center pt-6 pb-3 transition ease-out duration-300 ${
             currentColor === "yellow"
               ? "scale-110 transition ease-in-out duration-800"
               : ""
@@ -305,7 +305,7 @@ export default function Home({ currentPage, handlePageChange }) {
               src={yellow}
               className={`w-1/4 transition ease-in-out duration-500 hover:opacity-100 ${
                 currentColor === "yellow"
-                  ? "opacity-100 transition ease-in-out duration-800"
+                  ? "opacity-100 transition ease-in-out duration-600"
                   : "opacity-50"
               }`}
               alt="Yellowish-orange recycle symbol."
@@ -319,7 +319,7 @@ export default function Home({ currentPage, handlePageChange }) {
         </div>
         {/* green */}
         <div
-          className={`col-start-3 cursor-pointer flex flex-col justify-center items-center pt-6 pb-3 transition ease-in-out duration-600 ${
+          className={`col-start-3 cursor-pointer flex flex-col justify-center items-center pt-6 pb-3 transition ease-out duration-300 ${
             currentColor === "green"
               ? "scale-110 transition ease-in-out duration-800"
               : ""
@@ -334,7 +334,7 @@ export default function Home({ currentPage, handlePageChange }) {
               src={green}
               className={`w-1/4 transition ease-in-out duration-500 hover:opacity-100 ${
                 currentColor === "green"
-                  ? "opacity-100 transition ease-in-out duration-800"
+                  ? "opacity-100 transition ease-in-out duration-600"
                   : "opacity-50"
               }`}
               alt="Green recycle symbol."
@@ -347,7 +347,7 @@ export default function Home({ currentPage, handlePageChange }) {
         {/* blue */}
 
         <div
-          className={`col-start-4 cursor-pointer flex flex-col justify-center items-center pt-6 pb-3 transition ease-in-out duration-600 ${
+          className={`col-start-4 cursor-pointer flex flex-col justify-center items-center pt-6 pb-3 transition ease-out duration-300 ${
             currentColor === "blue"
               ? "scale-110 transition ease-in-out duration-800"
               : ""
@@ -362,7 +362,7 @@ export default function Home({ currentPage, handlePageChange }) {
               src={blue}
               className={`w-1/4 transition ease-in-out duration-500 hover:opacity-100 ${
                 currentColor === "blue"
-                  ? "opacity-100 transition ease-in-out duration-800"
+                  ? "opacity-100 transition ease-in-out duration-600"
                   : "opacity-50"
               }`}
               alt="Blue recycle symbol."
