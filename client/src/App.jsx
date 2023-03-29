@@ -43,7 +43,7 @@ const App = () => {
 
   const HomeLayout = () => (
     <>
-      <Logo />
+      <Logo currentPage={currentPage} handlePageChange={handlePageChange} />
       <Header currentPage={currentPage} handlePageChange={handlePageChange} />
       <Home
         className="flex"
@@ -55,7 +55,7 @@ const App = () => {
 
   const AboutLayout = () => (
     <>
-      <Logo />
+      <Logo currentPage={currentPage} handlePageChange={handlePageChange} />
       <Header currentPage={currentPage} handlePageChange={handlePageChange} />
       <About currentPage={currentPage} handlePageChange={handlePageChange} />
     </>
@@ -63,7 +63,7 @@ const App = () => {
 
   const LearnLayout = () => (
     <>
-      <Logo />
+      <Logo currentPage={currentPage} handlePageChange={handlePageChange} />
       <Header currentPage={currentPage} handlePageChange={handlePageChange} />
       <Learn currentPage={currentPage} handlePageChange={handlePageChange} />
     </>
@@ -71,7 +71,7 @@ const App = () => {
 
   const PurchaseLayout = () => (
     <>
-      <Logo />
+      <Logo currentPage={currentPage} handlePageChange={handlePageChange} />
       <Header currentPage={currentPage} handlePageChange={handlePageChange} />
       <Purchase
         className="flex"
@@ -83,12 +83,18 @@ const App = () => {
 
   const ContactLayout = () => (
     <>
-      <Logo />
+      <Logo currentPage={currentPage} handlePageChange={handlePageChange} />
       <Header currentPage={currentPage} handlePageChange={handlePageChange} />
       <ContactForm
         currentPage={currentPage}
         handlePageChange={handlePageChange}
       />
+    </>
+  );
+
+  const LandingLayout = () => (
+    <>
+      <Landing currentPage={currentPage} handlePageChange={handlePageChange} />
     </>
   );
 
@@ -98,7 +104,7 @@ const App = () => {
       <div>
         <main className="relative contentContainer">
           <Routes>
-            <Route path="/" element={<Landing />} />
+            <Route path="/" element={<LandingLayout />} />
             <Route path="/home" element={<HomeLayout />} />
             <Route path="/about" element={<AboutLayout />} />
             <Route path="/learn" element={<LearnLayout />} />
@@ -106,7 +112,7 @@ const App = () => {
             <Route path="/contact" element={<ContactLayout />} />
           </Routes>
         </main>
-        <Footer />
+        <Footer currentPage={currentPage} handlePageChange={handlePageChange} />
       </div>
       {/* </ScrollToTop> */}
     </Router>

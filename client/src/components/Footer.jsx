@@ -1,8 +1,14 @@
 import React from "react";
 
-export default function Footer() {
+export default function Footer({ currentPage }) {
   return (
-    <footer className="p-4 nav-bg shadow md:flex md:items-center md:justify-between md:p-6 dark:bg-gray-800">
+    <footer
+      className={`hidden ${
+        currentPage !== "Landing"
+          ? "p-4 nav-bg shadow md:flex md:items-center md:justify-between md:p-6 dark:bg-gray-800"
+          : ""
+      }`}
+    >
       <span className="text-sm text-white sm:text-center flex flex-col items-start">
         © 2023 Phoenix Health Technologies. All Rights Reserved.
         <div className="flex">

@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import PHTLogo from "../assets/PHT_LOGO_BLUE.png";
 
-export default function Landing() {
+export default function Landing({ currentPage, handlePageChange }) {
   return (
     <div className="flex min-h-screen">
       <div className="flex flex-col items-center mb-20 mx-auto my-auto pb-20">
@@ -19,6 +19,7 @@ export default function Landing() {
         <Link
           to="/home"
           className="bg-sky-400 px-2 py-1.5 md:px-3.5 md:py-2.5 lg:px-5 lg:py-3 text-lg md:text-xl lg:text-2xl mt-8 rounded-md font-semibold text-white hover:bg-sky-600"
+          onClick={() => handlePageChange("Home")}
         >
           Learn More
         </Link>
