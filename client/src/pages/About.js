@@ -74,14 +74,14 @@ export default function About({ currentPage, handlePageChange }) {
       {/* <div className="shadow-inner pb-8 bg-gray-200 opacity-80 w-full h-[300px] sm:h-[330px] md:h-[360px] lg:h-[320px]"></div> */}
       <div className="bg-gray-200/80 py-10">
         <div className="grid grid-cols-6">
-          <container className="col-start-1 col-end-7 md:col-end-5 mb-5 mx-10">
-            <h1 className="text-center md:text-left our-mission title-text">
+          <container className="col-start-1 col-end-7 lg:col-end-5 mb-5 mx-10">
+            <h1 className="text-center lg:text-left our-mission title-text">
               Our Mission
             </h1>
           </container>
         </div>
         <div className="grid grid-cols-6">
-          <container className="col-start-1 col-end-7 md:col-end-4 mb-5 mx-10 text-center dm-sans-med md:text-left sm:text-lg md:text-xl">
+          <container className="col-start-1 col-end-7 lg:col-end-5 xl:col-end-4 mb-5 mx-10 text-center dm-sans-med lg:text-left sm:text-lg md:text-xl">
             <p>
               We exist to create a safe and healthy environment for homes and
               workspaces using green, state of the art technology based on all

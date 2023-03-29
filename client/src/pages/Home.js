@@ -161,7 +161,7 @@ export default function Home({ currentPage, handlePageChange }) {
           </h1>
           <hr class="h-px my-4 bg-gray-200 border-0 dark:bg-gray-700" />
         </container>
-        <container className="flex flex-col pb-10 lg:mb-0 col-start-1 col-end-7 mx-8 md:col-start-2 md:col-end-6 text-center md:text-left text-sm sm:text-base items-center ">
+        <container className="flex flex-col pb-10 lg:mb-0 col-start-1 col-end-7 mx-8 lg:col-start-2 lg:col-end-6 text-center md:text-left text-sm sm:text-base lg:text-lg items-center ">
           <p className="text-justify">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
             laoreet a nisl sit amet facilisis. Vestibulum id tellus felis.
@@ -283,7 +283,7 @@ export default function Home({ currentPage, handlePageChange }) {
         </container>
       </container>
       <motion.container
-        className="grid grid-cols-5 py-5"
+        className="flex lg:grid lg:grid-cols-5 lg:py-5"
         initial="offscreen"
         whileInView="onscreen"
         viewport={{ once: true, amount: 0.8 }}
@@ -291,7 +291,7 @@ export default function Home({ currentPage, handlePageChange }) {
         {/* yellow */}
 
         <div
-          className={`col-start-2 cursor-pointer flex flex-col justify-center items-center pt-6 pb-3 transition ease-out duration-300 ${
+          className={`col-start-2 col-end-3 cursor-pointer flex flex-col justify-center items-center lg:pt-6 pb-3 transition ease-out duration-300 ${
             currentColor === "yellow"
               ? "scale-110 transition ease-in-out duration-800"
               : ""
@@ -311,16 +311,14 @@ export default function Home({ currentPage, handlePageChange }) {
               }`}
               alt="Yellowish-orange recycle symbol."
             ></img>
-            <h3
-              className={`dm-sans-bold font-semibold text-xs sm:text-base md:text-xl`}
-            >
+            <h3 className={`dm-sans-bold text-xs sm:text-base md:text-xl`}>
               All Natural
             </h3>
           </motion.div>
         </div>
         {/* green */}
         <div
-          className={`col-start-3 cursor-pointer flex flex-col justify-center items-center pt-6 pb-3 transition ease-out duration-300 ${
+          className={`col-start-3 cursor-pointer flex flex-col justify-center items-center lg:pt-6 pb-3 transition ease-out duration-300 ${
             currentColor === "green"
               ? "scale-110 transition ease-in-out duration-800"
               : ""
@@ -340,7 +338,7 @@ export default function Home({ currentPage, handlePageChange }) {
               }`}
               alt="Green recycle symbol."
             ></img>
-            <h3 className="dm-sans-bold font-semibold text-xs sm:text-base md:text-xl">
+            <h3 className="dm-sans-bold text-xs sm:text-base md:text-xl">
               Green Solution
             </h3>
           </motion.div>
@@ -348,7 +346,7 @@ export default function Home({ currentPage, handlePageChange }) {
         {/* blue */}
 
         <div
-          className={`col-start-4 cursor-pointer flex flex-col justify-center items-center pt-6 pb-3 transition ease-out duration-300 ${
+          className={`col-start-4 cursor-pointer flex flex-col justify-center items-center lg:pt-6 pb-3 transition ease-out duration-300 ${
             currentColor === "blue"
               ? "scale-110 transition ease-in-out duration-800"
               : ""
@@ -386,7 +384,7 @@ export default function Home({ currentPage, handlePageChange }) {
           </h2>
           <div className="grid grid-cols-6">
             <hr class="h-px mt-2 mb-4 col-start-3 col-end-5 lg:mr-20 lg:col-start-1 lg:col-end-4 bg-gray-300 border-0 dark:bg-gray-700 lg:ml-10" />
-            <p className="col-start-2 col-end-6 lg:col-start-1 lg:col-end-4 lg:text-left font-medium text-sm sm:text-base md:text-lg mb-10 lg:mb-0 lg:ml-10">
+            <p className="col-start-1 col-end-7 lg:col-end-4 text-justify lg:text-left font-medium text-sm sm:text-base md:text-lg mb-10 lg:mb-0 lg:ml-10">
               Mauris in sagittis metus. Sed sodales odio id sem sodales, sed
               bibendum risus ultrices. Maecenas magna velit, imperdiet vel dui
               id, eleifend fermentum odio. Integer at ultricies mi, nec eleifend
@@ -403,7 +401,7 @@ export default function Home({ currentPage, handlePageChange }) {
             </p>
             <img
               src={familyOutside}
-              className="col-start-2 col-end-6 lg:col-start-4 lg:col-end-7 lg:w-3/4 place-self-center"
+              className="col-start-1 col-end-7 lg:col-start-4 lg:col-end-7 lg:w-3/4 place-self-center"
               alt="Family of three playing outside, laughing. Dad helping toddler kick a socker ball."
             ></img>
           </div>
@@ -419,7 +417,7 @@ export default function Home({ currentPage, handlePageChange }) {
           </h2>
           <div className="grid grid-cols-6">
             <hr class="h-px mt-2 mb-4 col-start-3 col-end-5 lg:mr-20 lg:col-start-1 lg:col-end-4 bg-gray-300 border-0 dark:bg-gray-700 lg:ml-10" />
-            <p className="col-start-2 col-end-6 lg:col-start-1 lg:col-end-4 lg:text-left font-medium text-sm sm:text-base md:text-lg mb-10 lg:mb-0 lg:ml-10">
+            <p className="col-start-1 col-end-7 lg:col-end-4 text-justify lg:text-left font-medium text-sm sm:text-base md:text-lg mb-10 lg:mb-0 lg:ml-10">
               Mauris in sagittis metus. Sed sodales odio id sem sodales, sed
               bibendum risus ultrices. Maecenas magna velit, imperdiet vel dui
               id, eleifend fermentum odio. Integer at ultricies mi, nec eleifend
@@ -436,7 +434,7 @@ export default function Home({ currentPage, handlePageChange }) {
             </p>
             <img
               src={greenPhoto}
-              className="col-start-2 col-end-6 lg:col-start-4 lg:col-end-7 lg:w-3/4 place-self-center"
+              className="col-start-1 col-end-7 lg:col-start-4 lg:col-end-7 lg:w-3/4 place-self-center"
               alt="Close up of small, green plant sprouting from the ground. Blurry background of soil."
             ></img>
           </div>
@@ -452,7 +450,7 @@ export default function Home({ currentPage, handlePageChange }) {
           </h2>
           <div className="grid grid-cols-6">
             <hr class="h-px mt-2 mb-4 col-start-3 col-end-5 lg:mr-20 lg:col-start-1 lg:col-end-4 bg-gray-300 border-0 dark:bg-gray-700 lg:ml-10" />
-            <p className="col-start-2 col-end-6 lg:col-start-1 lg:col-end-4 lg:text-left font-medium text-sm sm:text-base md:text-lg mb-10 lg:mb-0 lg:ml-10">
+            <p className="col-start-1 col-end-7 lg:col-end-4 text-justify lg:text-left font-medium text-sm sm:text-base md:text-lg mb-10 lg:mb-0 lg:ml-10">
               Mauris in sagittis metus. Sed sodales odio id sem sodales, sed
               bibendum risus ultrices. Maecenas magna velit, imperdiet vel dui
               id, eleifend fermentum odio. Integer at ultricies mi, nec eleifend
@@ -469,7 +467,7 @@ export default function Home({ currentPage, handlePageChange }) {
             </p>
             <img
               src={blueGirl}
-              className="col-start-2 col-end-6 lg:col-start-4 lg:col-end-7 lg:w-3/4 place-self-center"
+              className="col-start-1 col-end-7 lg:col-start-4 lg:col-end-7 lg:w-3/4 place-self-center"
               alt="Young girl outside, wearing a tan fedora, jean jacket, and a blue and white button-up top. She  has red hair, is holding a paper airplane, and is smiling off into the distance."
             ></img>
           </div>
