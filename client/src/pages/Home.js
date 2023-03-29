@@ -20,6 +20,7 @@ import {
 import { Link } from "react-router-dom";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { motion } from "framer-motion";
+import familyOutside from "../assets/family-outside.jpg";
 // import Modal from "../components/Modal";
 
 // for animations
@@ -401,9 +402,9 @@ export default function Home({ currentPage, handlePageChange }) {
               elit.
             </p>
             <img
-              src={natural}
+              src={familyOutside}
               className="col-start-2 col-end-6 lg:col-start-4 lg:col-end-7 lg:w-3/4 place-self-center"
-              alt="Kitchen wall with light purple hand towel, bowl of oranges, glasses of water, and a bit of the kitchen counter. Close up."
+              alt="Family of three playing outside, laughing. Dad helping toddler kick a socker ball."
             ></img>
           </div>
         </div>
