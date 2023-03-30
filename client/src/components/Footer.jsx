@@ -3,10 +3,10 @@ import React from "react";
 export default function Footer({ currentPage }) {
   return (
     <footer
-      className={`hidden ${
+      className={`${
         currentPage !== "Landing"
-          ? "p-4 nav-bg shadow md:flex md:items-center md:justify-between md:p-6 dark:bg-gray-800"
-          : ""
+          ? "p-4 nav-bg shadow flex items-center justify-between md:p-6 dark:bg-gray-800"
+          : "hidden"
       }`}
     >
       <span className="text-sm text-white sm:text-center flex flex-col items-start">
