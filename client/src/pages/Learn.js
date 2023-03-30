@@ -189,11 +189,27 @@ export default function Learn({ currentPage, handlePageChange }) {
 
   return (
     <div className="flex flex-col justify-center items-center">
-      <div className="bg-fixed bg-[#212121] flex flex-col justify-center items-center py-20 border-2 border-[#212121]">
-        <h1 className="dm-sans-bold text-xl md:text-2xl lg:text-3xl text-white mb-10">
-          What is wrong with your HVAC unit?
-        </h1>
-        <div className="py-2 px-1 border-4 border-red-500 rounded-md">
+      <div className="bg-fixed flex flex-col justify-center items-center pb-20">
+        <div className="bg-gray-200/80 py-10">
+          <h1 className="dm-sans-bold learn-title title-text mb-10 text-center">
+            What is wrong with your HVAC unit?
+          </h1>
+          <div className="grid grid-cols-8 text-justify text-sm sm:text-base md:text-lg">
+            <p className="dm-sans col-start-1 col-end-9 md:col-start-2 md:col-end-8 px-6 md:p-0">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Vestibulum laoreet a nisl sit amet facilisis. Vestibulum id tellus
+              felis. Vestibulum efficitur dignissim pulvinar. Sed vulputate
+              posuere ultrices. Integer blandit dui ut laoreet bibendum.
+              Maecenas tristique, diam a mollis euismod, nunc erat ultricies
+              orci, vel auctor ex nulla in erat. Ut imperdiet, purus a porttitor
+              dignissim, nisi neque ultrices eros, a commodo lectus lectus
+              egestas leo. Ut quis neque elit. In congue elit rhoncus justo
+              viverra congue. Fusce ultricies nisi a lacus gravida, in efficitur
+              est finibus. Aliquam varius massa vel mi ornare malesuada.
+            </p>
+          </div>
+        </div>
+        <div className="py-2 px-1 border-4 mt-10 border-red-500 rounded-md">
           <iframe
             className="rounded-sm sm:w-[calc(1000px*1/2)] sm:h-[calc(500px*1/2)] md:w-[calc(1000px*2/3)] md:h-[calc(500px*2/3)] lg:w-[1000px] lg:h-[500px]"
             src="https://www.youtube.com/embed/C0DPdy98e4c"
@@ -204,20 +220,6 @@ export default function Learn({ currentPage, handlePageChange }) {
             allowfullscreen
             title="video"
           />{" "}
-        </div>
-        <div className="grid grid-cols-8 mt-10 text-justify text-sm sm:text-base md:text-lg">
-          <p className="text-white dm-sans col-start-1 col-end-9 md:col-start-2 md:col-end-8 px-6 md:p-0">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
-            laoreet a nisl sit amet facilisis. Vestibulum id tellus felis.
-            Vestibulum efficitur dignissim pulvinar. Sed vulputate posuere
-            ultrices. Integer blandit dui ut laoreet bibendum. Maecenas
-            tristique, diam a mollis euismod, nunc erat ultricies orci, vel
-            auctor ex nulla in erat. Ut imperdiet, purus a porttitor dignissim,
-            nisi neque ultrices eros, a commodo lectus lectus egestas leo. Ut
-            quis neque elit. In congue elit rhoncus justo viverra congue. Fusce
-            ultricies nisi a lacus gravida, in efficitur est finibus. Aliquam
-            varius massa vel mi ornare malesuada.
-          </p>
         </div>
       </div>
       {/* Bottom section */}

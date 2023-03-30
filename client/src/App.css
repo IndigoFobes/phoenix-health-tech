@@ -48,14 +48,14 @@ font-weight: 400;
 	font-size: 2.5rem
 }
 
-
+.learn-title {
+	font-size: 2.5rem
+}
 
 .meet-team {
 	font-size: 4rem;
 	/* text-shadow: 1px 1px 10px #404346; */
 }
-
-
 
 .hvac {
 	font-size: 3rem;
@@ -109,6 +109,16 @@ font-weight: 400;
 text-shadow: 1px 1px 2px #404346;
 }
 
+@media screen and (max-width: 953px){
+	.meet-team {
+		font-size: 3rem
+	}
+
+	.learn-title {
+		font-size: 1.8rem
+	}
+}
+
 @media screen and (max-width: 500px){
 	.our-mission {
 		font-size: 2rem
@@ -119,13 +129,9 @@ text-shadow: 1px 1px 2px #404346;
 	.contact-icons {
 		font-size: 1.2rem;
 	}
-}
-
-@media screen and (max-width: 953px){
-	.meet-team {
-		font-size: 3rem
+	.learn-title {
+		font-size: 1.2rem
 	}
-
 }
 
 .dark-blue-border {
