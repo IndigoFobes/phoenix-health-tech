@@ -27,7 +27,7 @@ import "./App.css";
 
 const App = () => {
   // useState to set which page user is on
-  const [currentPage, setCurrentPage] = useState("Home");
+  const [currentPage, setCurrentPage] = useState("Landing");
 
   // Scroll to top of page on page load
   function componentDidMount() {

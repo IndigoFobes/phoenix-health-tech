@@ -48,25 +48,14 @@ font-weight: 400;
 	font-size: 2.5rem
 }
 
-@media screen and (max-width: 500px){
-	.our-mission {
-		font-size: 2rem
-	}
-	.expect-text {
-		font-size: 1.7rem
-	}
-}
+
 
 .meet-team {
 	font-size: 4rem;
 	/* text-shadow: 1px 1px 10px #404346; */
 }
 
-@media screen and (max-width: 953px){
-	.meet-team {
-		font-size: 3rem
-	}
-}
+
 
 .hvac {
 	font-size: 3rem;
@@ -113,11 +102,30 @@ font-weight: 400;
 }
 
 .contact-icons {
-	font-size: 2rem
+	font-size: 1.8rem
 }
 
 .text-shadow {
 text-shadow: 1px 1px 2px #404346;
+}
+
+@media screen and (max-width: 500px){
+	.our-mission {
+		font-size: 2rem
+	}
+	.expect-text {
+		font-size: 1.7rem
+	}
+	.contact-icons {
+		font-size: 1.2rem;
+	}
+}
+
+@media screen and (max-width: 953px){
+	.meet-team {
+		font-size: 3rem
+	}
+
 }
 
 .dark-blue-border {
@@ -128,16 +136,6 @@ text-shadow: 1px 1px 2px #404346;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
 .App-header {
   background-color: #282c34;
