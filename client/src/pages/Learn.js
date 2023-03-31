@@ -131,7 +131,7 @@ export default function Learn({ currentPage, handlePageChange }) {
         This is a fun fun testing video. 3 2 1. Very simple.
       </p>
     );
-    console.log(video.props.children[0].props);
+    // console.log(video.props.children[0].props);
     //handleGreenOne();
   } else if (currentNumber === 2) {
     video = (

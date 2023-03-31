@@ -26,25 +26,36 @@ import "./App.css";
 // Stripe stuff??
 
 // Listen for back button to handle page state
-const BackButtonListener = ({ currentPage, handlePageChange }) => {
+// const BackButtonListener = ({ currentPage, handlePageChange }) => {
+//   const [clicked, setClicked] = useState(false);
+//   useEffect(() => {
+//     window.onpopstate = (e) => {
+//       e.preventDefault();
+//       setClicked(true);
+//       console.log("State: ", clicked.toString());
+//       // console.log(currentPage);
+//       // handlePageChange(currentPage);
+//     };
+//   }, []);
+//   if (clicked === true) {
+//     handlePageChange(currentPage);
+//   }
+// };
+
+const App = () => {
+  // useState to set which page user is on
+  const [currentPage, setCurrentPage] = useState("Landing");
+
   const [clicked, setClicked] = useState(false);
   useEffect(() => {
     window.onpopstate = (e) => {
       e.preventDefault();
       setClicked(true);
-      // console.log(currentPage);
-      // handlePageChange(currentPage);
+      console.log("State: ", clicked.toString());
+      console.log(currentPage);
+      handlePageChange(currentPage);
     };
   }, []);
-  console.log("State: ", clicked.toString());
-  if (clicked === true) {
-    console.log(currentPage);
-  }
-};
-
-const App = ({ setClicked }) => {
-  // useState to set which page user is on
-  const [currentPage, setCurrentPage] = useState("Landing");
 
   // Scroll to top of page on page load
   function componentDidMount() {
@@ -56,7 +67,6 @@ const App = ({ setClicked }) => {
     setCurrentPage(page);
     // console.log(currentPage);
     componentDidMount();
-    setClicked(false);
   };
 
   const HomeLayout = () => (
@@ -145,10 +155,6 @@ const App = ({ setClicked }) => {
       {/* <ScrollToTop> */}
       <div>
         <main className="relative contentContainer">
-          <BackButtonListener
-            currentPage={currentPage}
-            handlePageChange={handlePageChange}
-          />
           <Routes>
             <Route path="/" element={<LandingLayout />} />
             <Route path="/home" element={<HomeLayout />} />
