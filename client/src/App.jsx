@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   BrowserRouter as Router,
   Routes,
@@ -25,7 +25,24 @@ import "./App.css";
 
 // Stripe stuff??
 
-const App = () => {
+// Listen for back button to handle page state
+const BackButtonListener = ({ currentPage, handlePageChange }) => {
+  const [clicked, setClicked] = useState(false);
+  useEffect(() => {
+    window.onpopstate = (e) => {
+      e.preventDefault();
+      setClicked(true);
+      // console.log(currentPage);
+      // handlePageChange(currentPage);
+    };
+  }, []);
+  console.log("State: ", clicked.toString());
+  if (clicked === true) {
+    console.log(currentPage);
+  }
+};
+
+const App = ({ setClicked }) => {
   // useState to set which page user is on
   const [currentPage, setCurrentPage] = useState("Landing");
 
@@ -37,14 +54,19 @@ const App = () => {
   //handle page change; whichever page is plugged in here will be rendered
   const handlePageChange = (page) => {
     setCurrentPage(page);
-    console.log(currentPage);
+    // console.log(currentPage);
     componentDidMount();
+    setClicked(false);
   };
 
   const HomeLayout = () => (
     <>
       <Logo currentPage={currentPage} handlePageChange={handlePageChange} />
-      <Header currentPage={currentPage} handlePageChange={handlePageChange} />
+      <Header
+        currentPage={currentPage}
+        handlePageChange={handlePageChange}
+        setClicked={setClicked}
+      />
       <Home
         className="flex"
         currentPage={currentPage}
@@ -56,7 +78,11 @@ const App = () => {
   const AboutLayout = () => (
     <>
       <Logo currentPage={currentPage} handlePageChange={handlePageChange} />
-      <Header currentPage={currentPage} handlePageChange={handlePageChange} />
+      <Header
+        currentPage={currentPage}
+        handlePageChange={handlePageChange}
+        setClicked={setClicked}
+      />
       <About currentPage={currentPage} handlePageChange={handlePageChange} />
     </>
   );
@@ -64,7 +90,11 @@ const App = () => {
   const LearnLayout = () => (
     <>
       <Logo currentPage={currentPage} handlePageChange={handlePageChange} />
-      <Header currentPage={currentPage} handlePageChange={handlePageChange} />
+      <Header
+        currentPage={currentPage}
+        handlePageChange={handlePageChange}
+        setClicked={setClicked}
+      />
       <Learn currentPage={currentPage} handlePageChange={handlePageChange} />
     </>
   );
@@ -72,7 +102,11 @@ const App = () => {
   const PurchaseLayout = () => (
     <>
       <Logo currentPage={currentPage} handlePageChange={handlePageChange} />
-      <Header currentPage={currentPage} handlePageChange={handlePageChange} />
+      <Header
+        currentPage={currentPage}
+        handlePageChange={handlePageChange}
+        setClicked={setClicked}
+      />
       <Purchase
         className="flex"
         currentPage={currentPage}
@@ -84,7 +118,11 @@ const App = () => {
   const ContactLayout = () => (
     <>
       <Logo currentPage={currentPage} handlePageChange={handlePageChange} />
-      <Header currentPage={currentPage} handlePageChange={handlePageChange} />
+      <Header
+        currentPage={currentPage}
+        handlePageChange={handlePageChange}
+        setClicked={setClicked}
+      />
       <ContactForm
         currentPage={currentPage}
         handlePageChange={handlePageChange}
@@ -94,7 +132,11 @@ const App = () => {
 
   const LandingLayout = () => (
     <>
-      <Landing currentPage={currentPage} handlePageChange={handlePageChange} />
+      <Landing
+        currentPage={currentPage}
+        handlePageChange={handlePageChange}
+        setClicked={setClicked}
+      />
     </>
   );
 
@@ -103,6 +145,10 @@ const App = () => {
       {/* <ScrollToTop> */}
       <div>
         <main className="relative contentContainer">
+          <BackButtonListener
+            currentPage={currentPage}
+            handlePageChange={handlePageChange}
+          />
           <Routes>
             <Route path="/" element={<LandingLayout />} />
             <Route path="/home" element={<HomeLayout />} />
