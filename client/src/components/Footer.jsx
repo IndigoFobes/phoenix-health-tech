@@ -12,9 +12,11 @@ export default function Footer({ currentPage, handlePageChange }) {
       }`}
     >
       <div className="flex flex-col md:flex-row w-full items-center justify-between mb-3">
-        <div className="ml-5 w-[120px] mb-5 md:mb-0">
-          <img src={LogoImg} className="w-fit"></img>
-        </div>
+        <Link to="/home" onClick={() => handlePageChange("Home")}>
+          <div className="ml-5 w-[120px] mb-5 md:mb-0 hover:scale-110 transition duration-300 ease-in-out cursor-pointer">
+            <img src={LogoImg} className="w-fit"></img>
+          </div>
+        </Link>
         <ul className="dm-sans-med flex gap-5 sm:gap-20 md:gap-1 md:flex-col md:mr-[130px]">
           <Link to="/home">
             <li
@@ -31,7 +33,7 @@ export default function Footer({ currentPage, handlePageChange }) {
               className={
                 "text-white hover:underline transition duration-200 ease-in-out"
               }
-              onClick={() => handlePageChange("Home")}
+              onClick={() => handlePageChange("About")}
             >
               About
             </li>
@@ -41,7 +43,7 @@ export default function Footer({ currentPage, handlePageChange }) {
               className={
                 "text-white hover:underline transition duration-200 ease-in-out"
               }
-              onClick={() => handlePageChange("Home")}
+              onClick={() => handlePageChange("Learn")}
             >
               Learn
             </li>
@@ -51,7 +53,7 @@ export default function Footer({ currentPage, handlePageChange }) {
               className={
                 "text-white hover:underline transition duration-200 ease-in-out"
               }
-              onClick={() => handlePageChange("Home")}
+              onClick={() => handlePageChange("Purchase")}
             >
               Purchase
             </li>
@@ -61,7 +63,7 @@ export default function Footer({ currentPage, handlePageChange }) {
               className={
                 "text-white hover:underline transition duration-200 ease-in-out"
               }
-              onClick={() => handlePageChange("Home")}
+              onClick={() => handlePageChange("Contact")}
             >
               Contact
             </li>
