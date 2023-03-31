@@ -191,7 +191,7 @@ export default function Learn({ currentPage, handlePageChange }) {
     <div className="flex flex-col justify-center items-center">
       <div className="bg-fixed flex flex-col justify-center items-center pb-20">
         <div className="bg-gray-200/80 py-10">
-          <h1 className="dm-sans-bold learn-title title-text mb-10 text-center">
+          <h1 className="dm-sans-bold learn-title title-text mb-10 text-center sm:mt-10">
             What is wrong with your HVAC unit?
           </h1>
           <div className="grid grid-cols-8 text-justify text-sm sm:text-base md:text-lg">
@@ -223,62 +223,64 @@ export default function Learn({ currentPage, handlePageChange }) {
         </div>
       </div>
       {/* Bottom section */}
-      <div className="bg-fixed bg-[#1A1A1A] flex flex-col justify-center items-center border-2 border-[#1A1A1A] pb-40">
-        {/* arrow down to next section */}
-        <h1 className="dm-sans-bold text-white text-xl md:text-2xl lg:text-3xl font-semibold mb-10 mt-10 sm:mt-20">
-          What does PHT do to fix it?
-        </h1>
-        <div className="flex flex-col lg:grid lg:grid-cols-9">
-          <motion.ul
-            initial="offscreen"
-            whileInView="onscreen"
-            viewport={{ once: true, amount: 0.8 }}
-            className="mx-5 md:mx-20 lg:col-start-1 lg:mr-0 lg:ml-20 col-end-5 flex flex-col gap-4 mb-10 text-center"
-          >
-            <motion.li
-              variants={textVariant1}
-              onClick={HandleClickOne}
-              id="one"
-              className={`text-white dm-sans-med md:text-xl xl:text-2xl py-2 px-4 rounded-full cursor-pointer border-4 border-white hover:border-lime-500 ${
-                currentNumber === 1
-                  ? "bg-lime-500 border-lime-500"
-                  : "bg-white text-black"
-              }`}
+      <div className="bg-fixed flex flex-col justify-center items-center pb-40">
+        <div className="bg-gray-200/80 py-10 mb-10">
+          {/* arrow down to next section */}
+          <h1 className="dm-sans-bold learn-title title-text text-center mb-10 sm:mt-10">
+            What does PHT do to fix it?
+          </h1>
+          <div className="flex flex-col lg:grid lg:grid-cols-9">
+            <motion.ul
+              initial="offscreen"
+              whileInView="onscreen"
+              viewport={{ once: true, amount: 0.8 }}
+              className="mx-5 md:mx-20 lg:col-start-1 lg:mr-0 lg:ml-20 col-end-5 flex flex-col gap-4 mb-10 text-center"
             >
-              <p>1. Cleans out mold and bacteria.</p>
-            </motion.li>
-            <motion.li
-              variants={textVariant2}
-              onClick={HandleClickTwo}
-              id="two"
-              className={`text-white dm-sans-med md:text-xl xl:text-2xl py-2 px-4 rounded-full cursor-pointer border-4 border-white hover:border-lime-500 ${
-                currentNumber === 2
-                  ? "bg-lime-500 border-lime-500"
-                  : "bg-white text-black"
-              }`}
-            >
-              <p>2. Filters through air and cleans it.</p>
-            </motion.li>
-            <motion.li
-              variants={textVariant3}
-              onClick={HandleClickThree}
-              id="three"
-              className={`text-white dm-sans-med md:text-xl xl:text-2xl py-2 px-4 rounded-full cursor-pointer border-4 border-white hover:border-lime-500 ${
-                currentNumber === 3
-                  ? "bg-lime-500 border-lime-500"
-                  : "bg-white text-black"
-              }`}
-            >
-              <p>3. Monitors system for bacteria.</p>
-            </motion.li>
-          </motion.ul>
-          <div className="text-white dm-sans-med col-start-5 col-end-10 mx-5 md:mx-20 lg:mx-5 text-justify text-lg md:text-xl mb-10 px-3 lg:px-6">
-            {text}
+              <motion.li
+                variants={textVariant1}
+                onClick={HandleClickOne}
+                id="one"
+                className={`text-white dm-sans-med md:text-xl xl:text-2xl py-2 px-4 rounded-full cursor-pointer border-4 border-white hover:border-lime-500 ${
+                  currentNumber === 1
+                    ? "bg-lime-500 border-lime-500"
+                    : "bg-white text-black"
+                }`}
+              >
+                <p>1. Cleans out mold and bacteria.</p>
+              </motion.li>
+              <motion.li
+                variants={textVariant2}
+                onClick={HandleClickTwo}
+                id="two"
+                className={`text-white dm-sans-med md:text-xl xl:text-2xl py-2 px-4 rounded-full cursor-pointer border-4 border-white hover:border-lime-500 ${
+                  currentNumber === 2
+                    ? "bg-lime-500 border-lime-500"
+                    : "bg-white text-black"
+                }`}
+              >
+                <p>2. Filters through air and cleans it.</p>
+              </motion.li>
+              <motion.li
+                variants={textVariant3}
+                onClick={HandleClickThree}
+                id="three"
+                className={`text-white dm-sans-med md:text-xl xl:text-2xl py-2 px-4 rounded-full cursor-pointer border-4 border-white hover:border-lime-500 ${
+                  currentNumber === 3
+                    ? "bg-lime-500 border-lime-500"
+                    : "bg-white text-black"
+                }`}
+              >
+                <p>3. Monitors system for bacteria.</p>
+              </motion.li>
+            </motion.ul>
+            <div className=" dm-sans-med col-start-5 col-end-10 mx-5 md:mx-20 lg:mx-5 text-justify text-lg md:text-xl mb-10 px-3 lg:px-6">
+              {text}
+            </div>
           </div>
         </div>
         {/* Numbers for hover effect */}
         {/* switch hidden with "flex" */}
-        <div className="hidden space-x-10 sm:space-x-20 md:space-x-40 pb-5 md:pb-20 mx-10">
+        {/* <div className="hidden space-x-10 sm:space-x-20 md:space-x-40 pb-5 md:pb-20 mx-10">
           <div>
             <img
               src={GreenOne}
@@ -306,7 +308,7 @@ export default function Learn({ currentPage, handlePageChange }) {
               alt="Number three"
             ></img>
           </div>
-        </div>
+        </div> */}
         {video}
       </div>
     </div>
