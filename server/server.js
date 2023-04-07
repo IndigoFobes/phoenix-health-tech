@@ -27,6 +27,16 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.join(__dirname, "../client/build")));
 }
 
+// app.post("/create-customer", async (req, res) => {
+//   const {paymentMethodType, currency,paymentMethodOptions} = req.body;
+
+//   const params = {
+//     payment_method_types: [paymentMethodType],
+//     amount: 5999,
+//     currency: currency,
+//   }
+// })
+
 // Webhook to handle post-payment confirmation email
 app.post("/webhook", express.raw({ type: "application/json" }), (req, res) => {
   const payload = req.body;
@@ -49,16 +59,21 @@ app.post("/webhook", express.raw({ type: "application/json" }), (req, res) => {
   // console.log(event.data.object);
   // console.log(event.data.object.id);
 
+  const data = event.data.object;
   // handle the event
   switch (event.type) {
     case "payment_intent.succeeded":
       const paymentIntent = event.data.object;
       const email = event.data.object["receipt_email"];
-      console.log(event.data.object);
-      console.log(
-        `PaymentIntent for ${paymentIntent.amount} for ${email} was successful`
-      );
+      // console.log(event.data.object);
+      // console.log(
+      //   `PaymentIntent for ${paymentIntent.amount} for ${email} was successful`
+      // );
       // handlePaymentIntenetSucceeded(paymentIntent);
+      break;
+    case "checkout.session.completed":
+      // console.log(`Checkout session completed for customer ${data}`);
+      console.log(event);
       break;
     // payment_method.attached??
     default:
