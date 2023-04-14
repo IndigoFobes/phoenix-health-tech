@@ -21,6 +21,7 @@ import { Link } from "react-router-dom";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { motion } from "framer-motion";
 import familyOutside from "../assets/family-outside.jpg";
+import Testimonials from "../components/Testimonials";
 // import Modal from "../components/Modal";
 
 // for animations
@@ -372,7 +373,7 @@ export default function Home({ currentPage, handlePageChange }) {
           </motion.div>
         </div>
       </motion.container>
-      <div className="flex mb-20">
+      <div className="flex mb-10">
         {/* Yellow box */}
         <div
           className={`justify-center pt-5 py-5 px-8 flex-col text-center pb-20 ${
@@ -473,6 +474,7 @@ export default function Home({ currentPage, handlePageChange }) {
           </div>
         </div>
       </div>
+      <Testimonials />
     </div>
   );
 }
