@@ -254,7 +254,7 @@ export default function Home({ currentPage, handlePageChange }) {
                 })}
               />
               <p className="dm-sans text-lg md:text-xl text-white mb-2 md:mb-3">
-                777-777-7777
+                {`(678) 886-3901`}
               </p>
             </div>
             <div className="flex flex-row gap-2">

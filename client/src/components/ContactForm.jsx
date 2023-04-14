@@ -62,7 +62,7 @@ const ContactForm = () => {
                 style: "solid",
               })}
             />
-            <p className=" text-white mb-3">777-777-7777</p>
+            <p className=" text-white mb-3">{`(678) 886-3901`}</p>
           </div>
           <div className="flex flex-row gap-2 justify-center xl:justify-end contact-icons dm-sans-bold">
             <FontAwesomeIcon

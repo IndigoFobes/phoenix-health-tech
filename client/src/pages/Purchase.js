@@ -323,7 +323,7 @@ export default function Purchase({ currentPage, handlePageChange }) {
         <div className="col-start-1 col-end-7 md:col-end-4 flex flex-col justify-center place-items-center">
           <h2 className="dm-sans-bold text-[#0E4370] hvac mb-2">HVAC Unit</h2>
           <hr class="h-px my-4 w-2/3 bg-[#0E4370] border-0 dark:bg-gray-700" />
-          <h3 className="dm-sans-med text-[#0E4370] text-xl mb-4">$2,355.00</h3>
+          <h3 className="dm-sans-med text-[#0E4370] text-xl mb-4">$3350.00</h3>
           <h4 className="text-[#0E4370]">
             Text about the product. Information.
           </h4>
