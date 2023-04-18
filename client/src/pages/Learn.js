@@ -240,9 +240,9 @@ export default function Learn({ currentPage, handlePageChange }) {
                 variants={textVariant1}
                 onClick={HandleClickOne}
                 id="one"
-                className={`text-white dm-sans-med md:text-xl xl:text-2xl py-2 px-4 rounded-full cursor-pointer border-4 border-white hover:border-lime-500 ${
+                className={`dm-sans-med md:text-xl xl:text-2xl py-2 px-4 rounded-full cursor-pointer border-4 border-white hover:border-lime-500 ${
                   currentNumber === 1
-                    ? "bg-lime-500 border-lime-500"
+                    ? "bg-lime-500 border-lime-500 text-white"
                     : "bg-white text-black"
                 }`}
               >
@@ -252,9 +252,9 @@ export default function Learn({ currentPage, handlePageChange }) {
                 variants={textVariant2}
                 onClick={HandleClickTwo}
                 id="two"
-                className={`text-white dm-sans-med md:text-xl xl:text-2xl py-2 px-4 rounded-full cursor-pointer border-4 border-white hover:border-lime-500 ${
+                className={`dm-sans-med md:text-xl xl:text-2xl py-2 px-4 rounded-full cursor-pointer border-4 border-white hover:border-lime-500 ${
                   currentNumber === 2
-                    ? "bg-lime-500 border-lime-500"
+                    ? "bg-lime-500 border-lime-500 text-white "
                     : "bg-white text-black"
                 }`}
               >
@@ -264,9 +264,9 @@ export default function Learn({ currentPage, handlePageChange }) {
                 variants={textVariant3}
                 onClick={HandleClickThree}
                 id="three"
-                className={`text-white dm-sans-med md:text-xl xl:text-2xl py-2 px-4 rounded-full cursor-pointer border-4 border-white hover:border-lime-500 ${
+                className={`dm-sans-med md:text-xl xl:text-2xl py-2 px-4 rounded-full cursor-pointer border-4 border-white hover:border-lime-500 ${
                   currentNumber === 3
-                    ? "bg-lime-500 border-lime-500"
+                    ? "bg-lime-500 border-lime-500 text-white"
                     : "bg-white text-black"
                 }`}
               >

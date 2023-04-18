@@ -14,7 +14,8 @@ export default function Landing({ currentPage, handlePageChange }) {
           ></img>
         </div>
         <p className="mt-10 font-sans text-center text-lg md:text-2xl lg:text-3xl font-medium text-stone-700 mx-10">
-          Changing the world, one breath at a time.
+          Changing the world, one breath at a time. <br></br> Helping you feel
+          your best!
         </p>
         <Link
           to="/home"

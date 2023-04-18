@@ -6,7 +6,7 @@ import indigo from "../assets/indigo_recent.JPG";
 
 const Testimonials = () => {
   return (
-    <div className="text-center flex flex-col bg-gradient-to-br from-yellow-400 to-yellow-600 pt-20 pb-40 px-10">
+    <div className="text-center flex flex-col bg-gradient-to-br from-yellow-400 to-yellow-400 pt-20 pb-40 px-10">
       <h2 className="testimonials dm-sans-bold text-white mb-20">
         Hear From Our Customers:
       </h2>
