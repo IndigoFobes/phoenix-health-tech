@@ -3,15 +3,16 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import indigo from "../assets/indigo_recent.JPG";
+import triangles from "../assets/triangle–design.png";
 
 const Testimonials = () => {
   return (
-    <div className="text-center flex flex-col bg-gradient-to-br from-yellow-400 to-yellow-400 pt-20 pb-40 px-10">
+    <div className="text-center flex flex-col bg-gradient-to-br from-yellow-300 to-yellow-500 border-2 border-white pt-10 pb-40 px-10 relative">
       <h2 className="testimonials dm-sans-bold text-white mb-20">
         Hear From Our Customers:
       </h2>
       <div className="flex justify-center">
-        <div className="w-3/5">
+        <div className="w-[310px] sm:w-4/5 lg:w-3/5 pb-10 mb-0 xl:mb-20">
           <Slider>
             <Card
               text={`I am so grateful for this product. More text here. I love PHT. Etc.`}
@@ -28,13 +29,14 @@ const Testimonials = () => {
           </Slider>
         </div>
       </div>
+      <img className="absolute bottom-0 left-0 w-full" src={triangles}></img>
     </div>
   );
 };
 
 const Card = ({ text, name }) => {
   return (
-    <div className="text-center bg-white/70 rounded-sm mx-10 py-10 px-10">
+    <div className="text-center bg-white rounded-sm mx-2 sm:mx-10 py-10 px-5 sm:px-10">
       <p className="mb-5 dm-sans-med text-xl">{text}</p>
       <div className="flex justify-center align-center">
         <div className="w-[50px] rounded-full h-fit flex">

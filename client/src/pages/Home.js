@@ -483,6 +483,8 @@ Our solution has undergone extensive efficacy testing by Microchem Laboratories.
         </div>
       </div>
       <Testimonials />
+      {/* White space */}
+      <div className="w-full h-[100px] bg-white"></div>
     </div>
   );
 }
