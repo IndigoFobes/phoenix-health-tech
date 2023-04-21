@@ -38,7 +38,8 @@ const ContactForm = () => {
         <div className="grid grid-cols-6">
           <container className="col-start-1 col-end-7 lg:col-end-5 mb-5 mx-10">
             <h1 className="text-center lg:text-left our-mission title-text">
-              Contact us
+              Interested in Purchasing a Unit?
+              {/* Or asking questions? */}
             </h1>
           </container>
         </div>

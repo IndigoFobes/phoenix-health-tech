@@ -14,6 +14,7 @@ import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
 import purchase from "../assets/pht_purchase_graphic_1.png";
 import phoneCall from "../assets/pht_purchase_graphic_2.png";
 import install from "../assets/pht_purchase_graphic_3.png";
+import { Link } from "react-router-dom";
 import {
   motion,
   useScroll,
@@ -324,9 +325,20 @@ export default function Purchase({ currentPage, handlePageChange }) {
           <h2 className="dm-sans-bold text-[#0E4370] hvac mb-2">HVAC Unit</h2>
           <hr class="h-px my-4 w-2/3 bg-[#0E4370] border-0 dark:bg-gray-700" />
           <h3 className="dm-sans-med text-[#0E4370] text-xl mb-4">$3350.00</h3>
-          <h4 className="text-[#0E4370]">
+          <h4 className="text-[#0E4370] mb-8">
             Text about the product. Information.
           </h4>
+          <Link to="/contact">
+            <p
+              className="text-yellow-500 dm-sans-med text-base lg:text-lg font-bold flex drop-shadow-md hover:translate-x-3 transition duration-300 cursor-pointer"
+              onClick={() => handlePageChange("Contact")}
+            >
+              Contact Us to Purchase{" "}
+              <span>
+                <FontAwesomeIcon icon={faArrowRight} className="ml-2" />
+              </span>
+            </p>
+          </Link>
         </div>
         <div className="col-start-1 md:col-start-4 col-end-7 w-2/3 mx-auto flex flex-col items-center">
           <img
@@ -345,8 +357,24 @@ export default function Purchase({ currentPage, handlePageChange }) {
             </div>
           ) : (
             <>
+              {/* Placeholder for hidden purchase button. */}
+              <div>
+                <p className="dm-sans text-ms">
+                  {`To purchase a unit, please give us a call at (678) 886-3901.`}
+                </p>
+                <p className="dm-sans text-md">
+                  {` Or visit our `}
+                  <Link to="/contact">
+                    <span
+                      onClick={() => handlePageChange("Contact")}
+                      className="dm-sans-bold hover:text-yellow-500 hover:cursor-pointer"
+                    >{`Contact page.`}</span>
+                  </Link>
+                  {` Online purchase feature coming soon.`}
+                </p>
+              </div>
               <button
-                className="sm:text-xl md:text-2xl dm-sans-bold col-start-1 col-end-7 md:col-start-4 md:col-end-7 text-center py-2 rounded-sm text-yellow-400 hover:translate-x-2 transition duration-300 cursor-pointer mt-5"
+                className="hidden sm:text-xl md:text-2xl dm-sans-bold col-start-1 col-end-7 md:col-start-4 md:col-end-7 text-center py-2 rounded-sm text-yellow-400 hover:translate-x-2 transition duration-300 cursor-pointer mt-5"
                 onClick={() => setShowItem(true)}
               >
                 <p>
