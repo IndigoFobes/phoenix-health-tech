@@ -233,6 +233,92 @@ export default function Purchase({ currentPage, handlePageChange }) {
           </motion.li>
         </motion.ul>
       </div>
+      {/* *** DELETE this div when ready to move to online purchasing *** */}
+      {/* Mobile */}
+      <div className="flex md:hidden items-center flex-col bg-[#0E4370]/60 py-10">
+        <motion.div
+          className=" justify-items-center mb-10"
+          initial="offscreen"
+          whileInView="onscreen"
+          viewport={{ once: true, amount: 0.8 }}
+        >
+          <motion.div
+            variants={imgVariant1}
+            className="flex flex-col text-center pt-2"
+          >
+            <p className="dm-sans-bold text-white text-2xl my-3">Purchase</p>
+            <img
+              className="w-1/3 self-center hover:scale-110 transition duration-500 ease-in-out"
+              src={purchase}
+              alt="Laptop"
+            ></img>
+          </motion.div>
+          <motion.div
+            variants={textVariant}
+            className="flex flex-col text-center"
+          >
+            <p className="py-6 px-8 sm:px-20 dm-sans-med text-white">
+              Give us a call or fill out the form on our contact page. We will
+              help complete the necessary steps to purchase a unit.
+            </p>
+          </motion.div>
+        </motion.div>
+        <motion.div
+          className=" justify-items-center mb-10"
+          initial="offscreen"
+          whileInView="onscreen"
+          viewport={{ once: true, amount: 0.8 }}
+        >
+          <motion.div
+            variants={imgVariant1}
+            className="flex flex-col text-center pt-2"
+          >
+            <p className="dm-sans-bold text-white text-2xl my-3">Plan</p>
+            <img
+              className="w-1/3 self-center hover:scale-110 transition duration-500 ease-in-out"
+              src={phoneCall}
+              alt="Woman on phone call smiling."
+            ></img>
+          </motion.div>
+          <motion.div
+            variants={textVariant}
+            className="flex flex-col text-center"
+          >
+            <p className="py-6 px-8 sm:px-20 dm-sans-med text-white">
+              One of our dealers near you will receive your order and reach back
+              out to you to plan a day that works best for you to get your new
+              unit installed.
+            </p>
+          </motion.div>
+        </motion.div>
+        <motion.div
+          className=" justify-items-center"
+          initial="offscreen"
+          whileInView="onscreen"
+          viewport={{ once: true, amount: 0.8 }}
+        >
+          <motion.div
+            variants={imgVariant1}
+            className="flex flex-col text-center pt-2"
+          >
+            <p className="dm-sans-bold text-white text-2xl my-3">Install</p>
+            <img
+              className="w-1/3 self-center hover:scale-110 transition duration-500 ease-in-out"
+              src={install}
+              alt="Man in overalls giving thumbs-up."
+            ></img>
+          </motion.div>
+          <motion.div
+            variants={textVariant}
+            className="flex flex-col text-center"
+          >
+            <p className="py-6 px-8 sm:px-20 dm-sans-med text-white">
+              Installation day will come and go, and you can breathe deeply
+              knowing your HVAC unit is doing its thing, keeping your air clean!
+            </p>
+          </motion.div>
+        </motion.div>
+      </div>
       {/* *** Delete this OUTER hidden div when ready to move to online payments *** */}
       <div className="hidden">
         {/* regular to large screens */}
