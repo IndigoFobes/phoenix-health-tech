@@ -38,54 +38,52 @@ if (process.env.NODE_ENV === "production") {
 // })
 
 // Webhook to handle post-payment confirmation email
-app.post("/webhook", express.raw({ type: "application/json" }), (req, res) => {
-  const payload = req.body;
-  const signature = req.headers["stripe-signature"];
+// **** UN-COMMENT When Stripe is ready for use!
+// app.post("/webhook", express.raw({ type: "application/json" }), (req, res) => {
+//   const payload = req.body;
+//   const signature = req.headers["stripe-signature"];
 
-  let event;
-  // console.log(payload);
-  // console.log(signature);
-  // console.log("event.data****", event.data);
+//   let event;
 
-  try {
-    event = stripe.webhooks.constructEvent(payload, signature, endpointSecret);
-  } catch (error) {
-    console.log(error.message);
-    res.status(400).json({ message: "failed" });
-    return;
-  }
+//   try {
+//     event = stripe.webhooks.constructEvent(payload, signature, endpointSecret);
+//   } catch (error) {
+//     console.log(error.message);
+//     res.status(400).json({ message: "failed" });
+//     return;
+//   }
 
-  const data = event.data.object;
-  // handle the event
-  switch (event.type) {
-    case "payment_intent.created":
-      console.log("Payment intent created!");
-      break;
-    case "payment_intent.succeeded":
-      // define and call a method to handle payment intent success
-      console.log("Payment intent succeeded!");
-      break;
-    case "payment_intent.processing":
-      console.log("Payment intent processing.");
-      break;
-    case "payment_intent.payment_failed":
-      console.log("Payment failed for some reason.");
-      break;
-    case "checkout.session.completed":
-      // define and call a method to handle checkout session completed?
-      console.log("Checkout session completed!!");
-      break;
-    case "customer.created":
-      const cus = event.data.object.id;
-      console.log(`Customer ${cus} created!`);
-      break;
-    // payment_method.attached??
-    default:
-      console.log(`Unhandled event type ${event.type}`);
-  }
+//   const data = event.data.object;
+//   // handle the event
+//   switch (event.type) {
+//     case "payment_intent.created":
+//       console.log("Payment intent created!");
+//       break;
+//     case "payment_intent.succeeded":
+//       // define and call a method to handle payment intent success
+//       console.log("Payment intent succeeded!");
+//       break;
+//     case "payment_intent.processing":
+//       console.log("Payment intent processing.");
+//       break;
+//     case "payment_intent.payment_failed":
+//       console.log("Payment failed for some reason.");
+//       break;
+//     case "checkout.session.completed":
+//       // define and call a method to handle checkout session completed?
+//       console.log("Checkout session completed!!");
+//       break;
+//     case "customer.created":
+//       const cus = event.data.object.id;
+//       console.log(`Customer ${cus} created!`);
+//       break;
+//     // payment_method.attached??
+//     default:
+//       console.log(`Unhandled event type ${event.type}`);
+//   }
 
-  res.json();
-});
+//   res.json();
+// });
 
 // express JSON for all other routes
 app.use(express.json());
@@ -162,32 +160,30 @@ app.post("/contact", (req, res) => {
 });
 
 // Stripe integration
-app.post("/payment", async (req, res) => {
-  try {
-    // const customer = await stripe.customers.create({
-    //   name: "Indigo Fobes",
-    //   email: email,
-    // });
-    const paymentIntent = await stripe.paymentIntents.create({
-      amount: 2000,
-      currency: "USD",
-      description: "HVAC Unit",
-      // customer: customer,
-      automatic_payment_methods: {
-        enabled: true,
-      },
-    });
-    res.send({
-      clientSecret: paymentIntent.client_secret,
-    });
-  } catch (error) {
-    console.log("Error", error);
-    res.json({
-      message: "Payment failed.",
-      success: false,
-    });
-  }
-});
+// **** UN-COMMENT When Stripe is ready for use!
+
+// app.post("/payment", async (req, res) => {
+//   try {
+//     const paymentIntent = await stripe.paymentIntents.create({
+//       amount: 2000,
+//       currency: "USD",
+//       description: "HVAC Unit",
+//       // customer: customer,
+//       automatic_payment_methods: {
+//         enabled: true,
+//       },
+//     });
+//     res.send({
+//       clientSecret: paymentIntent.client_secret,
+//     });
+//   } catch (error) {
+//     console.log("Error", error);
+//     res.json({
+//       message: "Payment failed.",
+//       success: false,
+//     });
+//   }
+// });
 
 app.listen(PORT, () => {
   console.log(`API server listening at port ${PORT}!`);
