@@ -44,7 +44,8 @@ font-weight: 400;
 }
 
 .testimonials {
-	font-size: 2.5rem
+	font-size: 2.5rem;
+	color: #0E4370
 }
 
 
@@ -91,6 +92,14 @@ font-weight: 400;
 
 .purchase-bg {
 	background: url("./assets/family-playing.jpg");
+	height: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+  	background-size: cover;
+}
+
+.yellow-bg {
+	background: url("./assets/yellow-wall.jpg");
 	height: 100%;
 	background-position: center;
 	background-repeat: no-repeat;

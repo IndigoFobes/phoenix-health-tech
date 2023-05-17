@@ -7,8 +7,8 @@ import triangles from "../assets/triangle–design.png";
 
 const Testimonials = () => {
   return (
-    <div className="text-center flex flex-col bg-gradient-to-br from-yellow-300 to-yellow-500 border-2 border-white pt-10 pb-40 px-10 relative">
-      <h2 className="testimonials dm-sans-bold text-white mb-20">
+    <div className="text-center flex flex-col yellow-bg pt-20 pb-10 px-10 relative">
+      <h2 className="testimonials dm-sans-bold mb-20">
         Hear From Our Customers:
       </h2>
       <div className="flex justify-center">
@@ -29,14 +29,13 @@ const Testimonials = () => {
           </Slider>
         </div>
       </div>
-      <img className="absolute bottom-0 left-0 w-full" src={triangles}></img>
     </div>
   );
 };
 
 const Card = ({ text, name }) => {
   return (
-    <div className="text-center bg-white rounded-sm mx-2 sm:mx-10 py-10 px-5 sm:px-10">
+    <div className="text-center bg-white/70 rounded-sm mx-2 sm:mx-10 py-10 px-5 sm:px-10">
       <p className="mb-5 dm-sans-med text-xl">{text}</p>
       <div className="flex justify-center align-center">
         <div className="w-[50px] rounded-full h-fit flex">
