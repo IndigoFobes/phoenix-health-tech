@@ -109,7 +109,7 @@ function Navbar({ currentPage, handlePageChange }) {
         </div>
       </div>
 
-      {/* Larger screen menu */}
+      {/* desktop menu */}
       <div
         className="hidden md:grid grid-cols-6 w-full nav-bg"
         id="navbar-default"
@@ -175,6 +175,17 @@ function Navbar({ currentPage, handlePageChange }) {
               <a href="#contact">Contact</a>
             </li>
           </Link>
+        </ul>
+      </div>
+      <div
+        className="hidden md:grid grid-cols-6 w-full"
+        // id="navbar-default"
+      >
+        <ul className="col-start-2 col-end-6 grid grid-cols-5 border-none text-white dm-sans-med text-sm sm:text-base md:text-lg lg:text-xl">
+          <div className="col-start-2 col-end-3 nav-bg">
+            <p>Team</p>
+            <p>Product</p>
+          </div>
         </ul>
       </div>
     </nav>
