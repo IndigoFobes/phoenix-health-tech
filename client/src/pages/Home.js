@@ -22,6 +22,7 @@ import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { motion } from "framer-motion";
 import familyOutside from "../assets/family-outside.jpg";
 import Testimonials from "../components/Testimonials";
+import bullet from "../assets/bullet_pht.png";
 // import Modal from "../components/Modal";
 
 // for animations
@@ -147,14 +148,28 @@ export default function Home({ currentPage, handlePageChange }) {
             src={CleanHome}
             alt="White, modern couch with white pillows. Small circular tables with vase of pretty leaf decoration."
           ></img>
-          <p className="text-center dm-sans-bold text-xs sm:text-sm md:text-base lg:text-2xl absolute top-1/2 left-1/5 -translate-x-1/2 -translate-y-1/2 ml-10 md:ml-0 sm:font-bold warm-gray px-4 py-4 rounded-sm text-white">
-            Not quite as clean as you think.
-          </p>
+          <div className="w-1/2 absolute top-2/5 left-1/5 -translate-x-1/3 flex flex-col sm:grid grid-rows-3 md:pr-20 gap-1 md:gap-2">
+            <p className="self-center text-center dm-sans-bold text-xs sm:text-sm md:text-base lg:text-2xl sm:font-bold warm-gray p-2 mt-4 sm:mt-0 sm:p-4 rounded-sm text-white">
+              Not quite as clean as you think.
+            </p>
+            <p className="row-start-2 row-end-4 self-center hidden sm:flex text-xs dm-sans md:text-sm lg:text-base xl:text-lg">
+              Mold and fungus grow on your air conditioning’s coil. As air blows
+              through your system, it picks up spores and mycotoxins and spreads
+              them through your home or building often potentially causing an
+              allergic reaction or sickness.
+            </p>
+          </div>
         </div>
-        <h1 className="font-bold text-base sm:text-2xl md:text-3xl lg:text-4xl absolute top-1/4 ml-10 left-1/5 -translate-x-1/2 -translate-y-1/2 title-text">
-          How clean is your home's air?
+        <h1 className="w-1/2 absolute top-1/6 left-1/5 -translate-x-1/3 font-bold text-base sm:text-2xl  lg:text-4xl md:pr-10 md:ml-0 title-text">
+          How clean is the air in your <br></br>home or building?
         </h1>
       </div>
+      <p className="row-start-2 row-end-4 self-center text-center flex sm:hidden text-xs dm-sans md:text-sm lg:text-base warm-gray text-white px-8 py-2">
+        Mold and fungus grow on your air conditioning’s coil. As air blows
+        through your system, it picks up spores and mycotoxins and spreads them
+        through your home or building, often causing an allergic reaction or
+        sickness.
+      </p>
       <div className="grid grid-cols-6">
         <container className="col-start-2 col-end-6 mb-5 mt-5 md:mt-10">
           <h1 className="text-center font-semibold sm:text-xl md:text-2xl lg:text-3xl title-text ">
@@ -163,39 +178,25 @@ export default function Home({ currentPage, handlePageChange }) {
           <hr class="h-px my-4 bg-gray-200 border-0 dark:bg-gray-700" />
         </container>
         <container className="flex flex-col pb-10 lg:mb-0 col-start-1 col-end-7 mx-8 lg:col-start-2 lg:col-end-6 text-center md:text-left text-sm sm:text-base lg:text-lg items-center ">
-          <p className="text-justify">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
-            laoreet a nisl sit amet facilisis. Vestibulum id tellus felis.
-            Vestibulum efficitur dignissim pulvinar. Sed vulputate posuere
-            ultrices. Integer blandit dui ut laoreet bibendum. Maecenas
-            tristique, diam a mollis euismod, nunc erat ultricies orci, vel
-            auctor ex nulla in erat. Ut imperdiet, purus a porttitor dignissim,
-            nisi neque ultrices eros, a commodo lectus lectus egestas leo. Ut
-            quis neque elit. In congue elit rhoncus justo viverra congue. Fusce
-            ultricies nisi a lacus gravida, in efficitur est finibus. Aliquam
-            varius massa vel mi ornare malesuada. Suspendisse non ante aliquet
-            diam bibendum viverra vel id felis. Orci varius natoque penatibus et
-            magnis dis parturient montes, nascetur ridiculus mus. Maecenas
-            interdum, dui vitae dapibus gravida, magna justo blandit sapien, nec
-            convallis justo ex posuere erat. Curabitur quis dui mauris.
-            Vestibulum sollicitudin viverra suscipit?
+          <p className="text-justify dm-sans">
+            The Phoenix Module prevents mold and fungus from growing in your air
+            conditioning system.
             <br></br>
             <br></br>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
-            laoreet a nisl sit amet facilisis. Vestibulum id tellus felis.
-            Vestibulum efficitur dignissim pulvinar. Sed vulputate posuere
-            ultrices. Integer blandit dui ut laoreet bibendum. Maecenas
-            tristique, diam a mollis euismod, nunc erat ultricies orci, vel
-            auctor ex nulla in erat. Ut imperdiet, purus a porttitor dignissim,
-            nisi neque ultrices eros, a commodo lectus lectus egestas leo. Ut
-            quis neque elit. In congue elit rhoncus justo viverra congue. Fusce
-            ultricies nisi a lacus gravida, in efficitur est finibus. Aliquam
-            varius massa vel mi ornare malesuada. Suspendisse non ante aliquet
-            diam bibendum viverra vel id felis. Orci varius natoque penatibus et
-            magnis dis parturient montes, nascetur ridiculus mus. Maecenas
-            interdum, dui vitae dapibus gravida, magna justo blandit sapien, nec
-            convallis justo ex posuere erat. Curabitur quis dui mauris.
-            Vestibulum sollicitudin viverra suscipit.
+            <span className="dm-sans-bold">What is the Phoenix Module?</span>
+            <br></br>
+            <br></br>
+            The Phoenix Module is a patented system made in the U.S.A. that
+            prevents mold and fungus from growing in your air conditioning
+            system. It includes:
+            <br></br>
+            <br></br>
+            <ul className="list-disc ml-10">
+              <li>The Phoenix System of Sprayers</li>
+              <li>The Phoenix Formula</li>
+              <li>The Phoenix Sensors and Alarm</li>
+              <li>The Phoenix App</li>
+            </ul>
           </p>
           <Link
             to="/learn"
@@ -203,7 +204,7 @@ export default function Home({ currentPage, handlePageChange }) {
             onClick={() => handlePageChange("Learn")}
           >
             <p>
-              Learn More{" "}
+              Learn More About the Phoenix Module{" "}
               <span>
                 <FontAwesomeIcon icon={faArrowRight} className="ml-2" />
               </span>
