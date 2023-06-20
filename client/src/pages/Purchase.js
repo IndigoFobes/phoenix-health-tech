@@ -588,10 +588,10 @@ export default function Purchase({ currentPage, handlePageChange }) {
                 Cleaning system. Set up your cleaning schedule. View your
                 cleaning history and the status of your system.
               </p>
-              <div className="grid grid-cols-2 mt-6">
+              <div className="grid grid-cols-3 mt-6 gap-2">
                 {/* App Store Badge */}
                 <a
-                  className="self-center place-self-center w-[124px] overflow-hidden rounded-sm"
+                  className="self-center justify-self-end w-[124px] overflow-hidden rounded-sm hover:scale-110 transition ease-in-out duration-500"
                   target="_blank"
                   href={`https://apps.apple.com/us/app/phoenix-health-technologies/id6444221678?itsct=apps_box_badge&amp;itscg=30200`}
                   // style="display: inline-block; overflow: hidden; border-radius: 13px; width: 250px; height: 83px;"
@@ -605,12 +605,12 @@ export default function Purchase({ currentPage, handlePageChange }) {
                 </a>
                 {/* Google Play Badge */}
                 <a
-                  className="self-center w-[124px]"
+                  className="self-center w-[160px] hover:scale-110 transition ease-in-out duration-500"
                   target="_blank"
                   href={`https://play.google.com/store/apps/details?id=com.phoenixmedical.mobile&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1`}
                 >
                   <img
-                    className="rounded-sm w-[124px]"
+                    className="rounded-sm"
                     alt="Get it on Google Play"
                     src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
                   />
