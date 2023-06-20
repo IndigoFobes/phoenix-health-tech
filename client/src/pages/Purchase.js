@@ -23,6 +23,7 @@ import {
   MotionValue,
   useMotionValue,
 } from "framer-motion";
+import app from "../assets/screenshot_pht.png";
 
 const imgVariant1 = {
   offscreen: {
@@ -492,24 +493,71 @@ export default function Purchase({ currentPage, handlePageChange }) {
       </div>
       {/* Purchase box */}
       <div className="grid grid-cols-6 py-20 bg-white">
-        <div className="col-start-1 col-end-7 md:col-end-4 flex flex-col justify-center place-items-center">
-          <h2 className="dm-sans-bold text-[#0E4370] hvac mb-2">HVAC Unit</h2>
-          <hr class="h-px my-4 w-2/3 bg-[#0E4370] border-0 dark:bg-gray-700" />
-          <h3 className="dm-sans-med text-[#0E4370] text-xl mb-4">$3350.00</h3>
-          <h4 className="text-[#0E4370] mb-8">
-            Text about the product. Information.
-          </h4>
-          <Link to="/contact">
-            <p
-              className="text-yellow-500 dm-sans-med text-base lg:text-lg font-bold flex drop-shadow-md hover:translate-x-3 transition duration-300 cursor-pointer"
-              onClick={() => handlePageChange("Contact")}
-            >
-              Contact Us to Purchase{" "}
-              <span>
-                <FontAwesomeIcon icon={faArrowRight} className="ml-2" />
-              </span>
-            </p>
-          </Link>
+        <div className="col-start-1 col-end-7 md:col-end-4 flex flex-col justify-between place-items-center">
+          <div className="flex flex-col justify-center place-items-center">
+            <h2 className="dm-sans-bold text-[#0E4370] hvac mb-2">HVAC Unit</h2>
+            <hr class="h-px my-4 w-2/3 bg-[#0E4370] border-0 dark:bg-gray-700" />
+            <h3 className="dm-sans-med text-[#0E4370] text-xl mb-4">
+              $3350.00
+            </h3>
+            <h4 className="text-[#0E4370] mb-8">
+              Text about the product. Information.
+            </h4>
+            <Link to="/contact">
+              <p
+                className="text-yellow-500 dm-sans-med text-base lg:text-lg font-bold flex drop-shadow-md hover:translate-x-3 transition duration-300 cursor-pointer"
+                onClick={() => handlePageChange("Contact")}
+              >
+                Contact Us to Purchase{" "}
+                <span>
+                  <FontAwesomeIcon icon={faArrowRight} className="ml-2" />
+                </span>
+              </p>
+            </Link>
+          </div>
+          <div className="grid grid-cols-7 mt-10">
+            <img className="col-start-2 col-end-3 px-3" src={app}></img>
+            <div className="col-start-3 col-end-8">
+              <p className="dm-sans ml-2">
+                <span className="dm-sans-bold pr-2">
+                  Get the free mobile app.
+                  <FontAwesomeIcon icon={faArrowRight} className="ml-2" />
+                </span>
+                Available on the App Store and Google Play, the Phoenix Mobile
+                App provides you with control of your Phoenix HVAC Advanced
+                Cleaning system. Set up your cleaning schedule. View your
+                cleaning history and the status of your system.
+              </p>
+              <div className="grid grid-cols-2 mt-6">
+                {/* App Store Badge */}
+                <a
+                  className="self-center place-self-center w-[124px] overflow-hidden rounded-sm"
+                  target="_blank"
+                  href={`https://apps.apple.com/us/app/phoenix-health-technologies/id6444221678?itsct=apps_box_badge&amp;itscg=30200`}
+                  // style="display: inline-block; overflow: hidden; border-radius: 13px; width: 250px; height: 83px;"
+                >
+                  <img
+                    className="rounded-sm w-[124px]"
+                    src={`https://tools.applemediaservices.com/api/badges/download-on-the-app-store/white/en-us?size=250x83&amp;releaseDate=1668124800`}
+                    alt="Download on the App Store"
+                    // style="border-radius: 13px; width: 250px; height: 83px;"
+                  />
+                </a>
+                {/* Google Play Badge */}
+                <a
+                  className="self-center w-[124px]"
+                  target="_blank"
+                  href={`https://play.google.com/store/apps/details?id=com.phoenixmedical.mobile&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1`}
+                >
+                  <img
+                    className="rounded-sm w-[124px]"
+                    alt="Get it on Google Play"
+                    src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
         <div className="col-start-1 md:col-start-4 col-end-7 w-2/3 mx-auto flex flex-col items-center">
           <img

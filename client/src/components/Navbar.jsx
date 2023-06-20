@@ -177,7 +177,8 @@ function Navbar({ currentPage, handlePageChange }) {
           </Link>
         </ul>
       </div>
-      <div
+      {/* About Dropdown */}
+      {/* <div
         className="hidden md:grid grid-cols-6 w-full"
         // id="navbar-default"
       >
@@ -187,7 +188,7 @@ function Navbar({ currentPage, handlePageChange }) {
             <p>Product</p>
           </div>
         </ul>
-      </div>
+      </div> */}
     </nav>
   );
 }
