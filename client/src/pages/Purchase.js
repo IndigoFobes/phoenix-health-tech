@@ -515,48 +515,6 @@ export default function Purchase({ currentPage, handlePageChange }) {
               </p>
             </Link>
           </div>
-          <div className="grid grid-cols-7 mt-10">
-            <img className="col-start-2 col-end-3 px-3" src={app}></img>
-            <div className="col-start-3 col-end-8">
-              <p className="dm-sans ml-2">
-                <span className="dm-sans-bold pr-2">
-                  Get the free mobile app.
-                </span>
-                Available on the App Store and Google Play, the Phoenix Mobile
-                App provides you with control of your Phoenix HVAC Advanced
-                Cleaning system. Set up your cleaning schedule. View your
-                cleaning history and the status of your system.
-              </p>
-              <div className="grid grid-cols-2 mt-6">
-                {/* App Store Badge */}
-                <a
-                  className="self-center place-self-center w-[124px] overflow-hidden rounded-sm"
-                  target="_blank"
-                  href={`https://apps.apple.com/us/app/phoenix-health-technologies/id6444221678?itsct=apps_box_badge&amp;itscg=30200`}
-                  // style="display: inline-block; overflow: hidden; border-radius: 13px; width: 250px; height: 83px;"
-                >
-                  <img
-                    className="rounded-sm w-[124px]"
-                    src={`https://tools.applemediaservices.com/api/badges/download-on-the-app-store/white/en-us?size=250x83&amp;releaseDate=1668124800`}
-                    alt="Download on the App Store"
-                    // style="border-radius: 13px; width: 250px; height: 83px;"
-                  />
-                </a>
-                {/* Google Play Badge */}
-                <a
-                  className="self-center w-[124px]"
-                  target="_blank"
-                  href={`https://play.google.com/store/apps/details?id=com.phoenixmedical.mobile&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1`}
-                >
-                  <img
-                    className="rounded-sm w-[124px]"
-                    alt="Get it on Google Play"
-                    src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
-                  />
-                </a>
-              </div>
-            </div>
-          </div>
         </div>
         <div className="col-start-1 md:col-start-4 col-end-7 w-2/3 mx-auto flex flex-col items-center">
           <img
@@ -612,6 +570,55 @@ export default function Purchase({ currentPage, handlePageChange }) {
         ) : (
           ""
         )}
+        {/* Get app section */}
+
+        <div className="col-start-1 col-end-7 grid grid-cols-7 mt-10">
+          <hr class="col-start-1 col-end-8 justify-self-center h-px my-4 w-2/3 bg-[#0E4370] border-0 dark:bg-gray-700" />
+          <div className="col-start-2 col-end-7 grid grid-cols-7 mt-10">
+            <div className="col-start-1 col-end-2 xl:col-start-2 xl:col-end-3 flex justify-end">
+              <img className="w-1/2 h-min flex" src={app}></img>
+            </div>
+            <div className="col-start-2 col-end-8 xl:col-start-3 xl:col-end-7 pl-2">
+              <p className="dm-sans ml-2">
+                <span className="dm-sans-bold pr-2">
+                  Get the free mobile app.
+                </span>
+                Available on the App Store and Google Play, the Phoenix Mobile
+                App provides you with control of your Phoenix HVAC Advanced
+                Cleaning system. Set up your cleaning schedule. View your
+                cleaning history and the status of your system.
+              </p>
+              <div className="grid grid-cols-2 mt-6">
+                {/* App Store Badge */}
+                <a
+                  className="self-center place-self-center w-[124px] overflow-hidden rounded-sm"
+                  target="_blank"
+                  href={`https://apps.apple.com/us/app/phoenix-health-technologies/id6444221678?itsct=apps_box_badge&amp;itscg=30200`}
+                  // style="display: inline-block; overflow: hidden; border-radius: 13px; width: 250px; height: 83px;"
+                >
+                  <img
+                    className="rounded-sm w-[124px]"
+                    src={`https://tools.applemediaservices.com/api/badges/download-on-the-app-store/white/en-us?size=250x83&amp;releaseDate=1668124800`}
+                    alt="Download on the App Store"
+                    // style="border-radius: 13px; width: 250px; height: 83px;"
+                  />
+                </a>
+                {/* Google Play Badge */}
+                <a
+                  className="self-center w-[124px]"
+                  target="_blank"
+                  href={`https://play.google.com/store/apps/details?id=com.phoenixmedical.mobile&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1`}
+                >
+                  <img
+                    className="rounded-sm w-[124px]"
+                    alt="Get it on Google Play"
+                    src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
