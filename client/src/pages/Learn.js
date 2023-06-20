@@ -112,7 +112,8 @@ export default function Learn({ currentPage, handlePageChange }) {
   if (currentNumber === 1) {
     video = (
       <div className="py-2 px-1 border-4 border-lime-500 rounded-md">
-        <iframe
+        <div className="py-20 px-40 dm-sans-med">Animation coming soon!</div>
+        {/* <iframe
           className="rounded-sm sm:w-[calc(1000px*1/2)] sm:h-[calc(500px*1/2)] md:w-[calc(1000px*2/3)] md:h-[calc(500px*2/3)] lg:w-[1000px] lg:h-[500px]"
           // Handle hover (or click) to display proper animation
           src={"https://www.youtube.com/embed/C0DPdy98e4c"}
@@ -120,23 +121,17 @@ export default function Learn({ currentPage, handlePageChange }) {
           allow="autoplay; encrypted-media"
           allowfullscreen
           title="video"
-        />{" "}
+        />{" "} */}
       </div>
     );
-    text = (
-      <p>
-        This is a fun fun testing video. 3 2 1. Very simple. This is a fun fun
-        testing video. 3 2 1. Very simple. This is a fun fun testing video. 3 2
-        1. Very simple. This is a fun fun testing video. 3 2 1. Very simple.
-        This is a fun fun testing video. 3 2 1. Very simple.
-      </p>
-    );
+    text = <p>Details coming soon.</p>;
     // console.log(video.props.children[0].props);
     //handleGreenOne();
   } else if (currentNumber === 2) {
     video = (
       <div className="py-2 px-1 border-4 border-lime-500 rounded-md">
-        <iframe
+        <div className="py-20 px-40 dm-sans-med">Animation coming soon!</div>
+        {/* <iframe
           className="rounded-sm sm:w-[calc(1000px*1/2)] sm:h-[calc(500px*1/2)] md:w-[calc(1000px*2/3)] md:h-[calc(500px*2/3)] lg:w-[1000px] lg:h-[500px]"
           // Handle hover (or click) to display proper animation
           src="https://www.youtube.com/embed/1prweT95Mo0"
@@ -144,25 +139,16 @@ export default function Learn({ currentPage, handlePageChange }) {
           allow="autoplay; encrypted-media"
           allowfullscreen
           title="video"
-        />{" "}
+        />{" "} */}
       </div>
     );
-    text = (
-      <p>
-        Yo Yo Ma is my FAVORITE. Especially playing Bach, the greatest musician
-        of all time. Yo Yo Ma is my FAVORITE. Especially playing Bach, the
-        greatest musician of all time. Yo Yo Ma is my FAVORITE. Especially
-        playing Bach, the greatest musician of all time. Yo Yo Ma is my
-        FAVORITE. Especially playing Bach, the greatest musician of all time. Yo
-        Yo Ma is my FAVORITE. Especially playing Bach, the greatest musician of
-        all time.
-      </p>
-    );
+    text = <p>Details coming soon.</p>;
     // handleGreenTwo();
   } else if (currentNumber === 3) {
     video = (
       <div className="py-2 px-1 border-4 border-lime-500 rounded-md">
-        <iframe
+        <div className="py-20 px-40 dm-sans-med">Animation coming soon!</div>
+        {/* <iframe
           className="rounded-sm sm:w-[calc(1000px*1/2)] sm:h-[calc(500px*1/2)] md:w-[calc(1000px*2/3)] md:h-[calc(500px*2/3)] lg:w-[1000px] lg:h-[500px]"
           // Handle hover (or click) to display proper animation
           src="https://www.youtube.com/embed/BA-Wi4fdcVE"
@@ -170,18 +156,10 @@ export default function Learn({ currentPage, handlePageChange }) {
           allow="autoplay; encrypted-media"
           allowfullscreen
           title="video"
-        />{" "}
+        />{" "} */}
       </div>
     );
-    text = (
-      <p>
-        Austin Stone is also wonderful. Worship the LORD!! Austin Stone is also
-        wonderful. Worship the LORD!! Austin Stone is also wonderful. Worship
-        the LORD!! Austin Stone is also wonderful. Worship the LORD!! Austin
-        Stone is also wonderful. Worship the LORD!! Austin Stone is also
-        wonderful. Worship the LORD!!
-      </p>
-    );
+    text = <p>Details coming soon.</p>;
     // handleGreenThree();
   } else {
     video = <p>No video to display</p>;
@@ -189,13 +167,13 @@ export default function Learn({ currentPage, handlePageChange }) {
 
   return (
     <div className="flex flex-col justify-center items-center">
-      <div className="bg-fixed flex flex-col justify-center items-center pb-20">
-        <div className="bg-gray-200/80 py-10">
+      <div className="bg-fixed flex flex-col justify-center items-center pb-20 w-full">
+        <div className="bg-gray-200/80 py-10 w-full">
           <h1 className="dm-sans-bold learn-title title-text mb-10 text-center sm:mt-10">
             What is wrong with your HVAC unit?
           </h1>
           <div className="grid grid-cols-8 text-justify text-sm sm:text-base md:text-lg">
-            <p className="dm-sans col-start-1 col-end-9 md:col-start-2 md:col-end-8 px-6 md:p-0">
+            {/* <p className="dm-sans col-start-1 col-end-9 md:col-start-2 md:col-end-8 px-6 md:p-0">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               Vestibulum laoreet a nisl sit amet facilisis. Vestibulum id tellus
               felis. Vestibulum efficitur dignissim pulvinar. Sed vulputate
@@ -206,11 +184,14 @@ export default function Learn({ currentPage, handlePageChange }) {
               egestas leo. Ut quis neque elit. In congue elit rhoncus justo
               viverra congue. Fusce ultricies nisi a lacus gravida, in efficitur
               est finibus. Aliquam varius massa vel mi ornare malesuada.
+            </p> */}
+            <p className="dm-sans col-start-1 col-end-9 md:col-start-2 md:col-end-8 px-6 md:p-0">
+              Text coming soon! Check back later.
             </p>
           </div>
         </div>
         <div className="py-2 px-1 border-4 mt-10 border-red-500 rounded-md">
-          <iframe
+          {/* <iframe
             className="rounded-sm sm:w-[calc(1000px*1/2)] sm:h-[calc(500px*1/2)] md:w-[calc(1000px*2/3)] md:h-[calc(500px*2/3)] lg:w-[1000px] lg:h-[500px]"
             src="https://www.youtube.com/embed/C0DPdy98e4c"
             // width={1000}
@@ -219,7 +200,8 @@ export default function Learn({ currentPage, handlePageChange }) {
             allow="autoplay; encrypted-media"
             allowfullscreen
             title="video"
-          />{" "}
+          />{" "} */}
+          <div className="py-20 px-40 dm-sans-med">Video coming soon!</div>
         </div>
       </div>
       {/* Bottom section */}

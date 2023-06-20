@@ -521,7 +521,6 @@ export default function Purchase({ currentPage, handlePageChange }) {
               <p className="dm-sans ml-2">
                 <span className="dm-sans-bold pr-2">
                   Get the free mobile app.
-                  <FontAwesomeIcon icon={faArrowRight} className="ml-2" />
                 </span>
                 Available on the App Store and Google Play, the Phoenix Mobile
                 App provides you with control of your Phoenix HVAC Advanced
