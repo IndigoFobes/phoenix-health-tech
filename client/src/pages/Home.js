@@ -382,13 +382,27 @@ export default function Home({ currentPage, handlePageChange }) {
           }`}
         >
           <h2 className="title-text text-xl sm:text-2xl md:text-3xl lg:place-self-start lg:ml-10">
-            An All Natural Solution
+            {`An All Natural & Organic Solution`}
           </h2>
           <div className="grid grid-cols-6">
             <hr class="h-px mt-2 mb-4 col-start-3 col-end-5 lg:mr-20 lg:col-start-1 lg:col-end-4 bg-gray-300 border-0 dark:bg-gray-700 lg:ml-10" />
-            <p className="col-start-1 col-end-7 lg:col-end-4 text-justify lg:text-left font-medium text-sm sm:text-base md:text-lg mb-10 lg:mb-0 lg:ml-10">
-              {`Our cleaning solution is a proprietary, organic, nontoxic fungicide and bactericide. It contains no genetically modified organisms (non-GMO) or harsh chemicals.`}
-            </p>
+            <div className="col-start-1 col-end-7 lg:col-end-4 flex flex-col">
+              <p className=" text-justify lg:text-left font-medium text-sm sm:text-base md:text-lg mb-3 lg:ml-10">
+                {`Our cleaning solution is a proprietary, organic, nontoxic fungicide and bactericide. It contains no genetically modified organisms (non-GMO) or harsh chemicals.`}
+              </p>
+              <Link
+                to="/about"
+                className="lg:text-lg dm-sans-med col-start-1 col-end-7 lg:col-end-4 text-center place-self-center py-2 rounded-sm title-text font-bold hover:translate-x-2 transition duration-300 cursor-pointer mb-10"
+                onClick={() => handlePageChange("About")}
+              >
+                <p>
+                  Learn More{" "}
+                  <span>
+                    <FontAwesomeIcon icon={faArrowRight} className="ml-2" />
+                  </span>
+                </p>
+              </Link>
+            </div>
             <img
               src={familyOutside}
               className="col-start-1 col-end-7 lg:col-start-4 lg:col-end-7 lg:w-3/4 place-self-center"
@@ -407,27 +421,41 @@ export default function Home({ currentPage, handlePageChange }) {
           </h2>
           <div className="grid grid-cols-6">
             <hr class="h-px mt-2 mb-4 col-start-3 col-end-5 lg:mr-20 lg:col-start-1 lg:col-end-4 bg-gray-300 border-0 dark:bg-gray-700 lg:ml-10" />
-            <div className="col-start-1 col-end-7 lg:col-end-4 mb-10 lg:mb-0 lg:ml-10">
-              <p className="text-justify lg:text-left font-medium text-sm sm:text-base md:text-lg">
-                {`Besides being an organic and nontoxic solution, there are other benefits to using our solution.`}
-              </p>
-              <br></br>
-              <p className="text-justify lg:text-left font-medium text-sm sm:text-base md:text-lg">{`1. A clean HVAC uses less energy.`}</p>
-              <br></br>
-              <p className="text-justify lg:text-left font-medium text-sm sm:text-base md:text-lg px-5">
-                {`Before our system is installed, your HVAC coils are cleaned, removing any built-up mold, 
+            <div className="col-start-1 col-end-7 lg:col-end-4 flex flex-col">
+              <div className=" mb-3 lg:ml-10 font-medium text-sm sm:text-base xl:text-lg">
+                <p className="text-justify lg:text-left ">
+                  {`Besides being an organic and nontoxic solution, there are other benefits to using our solution.`}
+                </p>
+                <br></br>
+                <p className="text-justify lg:text-left">{`1. A clean HVAC uses less energy.`}</p>
+                <br></br>
+                <p className="text-justify lg:text-left px-5">
+                  {`Before our system is installed, your HVAC coils are cleaned, removing any built-up mold, 
               bacteria or detritus adhering to the internal components of the system. By removing the build-up, air flows more freely 
               through the vents, requiring less work and power consumption by the HVAC unit to achieve the desired climate.`}
-              </p>
-              <br></br>
-              <p className="text-justify lg:text-left font-medium text-sm sm:text-base md:text-lg">{`2. Longer 
+                </p>
+                <br></br>
+                <p className="text-justify lg:text-left">{`2. Longer 
               lasting equipment.`}</p>
-              <br></br>
-              <p className="text-justify lg:text-left font-medium text-sm sm:text-base md:text-lg px-5">
-                {`Airborne contaminants also cling to the HVAC system internal components that can cause rust and corrosion. 
+                <br></br>
+                <p className="text-justify lg:text-left px-5">
+                  {`Airborne contaminants also cling to the HVAC system internal components that can cause rust and corrosion. 
               Our solution prevents buildout of other micro contaminants as well resulting in less frequent replacement of components, 
               including the condensation pump and line.`}
-              </p>
+                </p>
+              </div>
+              <Link
+                to="/about"
+                className="lg:text-lg dm-sans-med col-start-1 col-end-7 lg:col-end-4 text-center place-self-center py-2 rounded-sm title-text font-bold hover:translate-x-2 transition duration-300 cursor-pointer mb-10"
+                onClick={() => handlePageChange("About")}
+              >
+                <p>
+                  Learn More{" "}
+                  <span>
+                    <FontAwesomeIcon icon={faArrowRight} className="ml-2" />
+                  </span>
+                </p>
+              </Link>
             </div>
             <img
               src={greenPhoto}
@@ -447,33 +475,47 @@ export default function Home({ currentPage, handlePageChange }) {
           </h2>
           <div className="grid grid-cols-6">
             <hr class="h-px mt-2 mb-4 col-start-3 col-end-5 lg:mr-20 lg:col-start-1 lg:col-end-4 bg-gray-300 border-0 dark:bg-gray-700 lg:ml-10" />
-            <div className="col-start-1 col-end-7 lg:col-end-4 mb-10 lg:mb-0 lg:ml-10">
-              <p className="text-justify lg:text-left font-medium text-sm sm:text-base md:text-lg">
-                {` Mold (a fungus) and bacteria in a building’s heating, ventilation, and air conditioning (HVAC)
+            <div className="col-start-1 col-end-7 lg:col-end-4 flex flex-col">
+              <div className=" mb-3 lg:ml-10">
+                <p className="text-justify lg:text-left font-medium text-sm sm:text-base md:text-lg">
+                  {` Mold (a fungus) and bacteria in a building’s heating, ventilation, and air conditioning (HVAC)
 Systems can cause serious health problems for the occupants including:`}
-              </p>
-              <br></br>
-              <p className="text-justify lg:text-left font-medium text-sm sm:text-base md:text-lg">
-                {`1. Sick Building Syndrome`}
-              </p>
-              <p className="text-justify lg:text-left font-medium text-sm sm:text-base md:text-lg">
-                {`2. Stachybotrys (black mold)`}
-              </p>
-              <p className="text-justify lg:text-left font-medium text-sm sm:text-base md:text-lg">
-                {`3. Aspergillus Legionaries’ Disease`}
-              </p>
-              <p className="text-justify lg:text-left font-medium text-sm sm:text-base md:text-lg">
-                {`4. MRSA`}
-              </p>
-              <p className="text-justify lg:text-left font-medium text-sm sm:text-base md:text-lg">
-                {`5. Staphylococcus`}
-              </p>
-              <br></br>
-              <p className="text-justify lg:text-left font-medium text-sm sm:text-base md:text-lg">
-                {`When an infected HVAC system turns on, the air blown through the vents carries mold, bacteria  and fungus into your building. Our solution eliminates the mold and fungus that lives inside the system, preventing the problem before it ever starts.
+                </p>
+                <br></br>
+                <p className="text-justify lg:text-left font-medium text-sm sm:text-base md:text-lg">
+                  {`1. Sick Building Syndrome`}
+                </p>
+                <p className="text-justify lg:text-left font-medium text-sm sm:text-base md:text-lg">
+                  {`2. Stachybotrys (black mold)`}
+                </p>
+                <p className="text-justify lg:text-left font-medium text-sm sm:text-base md:text-lg">
+                  {`3. Aspergillus Legionaries’ Disease`}
+                </p>
+                <p className="text-justify lg:text-left font-medium text-sm sm:text-base md:text-lg">
+                  {`4. MRSA`}
+                </p>
+                <p className="text-justify lg:text-left font-medium text-sm sm:text-base md:text-lg">
+                  {`5. Staphylococcus`}
+                </p>
+                <br></br>
+                <p className="text-justify lg:text-left font-medium text-sm sm:text-base md:text-lg">
+                  {`When an infected HVAC system turns on, the air blown through the vents carries mold, bacteria  and fungus into your building. Our solution eliminates the mold and fungus that lives inside the system, preventing the problem before it ever starts.
 Our solution has undergone extensive efficacy testing by Microchem Laboratories. Various microbes were tested for inhibition of mycelial extension and spore germination. The results of this test are conclusive that air quality is improved dramatically. Results of those tests are available upon request.
 `}
-              </p>
+                </p>
+              </div>
+              <Link
+                to="/about"
+                className="lg:text-lg dm-sans-med col-start-1 col-end-7 lg:col-end-4 text-center place-self-center py-2 rounded-sm title-text font-bold hover:translate-x-2 transition duration-300 cursor-pointer mb-10"
+                onClick={() => handlePageChange("About")}
+              >
+                <p>
+                  Learn More{" "}
+                  <span>
+                    <FontAwesomeIcon icon={faArrowRight} className="ml-2" />
+                  </span>
+                </p>
+              </Link>
             </div>
             <img
               src={blueGirl}
