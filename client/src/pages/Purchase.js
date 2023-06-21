@@ -120,12 +120,7 @@ export default function Purchase({ currentPage, handlePageChange }) {
         </div>
         <div className="grid grid-cols-6">
           <container className="col-start-1 col-end-7 md:col-end-5 xl:col-end-4 mb-5 mx-10 text-center dm-sans-med md:text-left text-sm sm:text-lg md:text-xl">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Vestibulum laoreet a nisl sit amet facilisis. Vestibulum id tellus
-              felis. Vestibulum efficitur dignissim pulvinar. Sed vulputate
-              posuere ultrices. Integer blandit dui ut laoreet bibendum.
-            </p>
+            <p>Text coming soon!</p>
           </container>
         </div>
       </div>
@@ -501,7 +496,7 @@ export default function Purchase({ currentPage, handlePageChange }) {
               $3350.00
             </h3>
             <h4 className="text-[#0E4370] mb-8">
-              Text about the product. Information.
+              Text about the product. Details coming soon.
             </h4>
             <Link to="/contact">
               <p

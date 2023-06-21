@@ -22,6 +22,7 @@ import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { motion } from "framer-motion";
 import familyOutside from "../assets/family-outside.jpg";
 import Testimonials from "../components/Testimonials";
+import FAQ from "../components/FAQ";
 import bullet from "../assets/bullet_pht.png";
 // import Modal from "../components/Modal";
 
@@ -528,6 +529,7 @@ Our solution has undergone extensive efficacy testing by Microchem Laboratories.
       {/* White space */}
       <div className="w-full h-[50px] md:h-[90px] bg-white"></div>
       <Testimonials />
+      <FAQ />
     </div>
   );
 }

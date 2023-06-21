@@ -13,7 +13,7 @@ export default function Landing({ currentPage, handlePageChange }) {
             alt="PHT Logo, colorful phoenix"
           ></img>
         </div>
-        <p className="mt-10 font-sans text-center text-lg md:text-2xl lg:text-3xl font-medium text-stone-700 mx-10">
+        <p className="mt-10 dm-sans text-center text-lg md:text-2xl lg:text-3xl text-stone-700 mx-10">
           Changing the world, one breath at a time. <br></br> Helping you feel
           your best!
         </p>
