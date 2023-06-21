@@ -39,6 +39,13 @@ font-weight: 400;
 	font-weight: 500;
 }
 
+.faq {
+	color: #0E4370;
+	font-family: 'DM Sans';
+	font-weight: 700;
+	font-size: 2rem;
+}
+
 .our-mission {
 	font-size: 3.5rem
 }
