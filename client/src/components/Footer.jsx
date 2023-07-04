@@ -87,16 +87,26 @@ export default function Footer({ currentPage, handlePageChange }) {
           </div>
         </span>
         <ul className="flex flex-wrap mt-8 justify-between md:items-center md:mt-3 text-sm text-white dark:text-gray-400 sm:mt-0">
-          <li>
-            <a href="#" className="mr-4 hover:underline md:mr-6">
-              Privacy Policy
-            </a>
-          </li>
-          <li>
-            <a href="#" className="mr-4 hover:underline md:mr-6">
-              Licensing
-            </a>
-          </li>
+          <Link to="/home">
+            <li>
+              <p
+                className="mr-4 hover:underline md:mr-6"
+                onClick={() => handlePageChange("Home")}
+              >
+                Privacy Policy
+              </p>
+            </li>
+          </Link>
+          <Link to="/home">
+            <li>
+              <p
+                className="mr-4 hover:underline md:mr-6"
+                onClick={() => handlePageChange("Home")}
+              >
+                Licensing
+              </p>
+            </li>
+          </Link>
         </ul>
       </div>
     </footer>
