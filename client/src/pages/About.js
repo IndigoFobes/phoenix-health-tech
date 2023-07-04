@@ -219,7 +219,7 @@ export default function About({ currentPage, handlePageChange }) {
               </div>
             </div>
           </div>
-          {/* Fifth image/description: Dudley Wells, Chief Information Officer */}
+          {/* Fifth image/description: Indigo Fobes, Web Designer and Developer */}
           <div className="flex flex-col place-items-center my-5 md:my-10 sm:grid sm:grid-cols-7">
             <div className="w-1/3 mb-5 sm:mb-0 sm:w-full h-fit sm:col-start-1 sm:col-end-3 rounded-full flex">
               <img
@@ -228,7 +228,7 @@ export default function About({ currentPage, handlePageChange }) {
                 alt="Indigo Fobes, smiling big with a colorful scarf on."
               ></img>
             </div>
-            {/* Text about Dudley Wells */}
+            {/* Text about Indigo Fobes */}
             <div className="col-start-3 col-end-8 flex sm:ml-10 items-center">
               <div className="flex flex-col gap-2 text-justify">
                 <h2 className="font-semibold text-center sm:text-left">
@@ -242,6 +242,35 @@ export default function About({ currentPage, handlePageChange }) {
                   certified full-stack web developer. She now works as a
                   freelance web developer and an actress. She is grateful to God
                   for so many opportunities to create.
+                </p>
+              </div>
+            </div>
+          </div>
+          {/* Fifth image/description: Indigo Fobes, Web Designer and Developer */}
+          <div className="flex flex-col place-items-center my-5 md:my-10 sm:grid sm:grid-cols-7">
+            <div className="w-1/3 mb-5 sm:mb-0 sm:w-full h-fit sm:col-start-1 sm:col-end-3 rounded-full flex">
+              <img
+                className="w-max rounded-full align-middle object-cover object-top"
+                src={indigo}
+                alt="Indigo Fobes, smiling big with a colorful scarf on."
+              ></img>
+            </div>
+            {/* Text about Jordan */}
+            <div className="col-start-3 col-end-8 flex sm:ml-10 items-center">
+              <div className="flex flex-col gap-2 text-justify">
+                <h2 className="font-semibold text-center sm:text-left">
+                  Jordan, Animation
+                </h2>
+                <p className="text-xs sm:text-sm md:text-base">
+                  Test about Jordan, Animation. Lorem ipsum dolor sit amet,
+                  consectetur adipiscing elit. Vestibulum laoreet a nisl sit
+                  amet facilisis. Vestibulum id tellus felis. Vestibulum
+                  efficitur dignissim pulvinar. Sed vulputate posuere ultrices.
+                  Integer blandit dui ut laoreet bibendum. Maecenas tristique,
+                  diam a mollis euismod, nunc erat ultricies orci, vel auctor ex
+                  nulla in erat. Ut imperdiet, purus a porttitor dignissim, nisi
+                  neque ultrices eros, a commodo lectus lectus egestas leo. Ut
+                  quis neque elit. In congue elit rhoncus justo viverra congue.
                 </p>
               </div>
             </div>
