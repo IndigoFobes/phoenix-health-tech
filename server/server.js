@@ -17,6 +17,9 @@ const stripe = require("stripe")(STRIPE_KEY);
 const PORT = process.env.PORT || 3001; // should it not be 3000?
 const app = express();
 
+app.get("/", (req, res) => {
+  res.send("Express on Vercel");
+});
 // Should I use app.use(express.urlencoded({ extended: false })); instead?
 app.use(cors());
 // express RAW for webhook route ONLY
@@ -188,3 +191,5 @@ app.post("/contact", (req, res) => {
 app.listen(PORT, () => {
   console.log(`API server listening at port ${PORT}!`);
 });
+
+module.exports = app;
