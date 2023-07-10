@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   solid,
@@ -37,6 +37,12 @@ const ContactForm = () => {
   //   let firstNameInput = document.getElementById("firstName");
   //   firstNameInput.value = "";
   // };
+
+  const [clicked, setClicked] = useState();
+
+  useEffect(() => {
+    console.log("UseEffect");
+  }, [clicked]);
 
   return (
     <div className="bg-fixed contact-photo flex flex-col">
@@ -167,7 +173,6 @@ const ContactForm = () => {
             </div>
             <button
               type="submit"
-              // onClick={clearText()}
               className="mt-6 dm-sans-med text-white text-lg bg-sky-400 px-6 py-1 rounded-sm hover:bg-sky-300 col-start-4 col-end-7 lg:mx-4"
             >
               {status}
