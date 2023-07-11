@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   solid,
@@ -8,6 +8,23 @@ import {
 } from "@fortawesome/fontawesome-svg-core/import.macro";
 
 const ContactForm = () => {
+  // Clear text after form submission
+  const inputRef = useRef();
+  const inputRef2 = useRef();
+  const inputRef3 = useRef();
+  const inputRef4 = useRef();
+  const inputRef5 = useRef();
+  // onclick for Submit Button
+  const test = () => {
+    inputRef.current.value = "";
+    inputRef2.current.value = "";
+    inputRef3.current.value = "";
+    inputRef4.current.value = "";
+    inputRef5.current.value = "";
+  };
+
+  ///
+
   const [status, setStatus] = useState("Submit");
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -30,13 +47,8 @@ const ContactForm = () => {
     setStatus("Submit");
     let result = await response.json();
     alert(result.status);
+    test();
   };
-
-  // Clear text after form submission
-  // const clearText = () => {
-  //   let firstNameInput = document.getElementById("firstName");
-  //   firstNameInput.value = "";
-  // };
 
   return (
     <div className="bg-fixed contact-photo flex flex-col">
@@ -101,6 +113,7 @@ const ContactForm = () => {
                   First Name
                 </label>
                 <input
+                  ref={inputRef}
                   className="w-full md:w-auto rounded-md border-gray-600 border-2 shadow-sm focus:border-amber-400 focus:ring-0 block text-gray-900"
                   id="firstName"
                   type="text"
@@ -114,6 +127,7 @@ const ContactForm = () => {
               <div className="mb-2 block mx-4 md:mx-0">
                 <label htmlFor="lastName">Last Name</label>
                 <input
+                  ref={inputRef2}
                   className="w-full md:w-auto rounded-md border-gray-600 border-2 shadow-sm focus:border-amber-400 focus:ring-0 block text-gray-900"
                   id="lastName"
                   type="text"
@@ -126,6 +140,7 @@ const ContactForm = () => {
               <div className="mb-2 block mx-4 md:mx-0">
                 <label htmlFor="phone">Phone number</label>
                 <input
+                  ref={inputRef3}
                   className="w-full md:w-auto rounded-md border-gray-600 border-2 shadow-sm focus:border-amber-400 focus:ring-0 block text-gray-900"
                   id="phone"
                   type="text"
@@ -139,6 +154,7 @@ const ContactForm = () => {
               <div className="mb-2 block mx-4 md:mx-0">
                 <label htmlFor="email">Email</label>
                 <input
+                  ref={inputRef4}
                   className="w-full md:w-auto rounded-md border-gray-600 border-2 shadow-sm focus:border-amber-400 focus:ring-0 block text-gray-900"
                   id="email"
                   type="email"
@@ -158,6 +174,7 @@ const ContactForm = () => {
                 Your message
               </label>
               <textarea
+                ref={inputRef5}
                 id="message"
                 rows="6"
                 className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-md shadow-sm border-2 border-gray-600 focus:ring-0 focus:border-amber-400 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
@@ -167,7 +184,6 @@ const ContactForm = () => {
             </div>
             <button
               type="submit"
-              // onClick={clearText()}
               className="mt-6 dm-sans-med text-white text-lg bg-sky-400 px-6 py-1 rounded-sm hover:bg-sky-300 col-start-4 col-end-7 lg:mx-4"
             >
               {status}
