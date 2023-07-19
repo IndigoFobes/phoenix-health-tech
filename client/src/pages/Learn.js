@@ -125,7 +125,25 @@ export default function Learn({ currentPage, handlePageChange }) {
     </div>
   );
 
-  // IF VIDEO IS SPLIT INTO PARTS
+  if (currentNumber === 1) {
+    text = (
+      <p>{`Mold and fungus are in the air and grow in your air conditioning system.`}</p>
+    );
+  } else if (currentNumber === 2) {
+    text = (
+      <p>{`The Phoenix Module sprays our proprietary formula on the coils, cleaning the mold spores, and washes them out the condensate drain.`}</p>
+    );
+  } else if (currentNumber === 3) {
+    text = (
+      <p>{`After a programable pause, the system starts and sprays again, cleaning the ductwork and ridding your system of mold, fungus, and mycotoxins!`}</p>
+    );
+  } else {
+    text = (
+      <p>{`Oops. Something went arwy. Check back later to see this bit of text!`}</p>
+    );
+  }
+
+  // IF VIDEO IS SPLIT INTO PARTS***
   // if (currentNumber === 1) {
   //   video = (
   //     <div className="py-2 px-1 border-4 border-lime-500 rounded-md">
@@ -245,7 +263,7 @@ export default function Learn({ currentPage, handlePageChange }) {
                     : "bg-white text-black"
                 }`}
               >
-                <p>1. Cleans out mold and bacteria.</p>
+                <p>{`1. Mold & fungus are in the air...`}</p>
               </motion.li>
               <motion.li
                 variants={textVariant2}
@@ -257,7 +275,7 @@ export default function Learn({ currentPage, handlePageChange }) {
                     : "bg-white text-black"
                 }`}
               >
-                <p>2. Filters through air and cleans it.</p>
+                <p>{`2. The Phoenix Module sprays...`}</p>
               </motion.li>
               <motion.li
                 variants={textVariant3}
@@ -269,7 +287,7 @@ export default function Learn({ currentPage, handlePageChange }) {
                     : "bg-white text-black"
                 }`}
               >
-                <p>3. Monitors system for bacteria.</p>
+                <p>{`3. Sprays again to clean...`}</p>
               </motion.li>
             </motion.ul>
             <div className=" dm-sans-med col-start-5 col-end-10 mx-5 md:mx-20 lg:mx-5 text-justify text-lg md:text-xl mb-10 px-3 lg:px-6">
