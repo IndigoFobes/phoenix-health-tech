@@ -111,7 +111,7 @@ export default function Learn({ currentPage, handlePageChange }) {
   let text;
 
   video = (
-    <div className="py-2 px-1 border-4 border-lime-500 rounded-md">
+    <div className="absolute top-2/3 translate-y-2/3 sm:top-1/2 sm:translate-y-2/3 md:top-1/2 md:translate-y-1/2 lg:left-1/2 lg:top-0 lg:-translate-x-1/2 lg:translate-y-4/5 py-2 px-1 border-4 border-lime-500 rounded-md">
       {/* <div className="py-20 px-40 dm-sans-med">Animation coming soon!</div> */}
       <iframe
         className="rounded-sm sm:w-[calc(1000px*1/2)] sm:h-[calc(500px*1/2)] md:w-[calc(1000px*2/3)] md:h-[calc(500px*2/3)] lg:w-[1000px] lg:h-[500px]"
@@ -240,8 +240,8 @@ export default function Learn({ currentPage, handlePageChange }) {
         </div>
       </div>
       {/* Bottom section */}
-      <div className="bg-fixed flex flex-col items-center pb-40 w-full">
-        <div className="bg-gray-200/80 py-10 mb-10 w-full flex flex-col">
+      <div className="bg-fixed flex flex-col items-center w-full relative">
+        <div className="bg-gray-200/80 py-10 pb-20 md:pb-40 mb-10 w-full flex flex-col">
           {/* arrow down to next section */}
           <h1 className="dm-sans-bold learn-title title-text text-center mb-10 sm:mt-10">
             What does PHT do to fix it?
@@ -326,8 +326,11 @@ export default function Learn({ currentPage, handlePageChange }) {
             ></img>
           </div>
         </div> */}
+        {/* White space */}
+
         {video}
       </div>
+      <div className="h-[600px]"></div>
     </div>
   );
 }
