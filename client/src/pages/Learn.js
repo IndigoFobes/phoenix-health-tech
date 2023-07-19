@@ -73,13 +73,13 @@ export default function Learn({ currentPage, handlePageChange }) {
   }
 
   function HandleClickTwo(e) {
-    e.currentTarget.src = GreenTwo;
+    // e.currentTarget.src = GreenTwo;
     setCurrentNumber(2);
     handleGreenTwo();
   }
 
   function HandleClickThree(e) {
-    e.currentTarget.src = GreenThree;
+    // e.currentTarget.src = GreenThree;
     setCurrentNumber(3);
     handleGreenThree();
   }
@@ -240,8 +240,8 @@ export default function Learn({ currentPage, handlePageChange }) {
         </div>
       </div>
       {/* Bottom section */}
-      <div className="bg-fixed flex flex-col justify-center items-center pb-40">
-        <div className="bg-gray-200/80 py-10 mb-10">
+      <div className="bg-fixed flex flex-col items-center pb-40 w-full">
+        <div className="bg-gray-200/80 py-10 mb-10 w-full flex flex-col">
           {/* arrow down to next section */}
           <h1 className="dm-sans-bold learn-title title-text text-center mb-10 sm:mt-10">
             What does PHT do to fix it?
@@ -290,7 +290,7 @@ export default function Learn({ currentPage, handlePageChange }) {
                 <p>{`3. Sprays again to clean...`}</p>
               </motion.li>
             </motion.ul>
-            <div className=" dm-sans-med col-start-5 col-end-10 mx-5 md:mx-20 lg:mx-5 text-justify text-lg md:text-xl mb-10 px-3 lg:px-6">
+            <div className="dm-sans-med col-start-5 col-end-10 mx-5 md:mx-20 lg:mx-5 text-lg md:text-xl mb-10 px-3 lg:px-6">
               {text}
             </div>
           </div>
