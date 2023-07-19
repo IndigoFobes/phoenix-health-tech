@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import indigo from "../assets/indigo_recent.JPG";
+import will from "../assets/Will_Harris_Headshot.jpg";
 import missionShape from "../assets/pht_mission_shape.png";
 import missionShapeLight from "../assets/pht_mission_shape_light.png";
 import office from "../assets/pexels-office.jpg";
@@ -121,7 +122,7 @@ export default function About({ currentPage, handlePageChange }) {
             <div className="w-1/3 mb-5 sm:mb-0 sm:w-full h-fit sm:col-start-1 sm:col-end-3 rounded-full flex">
               <img
                 className="w-max rounded-full align-middle object-cover object-top"
-                src={indigo}
+                src={will}
                 alt="Indigo Fobes, smiling big with a colorful scarf on."
               ></img>
             </div>
