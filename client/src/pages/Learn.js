@@ -5,6 +5,7 @@ import GreenThree from "../assets/green_3_pht(update).png";
 import GreyOne from "../assets/grey_1_pht(update).png";
 import GreyTwo from "../assets/grey_2_pht(update).png";
 import GreyThree from "../assets/grey_3_pht(update).png";
+import Animation from "../assets/HVAC_Animation_MP4.mp4";
 import {
   motion,
   useScroll,
@@ -109,61 +110,77 @@ export default function Learn({ currentPage, handlePageChange }) {
   let video;
   let text;
 
-  if (currentNumber === 1) {
-    video = (
-      <div className="py-2 px-1 border-4 border-lime-500 rounded-md">
-        <div className="py-20 px-40 dm-sans-med">Animation coming soon!</div>
-        {/* <iframe
-          className="rounded-sm sm:w-[calc(1000px*1/2)] sm:h-[calc(500px*1/2)] md:w-[calc(1000px*2/3)] md:h-[calc(500px*2/3)] lg:w-[1000px] lg:h-[500px]"
-          // Handle hover (or click) to display proper animation
-          src={"https://www.youtube.com/embed/C0DPdy98e4c"}
-          frameborder="0"
-          allow="autoplay; encrypted-media"
-          allowfullscreen
-          title="video"
-        />{" "} */}
-      </div>
-    );
-    text = <p>Details coming soon.</p>;
-    // console.log(video.props.children[0].props);
-    //handleGreenOne();
-  } else if (currentNumber === 2) {
-    video = (
-      <div className="py-2 px-1 border-4 border-lime-500 rounded-md">
-        <div className="py-20 px-40 dm-sans-med">Animation coming soon!</div>
-        {/* <iframe
-          className="rounded-sm sm:w-[calc(1000px*1/2)] sm:h-[calc(500px*1/2)] md:w-[calc(1000px*2/3)] md:h-[calc(500px*2/3)] lg:w-[1000px] lg:h-[500px]"
-          // Handle hover (or click) to display proper animation
-          src="https://www.youtube.com/embed/1prweT95Mo0"
-          frameborder="0"
-          allow="autoplay; encrypted-media"
-          allowfullscreen
-          title="video"
-        />{" "} */}
-      </div>
-    );
-    text = <p>Details coming soon.</p>;
-    // handleGreenTwo();
-  } else if (currentNumber === 3) {
-    video = (
-      <div className="py-2 px-1 border-4 border-lime-500 rounded-md">
-        <div className="py-20 px-40 dm-sans-med">Animation coming soon!</div>
-        {/* <iframe
-          className="rounded-sm sm:w-[calc(1000px*1/2)] sm:h-[calc(500px*1/2)] md:w-[calc(1000px*2/3)] md:h-[calc(500px*2/3)] lg:w-[1000px] lg:h-[500px]"
-          // Handle hover (or click) to display proper animation
-          src="https://www.youtube.com/embed/BA-Wi4fdcVE"
-          frameborder="0"
-          allow="autoplay; encrypted-media"
-          allowfullscreen
-          title="video"
-        />{" "} */}
-      </div>
-    );
-    text = <p>Details coming soon.</p>;
-    // handleGreenThree();
-  } else {
-    video = <p>No video to display</p>;
-  }
+  video = (
+    <div className="py-2 px-1 border-4 border-lime-500 rounded-md">
+      {/* <div className="py-20 px-40 dm-sans-med">Animation coming soon!</div> */}
+      <iframe
+        className="rounded-sm sm:w-[calc(1000px*1/2)] sm:h-[calc(500px*1/2)] md:w-[calc(1000px*2/3)] md:h-[calc(500px*2/3)] lg:w-[1000px] lg:h-[500px]"
+        // Handle hover (or click) to display proper animation
+        src={Animation}
+        frameborder="0"
+        allow="autoplay; encrypted-media"
+        allowfullscreen
+        title="video"
+      />{" "}
+    </div>
+  );
+
+  // IF VIDEO IS SPLIT INTO PARTS
+  // if (currentNumber === 1) {
+  //   video = (
+  //     <div className="py-2 px-1 border-4 border-lime-500 rounded-md">
+  //       {/* <div className="py-20 px-40 dm-sans-med">Animation coming soon!</div> */}
+  //       <iframe
+  //         className="rounded-sm sm:w-[calc(1000px*1/2)] sm:h-[calc(500px*1/2)] md:w-[calc(1000px*2/3)] md:h-[calc(500px*2/3)] lg:w-[1000px] lg:h-[500px]"
+  //         // Handle hover (or click) to display proper animation
+  //         src={Animation}
+  //         frameborder="0"
+  //         allow="autoplay; encrypted-media"
+  //         allowfullscreen
+  //         title="video"
+  //       />{" "}
+  //     </div>
+  //   );
+  //   text = <p>Details coming soon.</p>;
+  //   // console.log(video.props.children[0].props);
+  //   //handleGreenOne();
+  // } else if (currentNumber === 2) {
+  //   video = (
+  //     <div className="py-2 px-1 border-4 border-lime-500 rounded-md">
+  //       <div className="py-20 px-40 dm-sans-med">Animation coming soon!</div>
+  //       {/* <iframe
+  //         className="rounded-sm sm:w-[calc(1000px*1/2)] sm:h-[calc(500px*1/2)] md:w-[calc(1000px*2/3)] md:h-[calc(500px*2/3)] lg:w-[1000px] lg:h-[500px]"
+  //         // Handle hover (or click) to display proper animation
+  //         src="https://www.youtube.com/embed/1prweT95Mo0"
+  //         frameborder="0"
+  //         allow="autoplay; encrypted-media"
+  //         allowfullscreen
+  //         title="video"
+  //       />{" "} */}
+  //     </div>
+  //   );
+  //   text = <p>Details coming soon.</p>;
+  //   // handleGreenTwo();
+  // } else if (currentNumber === 3) {
+  //   video = (
+  //     <div className="py-2 px-1 border-4 border-lime-500 rounded-md">
+  //       <div className="py-20 px-40 dm-sans-med">Animation coming soon!</div>
+  //       {/* <iframe
+  //         className="rounded-sm sm:w-[calc(1000px*1/2)] sm:h-[calc(500px*1/2)] md:w-[calc(1000px*2/3)] md:h-[calc(500px*2/3)] lg:w-[1000px] lg:h-[500px]"
+  //         // Handle hover (or click) to display proper animation
+  //         src="https://www.youtube.com/embed/BA-Wi4fdcVE"
+  //         frameborder="0"
+  //         allow="autoplay; encrypted-media"
+  //         allowfullscreen
+  //         title="video"
+  //       />{" "} */}
+  //     </div>
+  //   );
+  //   text = <p>Details coming soon.</p>;
+  //   // handleGreenThree();
+  // } else {
+  //   video = <p>No video to display</p>;
+  // }
 
   return (
     <div className="flex flex-col justify-center items-center">
