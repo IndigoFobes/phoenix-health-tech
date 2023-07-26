@@ -216,11 +216,12 @@ export default function Home({ currentPage, handlePageChange }) {
       {/* Strip for contact + purchase */}
       <div className="bg-gradient-to-r from-[#0E4370] to-sky-500 w-full sm:h-60 lg:h-80 grid grid-cols-7">
         {/* Purchase */}
-        <div className="flex flex-col col-start-2 col-end-7 sm:col-start-1 ml-5 md:ml-0 md:col-start-2 sm:col-end-4 lg:col-end-5 justify-center place-self-center lg:justify-self-start items-start mt-8 sm:mt-0">
-          <h2 className="dm-sans-med text-base md:text-xl xl:text-3xl font-bold text-white mb-3">
-            Interested in Purchasing a New Unit?
+        <div className="flex flex-col col-start-2 col-end-7 sm:col-start-1 2xl:col-start-2 sm:col-end-4 lg:col-end-5 sm:ml-5 justify-center place-self-center xl:justify-self-start items-center sm:items-start mt-8 sm:mt-0 xl:ml-40 2xl:ml-0">
+          <h2 className="dm-sans-med text-base md:text-xl lg:text-3xl font-bold text-white mb-3">
+            Interested in Purchasing{" "}
+            <br className="hidden sm:flex xl:hidden"></br> a New Unit?
           </h2>
-          <p className="dm-sans text-base xl:text-lg font-medium text-white mb-1 lg:mb-2">
+          <p className="dm-sans text-base lg:text-lg font-medium text-white mb-1 lg:mb-2 text-center sm:text-left">
             Give us a call, send us an email, <br></br>or head over to our
             purchase page.
           </p>
