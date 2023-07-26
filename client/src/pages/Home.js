@@ -280,7 +280,7 @@ export default function Home({ currentPage, handlePageChange }) {
       {/* Click instead of hover */}
       <container className="grid grid-cols-6">
         <container className="col-start-2 col-end-6 mb-5 mt-5 md:mt-10">
-          <h1 className="text-center text-xl md:text-2xl lg:text-3xl title-text ">
+          <h1 className="text-center text-xl md:text-2xl lg:text-3xl title-text">
             What We Are All About
           </h1>
           <hr class="h-px my-4 mx-20 col-start-3 col-end-5 bg-gray-200 border-0 dark:bg-gray-700" />
@@ -379,16 +379,16 @@ export default function Home({ currentPage, handlePageChange }) {
       <div className="flex mb-10">
         {/* Yellow box */}
         <div
-          className={`justify-center pt-5 py-5 px-8 flex-col text-center pb-20 ${
+          className={`justify-center pt-10 lg:pt-5 px-8 flex-col text-center pb-20 ${
             currentColor === "yellow" ? "flex" : "hidden"
           }`}
         >
-          <h2 className="title-text text-xl sm:text-2xl md:text-3xl lg:place-self-start lg:ml-10">
+          <h2 className="title-text text-lg md:text-xl lg:text-2xl lg:place-self-start lg:ml-10">
             {`An All Natural & Organic Solution`}
           </h2>
           <div className="grid grid-cols-6">
             <hr class="h-px mt-2 mb-4 col-start-3 col-end-5 lg:mr-20 lg:col-start-1 lg:col-end-4 bg-gray-300 border-0 dark:bg-gray-700 lg:ml-10" />
-            <div className="col-start-1 col-end-7 lg:col-end-4 flex flex-col">
+            <div className="col-start-1 col-end-7 lg:col-end-4 flex flex-col px-10 lg:px-0">
               <p className=" text-justify lg:text-left font-medium text-sm sm:text-base md:text-lg mb-3 lg:ml-10">
                 {`Our cleaning solution is a proprietary, organic, nontoxic fungicide and bactericide. It contains no genetically modified organisms (non-GMO) or harsh chemicals.`}
               </p>
@@ -414,17 +414,17 @@ export default function Home({ currentPage, handlePageChange }) {
         </div>
         {/* Green box */}
         <div
-          className={`justify-center pt-5 py-5 px-8 flex-col text-center pb-20 ${
+          className={`justify-center pt-10 lg:pt-5 px-8 flex-col text-center pb-20 ${
             currentColor === "green" ? "flex" : "hidden"
           }`}
         >
-          <h2 className="title-text text-xl sm:text-2xl md:text-3xl lg:place-self-start lg:ml-10">
+          <h2 className="title-text text-lg md:text-xl lg:text-2xl lg:place-self-start lg:ml-10">
             A Green Solution
           </h2>
           <div className="grid grid-cols-6">
             <hr class="h-px mt-2 mb-4 col-start-3 col-end-5 lg:mr-20 lg:col-start-1 lg:col-end-4 bg-gray-300 border-0 dark:bg-gray-700 lg:ml-10" />
-            <div className="col-start-1 col-end-7 lg:col-end-4 flex flex-col">
-              <div className=" mb-3 lg:ml-10 font-medium text-sm sm:text-base xl:text-lg">
+            <div className="col-start-1 col-end-7 lg:col-end-4 flex flex-col px-10 lg:px-0">
+              <div className=" mb-3 lg:ml-10 font-medium text-sm sm:text-base md:text-lg">
                 <p className="text-justify lg:text-left ">
                   {`Besides being an organic and nontoxic solution, there are other benefits to using our solution.`}
                 </p>
@@ -468,16 +468,16 @@ export default function Home({ currentPage, handlePageChange }) {
         </div>
         {/* Blue box */}
         <div
-          className={`justify-center pt-5 py-5 px-8 flex-col text-center pb-20 ${
+          className={`justify-center pt-10 lg:pt-5 px-8 flex-col text-center pb-20 ${
             currentColor === "blue" ? "flex" : "hidden"
           }`}
         >
-          <h2 className="title-text text-xl sm:text-2xl md:text-3xl lg:place-self-start lg:ml-10">
+          <h2 className="title-text text-lg md:text-xl lg:text-2xl lg:place-self-start lg:ml-10">
             Prevention First
           </h2>
           <div className="grid grid-cols-6">
             <hr class="h-px mt-2 mb-4 col-start-3 col-end-5 lg:mr-20 lg:col-start-1 lg:col-end-4 bg-gray-300 border-0 dark:bg-gray-700 lg:ml-10" />
-            <div className="col-start-1 col-end-7 lg:col-end-4 flex flex-col">
+            <div className="col-start-1 col-end-7 lg:col-end-4 flex flex-col px-10 lg:px-0">
               <div className=" mb-3 lg:ml-10">
                 <p className="text-justify lg:text-left font-medium text-sm sm:text-base md:text-lg">
                   {` Mold (a fungus) and bacteria in a building’s heating, ventilation, and air conditioning (HVAC)
