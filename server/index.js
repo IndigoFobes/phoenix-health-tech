@@ -93,16 +93,18 @@ app.use(express.json());
 
 // Nodemailer setup
 const contactEmail = nodemailer.createTransport({
-  service: "gmail",
+  host: "smtpout.secureserver.net",
+  port: 465,
+  secure: true,
   auth: {
-    user: process.env.GMAIL,
-    pass: process.env.PASS,
+    user: "will@phoenixhealthtech.com",
+    pass: "Healthy77Air$",
   },
 });
 
 contactEmail.verify((error) => {
   if (error) {
-    console.log(error);
+    console.log("email error:", error);
   } else {
     console.log("Ready to send!");
   }
@@ -116,8 +118,8 @@ app.post("/contact", (req, res) => {
   const email = req.body.email;
   const message = req.body.message;
   const mail = {
-    from: "Phoenix Health Technologies from @phoenixhealthtech.com <admin@phoenixhealthtech.com>",
-    to: process.env.GMAIL,
+    from: "Phoenix Health Technologies from @phoenixhealthtech.com <will@phoenixhealthtech.com>",
+    to: "will@phoenixhealthtech.com",
     subject: "Phoenix Health Tech Contact Form Submission",
     html: `
     <div style="align-content: center; margin-right: 50px">
@@ -156,6 +158,7 @@ app.post("/contact", (req, res) => {
   contactEmail.sendMail(mail, (error) => {
     if (error) {
       res.json({ status: "ERROR" });
+      console.log(error);
     } else {
       res.json({ status: "Message Sent" });
     }
