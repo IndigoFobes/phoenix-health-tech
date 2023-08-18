@@ -127,18 +127,6 @@ function Navbar({ currentPage, handlePageChange }) {
               </a>
             </li>
           </Link>
-          <Link to="/about">
-            <li
-              className={
-                currentPage === "About"
-                  ? "nav-link active grid place-items-center py-1 md:py-2 lg:py-3 2xl:py-4"
-                  : "nav-link non-active grid place-items-center py-1 md:py-2 lg:py-3 2xl:py-4"
-              }
-              onClick={() => handlePageChange("About")}
-            >
-              <a href="#about">About</a>
-            </li>
-          </Link>
           <Link to="/learn">
             <li
               className={
@@ -161,6 +149,18 @@ function Navbar({ currentPage, handlePageChange }) {
               onClick={() => handlePageChange("Purchase")}
             >
               <a href="#purchase">Purchase</a>
+            </li>
+          </Link>
+          <Link to="/about">
+            <li
+              className={
+                currentPage === "About"
+                  ? "nav-link active grid place-items-center py-1 md:py-2 lg:py-3 2xl:py-4"
+                  : "nav-link non-active grid place-items-center py-1 md:py-2 lg:py-3 2xl:py-4"
+              }
+              onClick={() => handlePageChange("About")}
+            >
+              <a href="#about">About</a>
             </li>
           </Link>
           <Link to="/contact">

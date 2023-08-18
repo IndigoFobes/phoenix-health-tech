@@ -158,9 +158,9 @@ const App = () => {
           <Routes>
             <Route path="/" element={<LandingLayout />} />
             <Route path="/home" element={<HomeLayout />} />
-            <Route path="/about" element={<AboutLayout />} />
             <Route path="/learn" element={<LearnLayout />} />
             <Route path="/purchase" element={<PurchaseLayout />} />
+            <Route path="/about" element={<AboutLayout />} />
             <Route path="/contact" element={<ContactLayout />} />
           </Routes>
         </main>
