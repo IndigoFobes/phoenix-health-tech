@@ -97,8 +97,8 @@ const contactEmail = nodemailer.createTransport({
   port: 465,
   secure: true,
   auth: {
-    user: "will@phoenixhealthtech.com",
-    pass: "Healthy77Air$",
+    user: process.env.USER,
+    pass: process.env.PASS,
   },
 });
 
