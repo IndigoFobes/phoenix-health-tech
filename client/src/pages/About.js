@@ -3,6 +3,7 @@ import indigo from "../assets/indigo_recent.JPG";
 import will from "../assets/Will_Harris_Headshot.jpg";
 import dan from "../assets/dan_white_circle.png";
 import placeholder from "../assets/image_coming_soon.png";
+import rob from "../assets/rob_white_circle.png";
 import missionShape from "../assets/pht_mission_shape.png";
 import missionShapeLight from "../assets/pht_mission_shape_light.png";
 import office from "../assets/pexels-office.jpg";
@@ -213,7 +214,28 @@ export default function About({ currentPage, handlePageChange }) {
               </div>
             </div>
           </div>
-          {/* Fourth image/description: Brian Douglas, Corporate Counsel */}
+          {/* Fourth image/description: Robert Basil, Legal Advisor */}
+          <div className="flex flex-col place-items-center my-5 md:my-10 sm:grid sm:grid-cols-7">
+            <div className="w-1/3 mb-5 sm:mb-0 sm:w-full h-fit sm:col-start-1 sm:col-end-3 rounded-full flex border-4 border-solid border-gray-200">
+              <img
+                className="w-max rounded-full align-middle object-cover object-top"
+                src={rob}
+                alt="Robert Basil, white background."
+              ></img>
+            </div>
+            {/* Text about Robert D’Agostino */}
+            <div className="col-start-3 col-end-8 flex sm:ml-10 justify-self-start">
+              <div className="flex flex-col gap-2">
+                <h2 className="font-semibold text-center sm:text-left">
+                  Robert Basil, Lead Electrical Engineer
+                </h2>
+                <p className="text-xs sm:text-sm md:text-base">
+                  Bio coming soon!
+                </p>
+              </div>
+            </div>
+          </div>
+          {/* Fifth image/description: Brian Douglas, Corporate Counsel */}
           <div className="flex flex-col place-items-center my-5 md:my-10 sm:grid sm:grid-cols-7">
             <div className="w-1/3 mb-5 sm:mb-0 sm:w-full h-fit sm:col-start-1 sm:col-end-3 rounded-full flex border-4 border-solid border-gray-200">
               <img
@@ -234,7 +256,7 @@ export default function About({ currentPage, handlePageChange }) {
               </div>
             </div>
           </div>
-          {/* Fifth image/description: Indigo Fobes, Web Designer and Developer */}
+          {/* Sixth image/description: Indigo Fobes, Web Designer and Developer */}
           <div className="flex flex-col place-items-center my-5 md:my-10 sm:grid sm:grid-cols-7">
             <div className="w-1/3 mb-5 sm:mb-0 sm:w-full h-fit sm:col-start-1 sm:col-end-3 rounded-full flex border-4 border-solid border-gray-200">
               <img
@@ -261,7 +283,7 @@ export default function About({ currentPage, handlePageChange }) {
               </div>
             </div>
           </div>
-          {/* Sixth image/description: Jordan, Animation */}
+          {/* Seventh image/description: Jordan, Animation */}
           <div className="flex flex-col place-items-center my-5 md:my-10 sm:grid sm:grid-cols-7">
             <div className="w-1/3 mb-5 sm:mb-0 sm:w-full h-fit sm:col-start-1 sm:col-end-3 rounded-full flex border-4 border-solid border-gray-200">
               <img
