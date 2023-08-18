@@ -5,7 +5,7 @@ import blue from "../assets/blue_triangle_pht.png";
 import green from "../assets/green_triangle_pht.png";
 import yellow from "../assets/orange_triangle_pht.png";
 // import Wings from "../assets/PHT_WINGS.png";
-import CleanHome from "../assets/clean_home_pht_edit.png";
+import CleanHome from "../assets/clean_home_pht_edit.jpg";
 import extraLine from "../assets/clean_home_extra_line.png";
 import greenPhoto from "../assets/pexels-photomix.jpg";
 import natural from "../assets/pexels-skylar-kang-6370159.jpg";
@@ -145,7 +145,7 @@ export default function Home({ currentPage, handlePageChange }) {
           }`}
         >
           <img
-            className=""
+            className="w-full"
             src={CleanHome}
             alt="White, modern couch with white pillows. Small circular tables with vase of pretty leaf decoration."
           ></img>
