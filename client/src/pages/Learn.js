@@ -1,10 +1,4 @@
 import React, { useState, useEffect } from "react";
-import GreenOne from "../assets/green_1_pht(update).png";
-import GreenTwo from "../assets/green_2_pht(update).png";
-import GreenThree from "../assets/green_3_pht(update).png";
-import GreyOne from "../assets/grey_1_pht(update).png";
-import GreyTwo from "../assets/grey_2_pht(update).png";
-import GreyThree from "../assets/grey_3_pht(update).png";
 import Animation from "../assets/HVAC_Animation_MP4.mp4";
 import {
   motion,
@@ -87,23 +81,20 @@ export default function Learn({ currentPage, handlePageChange }) {
   // non-active icons are grey again
   function handleGreenOne() {
     const two = document.getElementById("two");
-    two.src = GreyTwo;
+
     const three = document.getElementById("three");
-    three.src = GreyThree;
   }
 
   function handleGreenTwo() {
     const one = document.getElementById("one");
-    one.src = GreyOne;
+
     const three = document.getElementById("three");
-    three.src = GreyThree;
   }
 
   function handleGreenThree() {
     const one = document.getElementById("one");
-    one.src = GreyOne;
+
     const two = document.getElementById("two");
-    two.src = GreyTwo;
   }
 
   // Render video based on currentNumber

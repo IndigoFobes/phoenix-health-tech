@@ -28,16 +28,6 @@ export default function Footer({ currentPage, handlePageChange }) {
               Home
             </li>
           </Link>
-          <Link to="/about">
-            <li
-              className={
-                "text-white hover:underline transition duration-200 ease-in-out"
-              }
-              onClick={() => handlePageChange("About")}
-            >
-              About
-            </li>
-          </Link>
           <Link to="/learn">
             <li
               className={
@@ -56,6 +46,16 @@ export default function Footer({ currentPage, handlePageChange }) {
               onClick={() => handlePageChange("Purchase")}
             >
               Purchase
+            </li>
+          </Link>
+          <Link to="/about">
+            <li
+              className={
+                "text-white hover:underline transition duration-200 ease-in-out"
+              }
+              onClick={() => handlePageChange("About")}
+            >
+              About
             </li>
           </Link>
           <Link to="/contact">

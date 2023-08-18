@@ -1,6 +1,9 @@
 import React, { useRef } from "react";
 import indigo from "../assets/indigo_recent.JPG";
 import will from "../assets/Will_Harris_Headshot.jpg";
+import dan from "../assets/dan_white_circle.png";
+import placeholder from "../assets/image_coming_soon.png";
+import rob from "../assets/rob_white_circle.png";
 import missionShape from "../assets/pht_mission_shape.png";
 import missionShapeLight from "../assets/pht_mission_shape_light.png";
 import office from "../assets/pexels-office.jpg";
@@ -119,7 +122,7 @@ export default function About({ currentPage, handlePageChange }) {
         <div className="col-start-1 col-end-7 px-8 md:px-20 lg:px-0 lg:col-start-2 lg:col-end-6">
           {/* First image/description: Will Harris, President & CEO */}
           <div className="flex flex-col place-items-center my-5 md:my-10 sm:grid sm:grid-cols-7">
-            <div className="w-1/3 mb-5 sm:mb-0 sm:w-full h-fit sm:col-start-1 sm:col-end-3 rounded-full flex">
+            <div className="w-1/3 mb-5 sm:mb-0 sm:w-full h-fit sm:col-start-1 sm:col-end-3 rounded-full flex border-4 border-solid border-gray-200">
               <img
                 className="w-max rounded-full align-middle object-cover object-top"
                 src={will}
@@ -127,8 +130,8 @@ export default function About({ currentPage, handlePageChange }) {
               ></img>
             </div>
             {/* Text about Will Harris */}
-            <div className="sm:col-start-3 sm:col-end-8 flex sm:ml-10 items-center">
-              <div className="flex flex-col gap-2 text-justify">
+            <div className="sm:col-start-3 sm:col-end-8 flex sm:ml-10 justify-self-start">
+              <div className="flex flex-col gap-2">
                 <h2 className="font-semibold text-center sm:text-left">
                   Will Harris, President {`&`} CEO
                 </h2>
@@ -156,16 +159,16 @@ export default function About({ currentPage, handlePageChange }) {
           </div>
           {/* Second image/description: Robert D’Agostino, Legal Advisor */}
           <div className="flex flex-col place-items-center my-5 md:my-10 sm:grid sm:grid-cols-7">
-            <div className="w-1/3 mb-5 sm:mb-0 sm:w-full h-fit sm:col-start-1 sm:col-end-3 rounded-full flex">
+            <div className="w-1/3 mb-5 sm:mb-0 sm:w-full h-fit sm:col-start-1 sm:col-end-3 rounded-full flex border-4 border-solid border-gray-200">
               <img
                 className="w-max rounded-full align-middle object-cover object-top"
-                src={indigo}
+                src={placeholder}
                 alt="Indigo Fobes, smiling big with a colorful scarf on."
               ></img>
             </div>
             {/* Text about Robert D’Agostino */}
-            <div className="col-start-3 col-end-8 flex sm:ml-10 items-center">
-              <div className="flex flex-col gap-2 text-justify">
+            <div className="col-start-3 col-end-8 flex sm:ml-10 justify-self-start">
+              <div className="flex flex-col gap-2">
                 <h2 className="font-semibold text-center sm:text-left">
                   Robert D’Agostino, Legal Advisor
                 </h2>
@@ -190,39 +193,72 @@ export default function About({ currentPage, handlePageChange }) {
               </div>
             </div>
           </div>
-          {/* Third image/description: Brian Douglas, Corporate Counsel */}
+          {/* Third image/description: Dan Guthrie, Software Developer */}
           <div className="flex flex-col place-items-center my-5 md:my-10 sm:grid sm:grid-cols-7">
-            <div className="w-1/3 mb-5 sm:mb-0 sm:w-full h-fit sm:col-start-1 sm:col-end-3 rounded-full flex">
+            <div className="w-1/3 mb-5 sm:mb-0 sm:w-full h-fit sm:col-start-1 sm:col-end-3 rounded-full flex border-4 border-solid border-gray-200">
               <img
                 className="w-max rounded-full align-middle object-cover object-top"
-                src={indigo}
-                alt="Indigo Fobes, smiling big with a colorful scarf on."
+                src={dan}
+                alt="Daniel Guthrie, white background."
               ></img>
             </div>
-            {/* Text about Brian Douglas */}
-            <div className="col-start-3 col-end-8 flex sm:ml-10 items-center">
-              <div className="flex flex-col gap-2 text-justify">
+            {/* Text about Dan Guthrie */}
+            <div className="col-start-3 col-end-8 flex sm:ml-10 justify-self-start">
+              <div className="flex flex-col gap-2">
                 <h2 className="font-semibold text-center sm:text-left">
-                  Brian Douglas, Corporate Counsel
+                  Dan Guthrie, Software Developer
                 </h2>
                 <p className="text-xs sm:text-sm md:text-base">
-                  Text about Brian Douglas, Corporate Counsel. Lorem ipsum dolor
-                  sit amet, consectetur adipiscing elit. Vestibulum laoreet a
-                  nisl sit amet facilisis. Vestibulum id tellus felis.
-                  Vestibulum efficitur dignissim pulvinar. Sed vulputate posuere
-                  ultrices. Integer blandit dui ut laoreet bibendum. Maecenas
-                  tristique, diam a mollis euismod, nunc erat ultricies orci,
-                  vel auctor ex nulla in erat. Ut imperdiet, purus a porttitor
-                  dignissim, nisi neque ultrices eros, a commodo lectus lectus
-                  egestas leo. Ut quis neque elit. In congue elit rhoncus justo
-                  viverra congue.
+                  Bio coming soon!
                 </p>
               </div>
             </div>
           </div>
-          {/* Fifth image/description: Indigo Fobes, Web Designer and Developer */}
+          {/* Fourth image/description: Robert Basil, Legal Advisor */}
           <div className="flex flex-col place-items-center my-5 md:my-10 sm:grid sm:grid-cols-7">
-            <div className="w-1/3 mb-5 sm:mb-0 sm:w-full h-fit sm:col-start-1 sm:col-end-3 rounded-full flex">
+            <div className="w-1/3 mb-5 sm:mb-0 sm:w-full h-fit sm:col-start-1 sm:col-end-3 rounded-full flex border-4 border-solid border-gray-200">
+              <img
+                className="w-max rounded-full align-middle object-cover object-top"
+                src={rob}
+                alt="Robert Basil, white background."
+              ></img>
+            </div>
+            {/* Text about Robert D’Agostino */}
+            <div className="col-start-3 col-end-8 flex sm:ml-10 justify-self-start">
+              <div className="flex flex-col gap-2">
+                <h2 className="font-semibold text-center sm:text-left">
+                  Robert Basil, Lead Electrical Engineer
+                </h2>
+                <p className="text-xs sm:text-sm md:text-base">
+                  Bio coming soon!
+                </p>
+              </div>
+            </div>
+          </div>
+          {/* Fifth image/description: Brian Douglas, Corporate Counsel */}
+          <div className="flex flex-col place-items-center my-5 md:my-10 sm:grid sm:grid-cols-7">
+            <div className="w-1/3 mb-5 sm:mb-0 sm:w-full h-fit sm:col-start-1 sm:col-end-3 rounded-full flex border-4 border-solid border-gray-200">
+              <img
+                className="w-max rounded-full align-middle object-cover object-top"
+                src={placeholder}
+                alt="Indigo Fobes, smiling big with a colorful scarf on."
+              ></img>
+            </div>
+            {/* Text about Brian Douglas */}
+            <div className="col-start-3 col-end-8 flex sm:ml-10 justify-self-start">
+              <div className="flex flex-col gap-2">
+                <h2 className="font-semibold text-center sm:text-left">
+                  Brian Douglas, Corporate Counsel
+                </h2>
+                <p className="text-xs sm:text-sm md:text-base">
+                  Bio coming soon!
+                </p>
+              </div>
+            </div>
+          </div>
+          {/* Sixth image/description: Indigo Fobes, Web Designer and Developer */}
+          <div className="flex flex-col place-items-center my-5 md:my-10 sm:grid sm:grid-cols-7">
+            <div className="w-1/3 mb-5 sm:mb-0 sm:w-full h-fit sm:col-start-1 sm:col-end-3 rounded-full flex border-4 border-solid border-gray-200">
               <img
                 className="w-max rounded-full align-middle object-cover object-top"
                 src={indigo}
@@ -230,8 +266,8 @@ export default function About({ currentPage, handlePageChange }) {
               ></img>
             </div>
             {/* Text about Indigo Fobes */}
-            <div className="col-start-3 col-end-8 flex sm:ml-10 items-center">
-              <div className="flex flex-col gap-2 text-justify">
+            <div className="col-start-3 col-end-8 flex sm:ml-10 justify-self-start">
+              <div className="flex flex-col gap-2">
                 <h2 className="font-semibold text-center sm:text-left">
                   Indigo Fobes, Web Designer and Developer
                 </h2>
@@ -247,31 +283,23 @@ export default function About({ currentPage, handlePageChange }) {
               </div>
             </div>
           </div>
-          {/* Fifth image/description: Indigo Fobes, Web Designer and Developer */}
+          {/* Seventh image/description: Jordan, Animation */}
           <div className="flex flex-col place-items-center my-5 md:my-10 sm:grid sm:grid-cols-7">
-            <div className="w-1/3 mb-5 sm:mb-0 sm:w-full h-fit sm:col-start-1 sm:col-end-3 rounded-full flex">
+            <div className="w-1/3 mb-5 sm:mb-0 sm:w-full h-fit sm:col-start-1 sm:col-end-3 rounded-full flex border-4 border-solid border-gray-200">
               <img
                 className="w-max rounded-full align-middle object-cover object-top"
-                src={indigo}
+                src={placeholder}
                 alt="Indigo Fobes, smiling big with a colorful scarf on."
               ></img>
             </div>
             {/* Text about Jordan */}
-            <div className="col-start-3 col-end-8 flex sm:ml-10 items-center">
-              <div className="flex flex-col gap-2 text-justify">
+            <div className="col-start-3 col-end-8 flex sm:ml-10 justify-self-start">
+              <div className="flex flex-col gap-2">
                 <h2 className="font-semibold text-center sm:text-left">
                   Jordan, Animation
                 </h2>
                 <p className="text-xs sm:text-sm md:text-base">
-                  Test about Jordan, Animation. Lorem ipsum dolor sit amet,
-                  consectetur adipiscing elit. Vestibulum laoreet a nisl sit
-                  amet facilisis. Vestibulum id tellus felis. Vestibulum
-                  efficitur dignissim pulvinar. Sed vulputate posuere ultrices.
-                  Integer blandit dui ut laoreet bibendum. Maecenas tristique,
-                  diam a mollis euismod, nunc erat ultricies orci, vel auctor ex
-                  nulla in erat. Ut imperdiet, purus a porttitor dignissim, nisi
-                  neque ultrices eros, a commodo lectus lectus egestas leo. Ut
-                  quis neque elit. In congue elit rhoncus justo viverra congue.
+                  Bio coming soon!
                 </p>
               </div>
             </div>
