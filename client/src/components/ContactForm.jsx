@@ -71,7 +71,7 @@ const ContactForm = () => {
         </div>
       </div>
 
-      <container className="grid grid-cols-7 p-8 xl:mt-40 mb-20">
+      <container className="grid grid-cols-7 p-8 xl:mt-20 mb-20">
         <div className="flex flex-col gap-6 col-start-2 col-end-7 xl:col-start-1 xl:col-end-4 xl:mr-10 mt-20 xl:mt-10 mb-20 xl:mb-0">
           <div className="flex flex-row gap-2 justify-center xl:justify-end contact-icons dm-sans-bold">
             <FontAwesomeIcon
@@ -104,7 +104,7 @@ const ContactForm = () => {
         {/* input form */}
         <form
           onSubmit={handleSubmit}
-          className="col-start-1 col-end-8 xl:col-start-4 xl:col-end-8 2xl:col-end-7 xl:mr-10 2xl:mr-20 bg-white rounded-sm md:p-10 pt-4 mx-4 sm:mx-20 lg:mx-40 xl:mx-0 grid md:grid-rows-2"
+          className="col-start-1 col-end-8 xl:col-start-4 xl:col-end-8 2xl:col-end-7 xl:mr-10 2xl:mr-20 bg-white/90 rounded-sm p-4 md:p-10 md:pt-[50px] mx-4 sm:mx-20 lg:mx-40 xl:mx-0 grid md:grid-rows-2"
         >
           <div className="grid md:grid-cols-2 gap-3">
             {/* first name */}
@@ -115,7 +115,7 @@ const ContactForm = () => {
                 </label>
                 <input
                   ref={inputRef}
-                  className="w-full md:w-auto rounded-md border-gray-600 border-2 shadow-sm focus:border-amber-400 focus:ring-0 block text-gray-900"
+                  className="w-full md:w-auto rounded-md bg-white/10 focus:bg-white/90 border-gray-600 border-2 shadow-sm focus:border-amber-400 focus:ring-0 block text-gray-900"
                   id="firstName"
                   type="text"
                   sizing="sm"
@@ -129,7 +129,7 @@ const ContactForm = () => {
                 <label htmlFor="lastName">Last Name</label>
                 <input
                   ref={inputRef2}
-                  className="w-full md:w-auto rounded-md border-gray-600 border-2 shadow-sm focus:border-amber-400 focus:ring-0 block text-gray-900"
+                  className="w-full md:w-auto rounded-md bg-white/10 focus:bg-white/90 border-gray-600 border-2 shadow-sm focus:border-amber-400 focus:ring-0 block text-gray-900"
                   id="lastName"
                   type="text"
                   sizing="sm"
@@ -142,7 +142,7 @@ const ContactForm = () => {
                 <label htmlFor="phone">Phone number</label>
                 <input
                   ref={inputRef3}
-                  className="w-full md:w-auto rounded-md border-gray-600 border-2 shadow-sm focus:border-amber-400 focus:ring-0 block text-gray-900"
+                  className="w-full md:w-auto rounded-md bg-white/10 focus:bg-white/90 border-gray-600 border-2 shadow-sm focus:border-amber-400 focus:ring-0 block text-gray-900"
                   id="phone"
                   type="text"
                   sizing="sm"
@@ -156,7 +156,7 @@ const ContactForm = () => {
                 <label htmlFor="email">Email</label>
                 <input
                   ref={inputRef4}
-                  className="w-full md:w-auto rounded-md border-gray-600 border-2 shadow-sm focus:border-amber-400 focus:ring-0 block text-gray-900"
+                  className="w-full md:w-auto rounded-md bg-white/10 focus:bg-white/90 border-gray-600 border-2 shadow-sm focus:border-amber-400 focus:ring-0 block text-gray-900"
                   id="email"
                   type="email"
                   sizing="sm"
@@ -178,7 +178,7 @@ const ContactForm = () => {
                 ref={inputRef5}
                 id="message"
                 rows="6"
-                className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-md shadow-sm border-2 border-gray-600 focus:ring-0 focus:border-amber-400 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                className="block p-2.5 w-full text-sm text-gray-900 bg-white/10 focus:bg-white/90 rounded-md shadow-sm border-2 border-gray-600 focus:ring-0 focus:border-amber-400 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
                 placeholder="What can we do for you?"
                 required
               ></textarea>
