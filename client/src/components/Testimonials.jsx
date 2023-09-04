@@ -7,7 +7,7 @@ import triangles from "../assets/triangle–design.png";
 
 const Testimonials = () => {
   return (
-    <div className="text-center flex flex-col yellow-bg pt-20 pb-10 px-10 relative">
+    <div className="text-center flex flex-col bg-[#F8B140] pt-20 pb-10 px-10 relative">
       <h2 className="testimonials dm-sans-bold mb-20">
         Hear From Our Customers:
       </h2>

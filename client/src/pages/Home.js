@@ -529,7 +529,8 @@ Our solution has undergone extensive efficacy testing by Microchem Laboratories.
       </div>
       {/* White space */}
       {/* <div className="w-full h-[50px] md:h-[90px] bg-white"></div> */}
-      <Testimonials />
+      {/* Hidden Testimonials section */}
+      {/* <Testimonials /> */}
       {/* Hidden FAQ section */}
       {/* <FAQ /> */}
     </div>
