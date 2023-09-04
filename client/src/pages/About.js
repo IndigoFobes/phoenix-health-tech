@@ -74,7 +74,7 @@ const textVariant = {
 
 export default function About({ currentPage, handlePageChange }) {
   return (
-    <div className="bg-fixed about-bg bg-[#424141] bg-blend-overlay relative">
+    <div className="bg-fixed about-bg bg-[#504f4f] bg-blend-overlay relative">
       {/* <div className="shadow-inner pb-8 bg-gray-200 opacity-80 w-full h-[300px] sm:h-[330px] md:h-[360px] lg:h-[320px]"></div> */}
       <div className="bg-gray-200/80 py-10">
         <div className="grid grid-cols-6">

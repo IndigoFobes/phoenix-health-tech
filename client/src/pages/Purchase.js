@@ -111,7 +111,7 @@ const expectVariant = {
 export default function Purchase({ currentPage, handlePageChange }) {
   const [showItem, setShowItem] = useState(false);
   return (
-    <div className="bg-fixed purchase-bg bg-[#424141] bg-blend-overlay relative">
+    <div className="bg-fixed purchase-bg bg-[#504f4f] bg-blend-overlay relative">
       <div className="bg-gray-200/80 py-10">
         <div className="grid grid-cols-6">
           <container className="col-start-1 col-end-7 md:col-end-5 mb-5 mx-10">
