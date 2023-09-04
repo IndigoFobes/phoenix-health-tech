@@ -94,14 +94,16 @@ const textVariant = {
 
 const expectVariant = {
   offscreen: {
+    y: 300,
     opacity: 0,
   },
   onscreen: {
+    y: 0,
     opacity: 1,
     transition: {
-      duration: 1,
       ease: "linear",
-      delay: 0.1,
+      type: "spring",
+      duration: 1,
     },
   },
 };
@@ -109,7 +111,7 @@ const expectVariant = {
 export default function Purchase({ currentPage, handlePageChange }) {
   const [showItem, setShowItem] = useState(false);
   return (
-    <div className="bg-fixed purchase-bg relative">
+    <div className="bg-fixed purchase-bg bg-[#424141] bg-blend-overlay relative">
       <div className="bg-gray-200/80 py-10">
         <div className="grid grid-cols-6">
           <container className="col-start-1 col-end-7 md:col-end-5 mb-5 mx-10">
@@ -131,25 +133,12 @@ export default function Purchase({ currentPage, handlePageChange }) {
         whileInView="onscreen"
         viewport={{ once: true, amount: 0.8 }}
       >
-        <motion.div
+        <motion.h1
           variants={expectVariant}
-          className="text-center hover:translate-y-4 transition duration-700 ease-in-out"
-          animate={{ transform: "translateY(-28px)" }}
-          transition={{
-            duration: 1,
-            ease: "easeInOut",
-            repeat: Infinity,
-            repeatType: "reverse",
-          }}
+          className="rounded-sm meet-team text-center font-semibold dm-sans-bold text-white"
         >
-          <p className="text-white dm-sans-bold expect-text border-b-4 border-white">
-            What to Expect
-          </p>
-          <FontAwesomeIcon
-            icon={faArrowDown}
-            className="text-white expect-text mt-2"
-          />
-        </motion.div>
+          What to Expect
+        </motion.h1>
       </motion.div>
       {/* *** DELETE this div when ready to move to online purchasing *** */}
       <div className="hidden md:flex items-center flex-col">

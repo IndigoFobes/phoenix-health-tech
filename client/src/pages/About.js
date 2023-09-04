@@ -74,7 +74,7 @@ const textVariant = {
 
 export default function About({ currentPage, handlePageChange }) {
   return (
-    <div className="bg-fixed about-bg relative">
+    <div className="bg-fixed about-bg bg-[#424141] bg-blend-overlay relative">
       {/* <div className="shadow-inner pb-8 bg-gray-200 opacity-80 w-full h-[300px] sm:h-[330px] md:h-[360px] lg:h-[320px]"></div> */}
       <div className="bg-gray-200/80 py-10">
         <div className="grid grid-cols-6">
@@ -102,7 +102,7 @@ export default function About({ currentPage, handlePageChange }) {
         <div className="my-40">
           <motion.h1
             variants={textVariant}
-            className="rounded-sm meet-team text-center font-semibold dm-sans-bold text-[#0E4370]"
+            className="rounded-sm meet-team text-center font-semibold dm-sans-bold text-white"
           >
             Meet Our Team
           </motion.h1>
