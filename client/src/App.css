@@ -97,6 +97,14 @@ font-weight: 400;
   	background-size: cover;
 }
 
+.home-bg {
+	background: url("./assets/clean_home_pht_edit.jpg");
+	height: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+  	background-size: cover;
+}
+
 .purchase-bg {
 	background: url("./assets/family-playing.jpg");
 	height: 100%;

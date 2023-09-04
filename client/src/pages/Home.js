@@ -140,16 +140,16 @@ export default function Home({ currentPage, handlePageChange }) {
       <div className="flex flex-col relative">
         <div
           onClick={handleImageClick}
-          className={`cursor-pointer relative w-full transition ease-in-out duration-1200 hover:blur-none ${
+          className={`cursor-pointer relative w-full home-bg h-[240px] sm:h-[300px] md:h-[367px] lg:h-[500px] xl:h-[601px] 2xl:h-[736px] sm:mb-[30px] transition ease-in-out duration-1200 hover:blur-none ${
             isClicked ? "blur-none" : "blur-sm"
           }`}
         >
-          <img
-            className="w-full"
+          {/* <img
+            className="w-full hidden sm:flex"
             src={CleanHome}
             alt="White, modern couch with white pillows. Small circular tables with vase of pretty leaf decoration."
-          ></img>
-          <div className="w-1/2 absolute top-2/5 left-1/5 -translate-x-1/3 flex flex-col sm:grid grid-rows-3 md:pr-20 gap-1 md:gap-2">
+          ></img> */}
+          <div className="sm:w-1/2 absolute mt-[15px] top-2/5 left-1/5 -translate-x-1/3 flex flex-col sm:grid grid-rows-3 md:pr-20 gap-1 md:gap-2">
             <p className="self-center text-center dm-sans-bold text-xs sm:text-sm md:text-base lg:text-2xl sm:font-bold warm-gray p-2 mt-4 sm:mt-0 sm:p-4 rounded-sm text-white">
               Not quite as clean as you think.
             </p>
@@ -161,7 +161,7 @@ export default function Home({ currentPage, handlePageChange }) {
             </p>
           </div>
         </div>
-        <h1 className="w-1/2 absolute top-1/6 left-1/5 -translate-x-1/3 font-bold text-base sm:text-2xl  lg:text-4xl md:pr-10 md:ml-0 title-text">
+        <h1 className="sm:w-1/2 absolute top-1/6 left-1/5 -translate-x-1/3 font-bold text-base sm:text-2xl lg:text-4xl md:pr-10 md:ml-0 title-text">
           How clean is the air in your <br></br>home or building?
         </h1>
       </div>
